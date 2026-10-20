@@ -34,19 +34,11 @@ python3 scripts/extract_study_data.py
 
 O script regrava os três JSON em `data/` e imprime as contagens. O site recusa abrir se o SHA-256 do Markdown deixar de bater com `metadata.sha256`.
 
-## GitHub Pages, quando você autorizar
+## Publicação
 
-Não há deploy neste repositório por padrão. Quando for publicar:
+O site está em **https://devgns.github.io/rota-cloud/**.
 
-1. `npm run build` gera `dist/`.
-2. Para um site de projeto (`https://usuario.github.io/nome-do-repo/`), gere com a base dos assets:
-
-```bash
-BASE_PATH=/nome-do-repo/ npm run build
-```
-
-3. Publique o conteúdo de `dist/` no branch que o Pages usa, ou use uma GitHub Action que rode o build. O `HashRouter` não precisa de `404.html`.
-
+A cada push na `main`, o workflow `.github/workflows/deploy.yml` roda lint, testes e build (com `BASE_PATH=/rota-cloud/`) e publica `dist/` no GitHub Pages. Também dá para disparar manualmente em Actions → "Deploy no GitHub Pages" → Run workflow. O `HashRouter` dispensa `404.html`.
 
 ## O que fica salvo
 
