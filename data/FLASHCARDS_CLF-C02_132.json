@@ -1,0 +1,934 @@
+{
+  "metadata": {
+    "source": "Apostila_AWS_Cloud_Practitioner_CLF-C02_Completa.md",
+    "sha256": "3287b9304c5818488bfe8b34a5cfa981435a8fc3dc8ee0f41293e66b1c70799d",
+    "count": 132,
+    "category_count": 10
+  },
+  "flashcards": [
+    {
+      "id": "FC001",
+      "category": "Fundamentos",
+      "front_markdown": "O que diferencia escalabilidade de elasticidade?",
+      "back_markdown": "Escalabilidade suporta mais carga; elasticidade ajusta recursos à demanda, aumentando e reduzindo.",
+      "source_chapter_id": "chapter-24"
+    },
+    {
+      "id": "FC002",
+      "category": "Fundamentos",
+      "front_markdown": "Scale up e scale out?",
+      "back_markdown": "Up aumenta a capacidade de uma unidade; out acrescenta mais unidades.",
+      "source_chapter_id": "chapter-24"
+    },
+    {
+      "id": "FC003",
+      "category": "Fundamentos",
+      "front_markdown": "O que é alta disponibilidade?",
+      "back_markdown": "Arquitetura para manter o serviço acessível apesar de falhas.",
+      "source_chapter_id": "chapter-24"
+    },
+    {
+      "id": "FC004",
+      "category": "Fundamentos",
+      "front_markdown": "O que é durabilidade?",
+      "back_markdown": "Propriedade de preservar dados ao longo do tempo.",
+      "source_chapter_id": "chapter-24"
+    },
+    {
+      "id": "FC005",
+      "category": "Fundamentos",
+      "front_markdown": "O que são RTO e RPO?",
+      "back_markdown": "RTO é tempo-alvo de recuperação; RPO é ponto-alvo de recuperação de dados.",
+      "source_chapter_id": "chapter-24"
+    },
+    {
+      "id": "FC006",
+      "category": "Fundamentos",
+      "front_markdown": "Uma AZ equivale a uma Região?",
+      "back_markdown": "Não. Uma Região contém várias AZs.",
+      "source_chapter_id": "chapter-24"
+    },
+    {
+      "id": "FC007",
+      "category": "Fundamentos",
+      "front_markdown": "Onde ficam edge locations?",
+      "back_markdown": "Na rede global de borda; usadas por serviços de distribuição/aceleração.",
+      "source_chapter_id": "chapter-24"
+    },
+    {
+      "id": "FC008",
+      "category": "Fundamentos",
+      "front_markdown": "Quando considerar Multi-Region?",
+      "back_markdown": "Falha regional, DR, geografia de usuários ou residência de dados.",
+      "source_chapter_id": "chapter-24"
+    },
+    {
+      "id": "FC009",
+      "category": "Fundamentos",
+      "front_markdown": "CAPEX versus OPEX?",
+      "back_markdown": "Investimento de capital versus despesa operacional.",
+      "source_chapter_id": "chapter-24"
+    },
+    {
+      "id": "FC010",
+      "category": "Fundamentos",
+      "front_markdown": "O que é TCO?",
+      "back_markdown": "Custo total de propriedade, incluindo pessoas, infraestrutura, energia, licenças e operação.",
+      "source_chapter_id": "chapter-24"
+    },
+    {
+      "id": "FC011",
+      "category": "Fundamentos",
+      "front_markdown": "O que é rightsizing?",
+      "back_markdown": "Adequar tipo e tamanho de recurso ao uso real.",
+      "source_chapter_id": "chapter-24"
+    },
+    {
+      "id": "FC012",
+      "category": "Fundamentos",
+      "front_markdown": "O que é pay-as-you-go?",
+      "back_markdown": "Modelo de cobrança ligado ao consumo, sujeito a unidade e contrato específicos.",
+      "source_chapter_id": "chapter-24"
+    },
+    {
+      "id": "FC013",
+      "category": "Arquitetura",
+      "front_markdown": "Os seis pilares do Well-Architected?",
+      "back_markdown": "Excelência operacional, segurança, confiabilidade, performance, custos e sustentabilidade.",
+      "source_chapter_id": "chapter-24"
+    },
+    {
+      "id": "FC014",
+      "category": "Arquitetura",
+      "front_markdown": "Well-Architected versus CAF?",
+      "back_markdown": "Workload e pilares técnicos versus prontidão/transformação organizacional.",
+      "source_chapter_id": "chapter-24"
+    },
+    {
+      "id": "FC015",
+      "category": "Arquitetura",
+      "front_markdown": "As seis perspectivas do AWS CAF?",
+      "back_markdown": "Business, People, Governance, Platform, Security, Operations.",
+      "source_chapter_id": "chapter-24"
+    },
+    {
+      "id": "FC016",
+      "category": "Arquitetura",
+      "front_markdown": "Rehost?",
+      "back_markdown": "Migrar com poucas mudanças: lift-and-shift.",
+      "source_chapter_id": "chapter-24"
+    },
+    {
+      "id": "FC017",
+      "category": "Arquitetura",
+      "front_markdown": "Replatform?",
+      "back_markdown": "Modernizar parte da plataforma sem redesenho substancial.",
+      "source_chapter_id": "chapter-24"
+    },
+    {
+      "id": "FC018",
+      "category": "Arquitetura",
+      "front_markdown": "Refactor?",
+      "back_markdown": "Redesenhar arquitetura/código de modo relevante.",
+      "source_chapter_id": "chapter-24"
+    },
+    {
+      "id": "FC019",
+      "category": "Arquitetura",
+      "front_markdown": "Repurchase?",
+      "back_markdown": "Trocar por produto/SaaS novo.",
+      "source_chapter_id": "chapter-24"
+    },
+    {
+      "id": "FC020",
+      "category": "Arquitetura",
+      "front_markdown": "Retain e Retire?",
+      "back_markdown": "Manter por enquanto versus desativar definitivamente.",
+      "source_chapter_id": "chapter-24"
+    },
+    {
+      "id": "FC021",
+      "category": "Arquitetura",
+      "front_markdown": "Relocate?",
+      "back_markdown": "Mover infraestrutura/plataforma de hospedagem com pouco redesenho.",
+      "source_chapter_id": "chapter-24"
+    },
+    {
+      "id": "FC022",
+      "category": "Arquitetura",
+      "front_markdown": "O que é stateless?",
+      "back_markdown": "Processamento não depende de sessão crítica guardada numa instância específica.",
+      "source_chapter_id": "chapter-24"
+    },
+    {
+      "id": "FC023",
+      "category": "Segurança",
+      "front_markdown": "Quem protege fisicamente os datacenters AWS?",
+      "back_markdown": "A AWS.",
+      "source_chapter_id": "chapter-24"
+    },
+    {
+      "id": "FC024",
+      "category": "Segurança",
+      "front_markdown": "Quem define o acesso aos dados da aplicação?",
+      "back_markdown": "O cliente, via identidades, rede e autorização de negócio.",
+      "source_chapter_id": "chapter-24"
+    },
+    {
+      "id": "FC025",
+      "category": "Segurança",
+      "front_markdown": "Quem atualiza normalmente SO de EC2?",
+      "back_markdown": "O cliente.",
+      "source_chapter_id": "chapter-24"
+    },
+    {
+      "id": "FC026",
+      "category": "Segurança",
+      "front_markdown": "Quem gerencia dependências do código Lambda?",
+      "back_markdown": "O cliente.",
+      "source_chapter_id": "chapter-24"
+    },
+    {
+      "id": "FC027",
+      "category": "Segurança",
+      "front_markdown": "Usuário root deve ser usado diariamente?",
+      "back_markdown": "Não. Apenas nas tarefas necessárias; proteger com MFA.",
+      "source_chapter_id": "chapter-24"
+    },
+    {
+      "id": "FC028",
+      "category": "Segurança",
+      "front_markdown": "Autenticação versus autorização?",
+      "back_markdown": "Verificar identidade versus decidir o que pode fazer.",
+      "source_chapter_id": "chapter-24"
+    },
+    {
+      "id": "FC029",
+      "category": "Segurança",
+      "front_markdown": "IAM user versus IAM role?",
+      "back_markdown": "Usuário é identidade da conta; role é assumida para sessão/credenciais temporárias.",
+      "source_chapter_id": "chapter-24"
+    },
+    {
+      "id": "FC030",
+      "category": "Segurança",
+      "front_markdown": "Group no IAM?",
+      "back_markdown": "Conjunto de usuários para facilitar políticas; role não pertence a grupo.",
+      "source_chapter_id": "chapter-24"
+    },
+    {
+      "id": "FC031",
+      "category": "Segurança",
+      "front_markdown": "Trust policy versus permissions policy?",
+      "back_markdown": "Quem assume role versus o que ela pode fazer.",
+      "source_chapter_id": "chapter-24"
+    },
+    {
+      "id": "FC032",
+      "category": "Segurança",
+      "front_markdown": "Deny explícito versus Allow?",
+      "back_markdown": "Deny explícito aplicável prevalece.",
+      "source_chapter_id": "chapter-24"
+    },
+    {
+      "id": "FC033",
+      "category": "Segurança",
+      "front_markdown": "Uma SCP concede acesso?",
+      "back_markdown": "Não, SCP limita permissões em conta/organização.",
+      "source_chapter_id": "chapter-24"
+    },
+    {
+      "id": "FC034",
+      "category": "Segurança",
+      "front_markdown": "Permissions boundary concede acesso?",
+      "back_markdown": "Não, define limite de permissões.",
+      "source_chapter_id": "chapter-24"
+    },
+    {
+      "id": "FC035",
+      "category": "Segurança",
+      "front_markdown": "Menor privilégio?",
+      "back_markdown": "Permitir só as ações e recursos necessários.",
+      "source_chapter_id": "chapter-24"
+    },
+    {
+      "id": "FC036",
+      "category": "Segurança",
+      "front_markdown": "O que é STS?",
+      "back_markdown": "Credenciais temporárias AWS para sessões e roles.",
+      "source_chapter_id": "chapter-24"
+    },
+    {
+      "id": "FC037",
+      "category": "Segurança",
+      "front_markdown": "Identity Center versus Cognito?",
+      "back_markdown": "SSO de workforce/contas AWS versus login de usuários de aplicação.",
+      "source_chapter_id": "chapter-24"
+    },
+    {
+      "id": "FC038",
+      "category": "Segurança",
+      "front_markdown": "KMS versus CloudHSM?",
+      "back_markdown": "Chaves gerenciadas integradas versus HSM dedicado.",
+      "source_chapter_id": "chapter-24"
+    },
+    {
+      "id": "FC039",
+      "category": "Segurança",
+      "front_markdown": "ACM?",
+      "back_markdown": "Certificados TLS.",
+      "source_chapter_id": "chapter-24"
+    },
+    {
+      "id": "FC040",
+      "category": "Segurança",
+      "front_markdown": "Secrets Manager?",
+      "back_markdown": "Armazenamento, gerenciamento e rotação de segredos.",
+      "source_chapter_id": "chapter-24"
+    },
+    {
+      "id": "FC041",
+      "category": "Segurança",
+      "front_markdown": "Artifact?",
+      "back_markdown": "Relatórios e documentos de conformidade AWS.",
+      "source_chapter_id": "chapter-24"
+    },
+    {
+      "id": "FC042",
+      "category": "Segurança",
+      "front_markdown": "WAF?",
+      "back_markdown": "Filtragem de tráfego HTTP(S) para aplicações web.",
+      "source_chapter_id": "chapter-24"
+    },
+    {
+      "id": "FC043",
+      "category": "Segurança",
+      "front_markdown": "Shield?",
+      "back_markdown": "Proteção DDoS.",
+      "source_chapter_id": "chapter-24"
+    },
+    {
+      "id": "FC044",
+      "category": "Segurança",
+      "front_markdown": "Firewall Manager?",
+      "back_markdown": "Gestão centralizada de políticas de firewall.",
+      "source_chapter_id": "chapter-24"
+    },
+    {
+      "id": "FC045",
+      "category": "Segurança",
+      "front_markdown": "GuardDuty?",
+      "back_markdown": "Detecção de ameaças.",
+      "source_chapter_id": "chapter-24"
+    },
+    {
+      "id": "FC046",
+      "category": "Segurança",
+      "front_markdown": "Inspector?",
+      "back_markdown": "Descoberta/avaliação de vulnerabilidades.",
+      "source_chapter_id": "chapter-24"
+    },
+    {
+      "id": "FC047",
+      "category": "Segurança",
+      "front_markdown": "Macie?",
+      "back_markdown": "Detecção de dados sensíveis em S3.",
+      "source_chapter_id": "chapter-24"
+    },
+    {
+      "id": "FC048",
+      "category": "Segurança",
+      "front_markdown": "Security Hub?",
+      "back_markdown": "Centralização de achados de segurança.",
+      "source_chapter_id": "chapter-24"
+    },
+    {
+      "id": "FC049",
+      "category": "Segurança",
+      "front_markdown": "Detective?",
+      "back_markdown": "Investigação contextual de eventos de segurança.",
+      "source_chapter_id": "chapter-24"
+    },
+    {
+      "id": "FC050",
+      "category": "Segurança",
+      "front_markdown": "CloudTrail?",
+      "back_markdown": "Quem fez qual chamada/API e quando.",
+      "source_chapter_id": "chapter-24"
+    },
+    {
+      "id": "FC051",
+      "category": "Segurança",
+      "front_markdown": "CloudWatch?",
+      "back_markdown": "Métricas, logs, dashboards e alarmes.",
+      "source_chapter_id": "chapter-24"
+    },
+    {
+      "id": "FC052",
+      "category": "Segurança",
+      "front_markdown": "Config?",
+      "back_markdown": "Inventário/histórico de configuração e regras de conformidade.",
+      "source_chapter_id": "chapter-24"
+    },
+    {
+      "id": "FC053",
+      "category": "Computação",
+      "front_markdown": "EC2?",
+      "back_markdown": "Máquinas virtuais administráveis.",
+      "source_chapter_id": "chapter-24"
+    },
+    {
+      "id": "FC054",
+      "category": "Computação",
+      "front_markdown": "AMI?",
+      "back_markdown": "Imagem usada para iniciar EC2.",
+      "source_chapter_id": "chapter-24"
+    },
+    {
+      "id": "FC055",
+      "category": "Computação",
+      "front_markdown": "Compute optimized?",
+      "back_markdown": "Família de instâncias voltada a processamento CPU.",
+      "source_chapter_id": "chapter-24"
+    },
+    {
+      "id": "FC056",
+      "category": "Computação",
+      "front_markdown": "Memory optimized?",
+      "back_markdown": "Família voltada a grandes necessidades de RAM.",
+      "source_chapter_id": "chapter-24"
+    },
+    {
+      "id": "FC057",
+      "category": "Computação",
+      "front_markdown": "ALB?",
+      "back_markdown": "Balanceamento de tráfego HTTP(S) e roteamento por aplicação.",
+      "source_chapter_id": "chapter-24"
+    },
+    {
+      "id": "FC058",
+      "category": "Computação",
+      "front_markdown": "Auto Scaling?",
+      "back_markdown": "Ajuste de quantidade de instâncias/capacidade.",
+      "source_chapter_id": "chapter-24"
+    },
+    {
+      "id": "FC059",
+      "category": "Computação",
+      "front_markdown": "ECR?",
+      "back_markdown": "Registro de imagens de contêiner.",
+      "source_chapter_id": "chapter-24"
+    },
+    {
+      "id": "FC060",
+      "category": "Computação",
+      "front_markdown": "ECS?",
+      "back_markdown": "Orquestração de contêineres AWS.",
+      "source_chapter_id": "chapter-24"
+    },
+    {
+      "id": "FC061",
+      "category": "Computação",
+      "front_markdown": "EKS?",
+      "back_markdown": "Kubernetes gerenciado.",
+      "source_chapter_id": "chapter-24"
+    },
+    {
+      "id": "FC062",
+      "category": "Computação",
+      "front_markdown": "Fargate?",
+      "back_markdown": "Compute serverless para contêineres compatíveis.",
+      "source_chapter_id": "chapter-24"
+    },
+    {
+      "id": "FC063",
+      "category": "Computação",
+      "front_markdown": "Lambda?",
+      "back_markdown": "Execução de funções baseada em eventos, sem gerir servidores.",
+      "source_chapter_id": "chapter-24"
+    },
+    {
+      "id": "FC064",
+      "category": "Computação",
+      "front_markdown": "Batch?",
+      "back_markdown": "Agenda e executa processamento em lote.",
+      "source_chapter_id": "chapter-24"
+    },
+    {
+      "id": "FC065",
+      "category": "Computação",
+      "front_markdown": "Beanstalk?",
+      "back_markdown": "Plataforma para deploy/gestão simplificada de aplicações.",
+      "source_chapter_id": "chapter-24"
+    },
+    {
+      "id": "FC066",
+      "category": "Computação",
+      "front_markdown": "Lightsail?",
+      "back_markdown": "Solução simplificada de recursos de computação e outros para apps menores.",
+      "source_chapter_id": "chapter-24"
+    },
+    {
+      "id": "FC067",
+      "category": "Computação",
+      "front_markdown": "Outposts?",
+      "back_markdown": "Infraestrutura/serviços AWS nas instalações do cliente.",
+      "source_chapter_id": "chapter-24"
+    },
+    {
+      "id": "FC068",
+      "category": "Redes",
+      "front_markdown": "VPC?",
+      "back_markdown": "Rede virtual isolada e regional.",
+      "source_chapter_id": "chapter-24"
+    },
+    {
+      "id": "FC069",
+      "category": "Redes",
+      "front_markdown": "Subnet pode abranger duas AZs?",
+      "back_markdown": "Não, uma subnet pertence a uma AZ.",
+      "source_chapter_id": "chapter-24"
+    },
+    {
+      "id": "FC070",
+      "category": "Redes",
+      "front_markdown": "IGW?",
+      "back_markdown": "Gateway de internet para VPC com rotas/regras apropriadas.",
+      "source_chapter_id": "chapter-24"
+    },
+    {
+      "id": "FC071",
+      "category": "Redes",
+      "front_markdown": "NAT Gateway?",
+      "back_markdown": "Saída IPv4 para recursos privados, sem acesso inbound iniciado arbitrariamente.",
+      "source_chapter_id": "chapter-24"
+    },
+    {
+      "id": "FC072",
+      "category": "Redes",
+      "front_markdown": "SG versus NACL?",
+      "back_markdown": "SG stateful ligado ao recurso; NACL stateless ligada à subnet.",
+      "source_chapter_id": "chapter-24"
+    },
+    {
+      "id": "FC073",
+      "category": "Redes",
+      "front_markdown": "Route 53?",
+      "back_markdown": "DNS e roteamento de domínio.",
+      "source_chapter_id": "chapter-24"
+    },
+    {
+      "id": "FC074",
+      "category": "Redes",
+      "front_markdown": "CloudFront?",
+      "back_markdown": "CDN e entrega de conteúdo em borda.",
+      "source_chapter_id": "chapter-24"
+    },
+    {
+      "id": "FC075",
+      "category": "Redes",
+      "front_markdown": "API Gateway?",
+      "back_markdown": "Publicação e gerenciamento de APIs.",
+      "source_chapter_id": "chapter-24"
+    },
+    {
+      "id": "FC076",
+      "category": "Redes",
+      "front_markdown": "Global Accelerator?",
+      "back_markdown": "Aceleração de tráfego de rede pela infraestrutura global AWS.",
+      "source_chapter_id": "chapter-24"
+    },
+    {
+      "id": "FC077",
+      "category": "Redes",
+      "front_markdown": "Direct Connect versus VPN?",
+      "back_markdown": "Conexão dedicada versus túnel criptografado via rede pública.",
+      "source_chapter_id": "chapter-24"
+    },
+    {
+      "id": "FC078",
+      "category": "Redes",
+      "front_markdown": "Transit Gateway?",
+      "back_markdown": "Hub de conectividade de VPCs/redes.",
+      "source_chapter_id": "chapter-24"
+    },
+    {
+      "id": "FC079",
+      "category": "Redes",
+      "front_markdown": "PrivateLink?",
+      "back_markdown": "Consumo privado de serviço via endpoints.",
+      "source_chapter_id": "chapter-24"
+    },
+    {
+      "id": "FC080",
+      "category": "Storage",
+      "front_markdown": "S3?",
+      "back_markdown": "Armazenamento de objetos em buckets.",
+      "source_chapter_id": "chapter-24"
+    },
+    {
+      "id": "FC081",
+      "category": "Storage",
+      "front_markdown": "EBS?",
+      "back_markdown": "Volumes persistentes de bloco.",
+      "source_chapter_id": "chapter-24"
+    },
+    {
+      "id": "FC082",
+      "category": "Storage",
+      "front_markdown": "Instance store?",
+      "back_markdown": "Armazenamento local efêmero da instância.",
+      "source_chapter_id": "chapter-24"
+    },
+    {
+      "id": "FC083",
+      "category": "Storage",
+      "front_markdown": "EFS?",
+      "back_markdown": "Sistema de arquivos NFS compartilhado.",
+      "source_chapter_id": "chapter-24"
+    },
+    {
+      "id": "FC084",
+      "category": "Storage",
+      "front_markdown": "FSx?",
+      "back_markdown": "Sistemas de arquivos gerenciados especializados.",
+      "source_chapter_id": "chapter-24"
+    },
+    {
+      "id": "FC085",
+      "category": "Storage",
+      "front_markdown": "S3 Intelligent-Tiering?",
+      "back_markdown": "Automatiza uso de camadas conforme padrões de acesso elegíveis.",
+      "source_chapter_id": "chapter-24"
+    },
+    {
+      "id": "FC086",
+      "category": "Storage",
+      "front_markdown": "S3 One Zone-IA?",
+      "back_markdown": "Acesso infrequente com armazenamento em uma AZ.",
+      "source_chapter_id": "chapter-24"
+    },
+    {
+      "id": "FC087",
+      "category": "Storage",
+      "front_markdown": "S3 Deep Archive?",
+      "back_markdown": "Arquivamento de longuíssimo prazo, acesso raro e recuperação demorada.",
+      "source_chapter_id": "chapter-24"
+    },
+    {
+      "id": "FC088",
+      "category": "Storage",
+      "front_markdown": "S3 lifecycle?",
+      "back_markdown": "Automatiza transição de classes e expiração.",
+      "source_chapter_id": "chapter-24"
+    },
+    {
+      "id": "FC089",
+      "category": "Storage",
+      "front_markdown": "Storage Gateway?",
+      "back_markdown": "Integração híbrida de armazenamento local à AWS.",
+      "source_chapter_id": "chapter-24"
+    },
+    {
+      "id": "FC090",
+      "category": "Storage",
+      "front_markdown": "AWS Backup versus DRS?",
+      "back_markdown": "Plano central de backups versus recuperação de servidores/workloads.",
+      "source_chapter_id": "chapter-24"
+    },
+    {
+      "id": "FC091",
+      "category": "Bancos",
+      "front_markdown": "RDS?",
+      "back_markdown": "Banco relacional gerenciado.",
+      "source_chapter_id": "chapter-24"
+    },
+    {
+      "id": "FC092",
+      "category": "Bancos",
+      "front_markdown": "Aurora?",
+      "back_markdown": "Banco relacional AWS com arquitetura própria e compatibilidade MySQL/PostgreSQL.",
+      "source_chapter_id": "chapter-24"
+    },
+    {
+      "id": "FC093",
+      "category": "Bancos",
+      "front_markdown": "RDS Multi-AZ versus Read Replica?",
+      "back_markdown": "HA/failover versus escala de leitura.",
+      "source_chapter_id": "chapter-24"
+    },
+    {
+      "id": "FC094",
+      "category": "Bancos",
+      "front_markdown": "DynamoDB?",
+      "back_markdown": "NoSQL serverless de chave-valor/documento.",
+      "source_chapter_id": "chapter-24"
+    },
+    {
+      "id": "FC095",
+      "category": "Bancos",
+      "front_markdown": "ElastiCache?",
+      "back_markdown": "Cache em memória.",
+      "source_chapter_id": "chapter-24"
+    },
+    {
+      "id": "FC096",
+      "category": "Bancos",
+      "front_markdown": "DocumentDB?",
+      "back_markdown": "Banco de documentos.",
+      "source_chapter_id": "chapter-24"
+    },
+    {
+      "id": "FC097",
+      "category": "Bancos",
+      "front_markdown": "Neptune?",
+      "back_markdown": "Banco de grafos.",
+      "source_chapter_id": "chapter-24"
+    },
+    {
+      "id": "FC098",
+      "category": "Bancos",
+      "front_markdown": "DMS versus SCT?",
+      "back_markdown": "Mover/replicar dados versus converter esquema de banco.",
+      "source_chapter_id": "chapter-24"
+    },
+    {
+      "id": "FC099",
+      "category": "Integração e dados",
+      "front_markdown": "SQS?",
+      "back_markdown": "Fila para processamento assíncrono.",
+      "source_chapter_id": "chapter-24"
+    },
+    {
+      "id": "FC100",
+      "category": "Integração e dados",
+      "front_markdown": "SNS?",
+      "back_markdown": "Pub/sub e notificações.",
+      "source_chapter_id": "chapter-24"
+    },
+    {
+      "id": "FC101",
+      "category": "Integração e dados",
+      "front_markdown": "EventBridge?",
+      "back_markdown": "Barramento/regras de eventos.",
+      "source_chapter_id": "chapter-24"
+    },
+    {
+      "id": "FC102",
+      "category": "Integração e dados",
+      "front_markdown": "Step Functions?",
+      "back_markdown": "Orquestração de workflows.",
+      "source_chapter_id": "chapter-24"
+    },
+    {
+      "id": "FC103",
+      "category": "Integração e dados",
+      "front_markdown": "SES?",
+      "back_markdown": "Serviço de e-mail para aplicações.",
+      "source_chapter_id": "chapter-24"
+    },
+    {
+      "id": "FC104",
+      "category": "Integração e dados",
+      "front_markdown": "Connect?",
+      "back_markdown": "Plataforma de contact center.",
+      "source_chapter_id": "chapter-24"
+    },
+    {
+      "id": "FC105",
+      "category": "Integração e dados",
+      "front_markdown": "Athena?",
+      "back_markdown": "SQL sobre dados, muito comum com S3.",
+      "source_chapter_id": "chapter-24"
+    },
+    {
+      "id": "FC106",
+      "category": "Integração e dados",
+      "front_markdown": "Glue?",
+      "back_markdown": "Catálogo/ETL/integração de dados.",
+      "source_chapter_id": "chapter-24"
+    },
+    {
+      "id": "FC107",
+      "category": "Integração e dados",
+      "front_markdown": "Kinesis?",
+      "back_markdown": "Streaming em tempo real.",
+      "source_chapter_id": "chapter-24"
+    },
+    {
+      "id": "FC108",
+      "category": "Integração e dados",
+      "front_markdown": "Redshift?",
+      "back_markdown": "Data warehouse analítico.",
+      "source_chapter_id": "chapter-24"
+    },
+    {
+      "id": "FC109",
+      "category": "Integração e dados",
+      "front_markdown": "EMR?",
+      "back_markdown": "Big data com frameworks distribuídos.",
+      "source_chapter_id": "chapter-24"
+    },
+    {
+      "id": "FC110",
+      "category": "Integração e dados",
+      "front_markdown": "QuickSight?",
+      "back_markdown": "BI e dashboards.",
+      "source_chapter_id": "chapter-24"
+    },
+    {
+      "id": "FC111",
+      "category": "Integração e dados",
+      "front_markdown": "OpenSearch?",
+      "back_markdown": "Busca e analytics em dados indexados/logs.",
+      "source_chapter_id": "chapter-24"
+    },
+    {
+      "id": "FC112",
+      "category": "IA",
+      "front_markdown": "SageMaker AI?",
+      "back_markdown": "Ciclo de vida de modelos de ML.",
+      "source_chapter_id": "chapter-24"
+    },
+    {
+      "id": "FC113",
+      "category": "IA",
+      "front_markdown": "Rekognition versus Textract?",
+      "back_markdown": "Análise de imagem/vídeo versus extração de texto/tabelas em documentos.",
+      "source_chapter_id": "chapter-24"
+    },
+    {
+      "id": "FC114",
+      "category": "IA",
+      "front_markdown": "Transcribe versus Polly?",
+      "back_markdown": "Fala→texto versus texto→fala.",
+      "source_chapter_id": "chapter-24"
+    },
+    {
+      "id": "FC115",
+      "category": "IA",
+      "front_markdown": "Comprehend versus Translate?",
+      "back_markdown": "Analisar linguagem natural versus traduzir idiomas.",
+      "source_chapter_id": "chapter-24"
+    },
+    {
+      "id": "FC116",
+      "category": "IA",
+      "front_markdown": "Lex?",
+      "back_markdown": "Chatbot/interface conversacional.",
+      "source_chapter_id": "chapter-24"
+    },
+    {
+      "id": "FC117",
+      "category": "IA",
+      "front_markdown": "Amazon Q?",
+      "back_markdown": "Família de assistentes de IA.",
+      "source_chapter_id": "chapter-24"
+    },
+    {
+      "id": "FC118",
+      "category": "Custos e suporte",
+      "front_markdown": "On-Demand?",
+      "back_markdown": "Sem compromisso plurianual; pagamento conforme uso elegível.",
+      "source_chapter_id": "chapter-24"
+    },
+    {
+      "id": "FC119",
+      "category": "Custos e suporte",
+      "front_markdown": "Spot?",
+      "back_markdown": "Capacidade com desconto sujeita a interrupção.",
+      "source_chapter_id": "chapter-24"
+    },
+    {
+      "id": "FC120",
+      "category": "Custos e suporte",
+      "front_markdown": "Reserved Instance?",
+      "back_markdown": "Desconto/compromisso por prazo, conforme modalidade.",
+      "source_chapter_id": "chapter-24"
+    },
+    {
+      "id": "FC121",
+      "category": "Custos e suporte",
+      "front_markdown": "Savings Plans?",
+      "back_markdown": "Desconto por compromisso de gasto/hora para uso elegível.",
+      "source_chapter_id": "chapter-24"
+    },
+    {
+      "id": "FC122",
+      "category": "Custos e suporte",
+      "front_markdown": "Capacity Reservation?",
+      "back_markdown": "Reserva de capacidade em AZ, não implica desconto sozinha.",
+      "source_chapter_id": "chapter-24"
+    },
+    {
+      "id": "FC123",
+      "category": "Custos e suporte",
+      "front_markdown": "Dedicated Host?",
+      "back_markdown": "Servidor físico dedicado para cliente.",
+      "source_chapter_id": "chapter-24"
+    },
+    {
+      "id": "FC124",
+      "category": "Custos e suporte",
+      "front_markdown": "Pricing Calculator?",
+      "back_markdown": "Estimativa de custos antes de usar.",
+      "source_chapter_id": "chapter-24"
+    },
+    {
+      "id": "FC125",
+      "category": "Custos e suporte",
+      "front_markdown": "Cost Explorer?",
+      "back_markdown": "Análise do gasto existente.",
+      "source_chapter_id": "chapter-24"
+    },
+    {
+      "id": "FC126",
+      "category": "Custos e suporte",
+      "front_markdown": "Budgets?",
+      "back_markdown": "Orçamentos e alertas.",
+      "source_chapter_id": "chapter-24"
+    },
+    {
+      "id": "FC127",
+      "category": "Custos e suporte",
+      "front_markdown": "Cost and Usage Reports?",
+      "back_markdown": "Detalhamento granular do faturamento.",
+      "source_chapter_id": "chapter-24"
+    },
+    {
+      "id": "FC128",
+      "category": "Custos e suporte",
+      "front_markdown": "Consolidated billing?",
+      "back_markdown": "Cobrança agrupada de contas AWS Organizations.",
+      "source_chapter_id": "chapter-24"
+    },
+    {
+      "id": "FC129",
+      "category": "Custos e suporte",
+      "front_markdown": "O que fazem cost allocation tags?",
+      "back_markdown": "Permitem atribuir gastos a projetos/ambientes quando configuradas.",
+      "source_chapter_id": "chapter-24"
+    },
+    {
+      "id": "FC130",
+      "category": "Custos e suporte",
+      "front_markdown": "Trusted Advisor?",
+      "back_markdown": "Recomendações/verificações de boas práticas.",
+      "source_chapter_id": "chapter-24"
+    },
+    {
+      "id": "FC131",
+      "category": "Custos e suporte",
+      "front_markdown": "AWS Health?",
+      "back_markdown": "Eventos/impacto de saúde dos serviços AWS.",
+      "source_chapter_id": "chapter-24"
+    },
+    {
+      "id": "FC132",
+      "category": "Custos e suporte",
+      "front_markdown": "Planos AWS Support atuais?",
+      "back_markdown": "Basic, Business Support+, Enterprise Support e Unified Operations em 2026.",
+      "source_chapter_id": "chapter-24"
+    }
+  ]
+}

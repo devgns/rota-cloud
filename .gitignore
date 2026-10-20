@@ -1,0 +1,21 @@
+node_modules/
+dist/
+.vite/
+playwright-report/
+test-results/
+blob-report/
+coverage/
+*.tsbuildinfo
+
+references-private/
+*.pdf
+
+.env
+.env.*
+!.env.example
+
+*.log
+.DS_Store
+
+# Metadados do Windows (arquivos baixados)
+*:Zone.Identifier

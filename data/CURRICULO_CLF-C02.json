@@ -1,0 +1,2049 @@
+{
+  "metadata": {
+    "generated_from": "Apostila_AWS_Cloud_Practitioner_CLF-C02_Completa.md",
+    "sha256": "3287b9304c5818488bfe8b34a5cfa981435a8fc3dc8ee0f41293e66b1c70799d",
+    "chapter_count": 26,
+    "question_count": 80,
+    "flashcard_count": 132,
+    "editorial_warning": "Derived navigation metadata, not a replacement for full Markdown. Verify domain labels; mapping is editorial."
+  },
+  "modules": [
+    {
+      "id": "intro",
+      "title": "Comece aqui",
+      "chapter_ids": [
+        "chapter-01"
+      ]
+    },
+    {
+      "id": "fundamentos",
+      "title": "Fundamentos e arquitetura",
+      "chapter_ids": [
+        "chapter-02",
+        "chapter-03",
+        "chapter-04",
+        "chapter-05"
+      ]
+    },
+    {
+      "id": "seguranca",
+      "title": "Segurança por camadas",
+      "chapter_ids": [
+        "chapter-06",
+        "chapter-07",
+        "chapter-08",
+        "chapter-09"
+      ]
+    },
+    {
+      "id": "construcao",
+      "title": "Construindo sistemas",
+      "chapter_ids": [
+        "chapter-10",
+        "chapter-11",
+        "chapter-12",
+        "chapter-13",
+        "chapter-14"
+      ]
+    },
+    {
+      "id": "integracao",
+      "title": "Operando e integrando",
+      "chapter_ids": [
+        "chapter-15",
+        "chapter-16",
+        "chapter-17",
+        "chapter-18"
+      ]
+    },
+    {
+      "id": "custos",
+      "title": "Custos e suporte",
+      "chapter_ids": [
+        "chapter-19",
+        "chapter-20"
+      ]
+    },
+    {
+      "id": "revisao",
+      "title": "Aplicação e revisão",
+      "chapter_ids": [
+        "chapter-21",
+        "chapter-22",
+        "chapter-23",
+        "chapter-24",
+        "chapter-25",
+        "chapter-26"
+      ]
+    }
+  ],
+  "chapters": [
+    {
+      "id": "chapter-01",
+      "original_number": 1,
+      "title": "Como funciona a prova e como estudar",
+      "module_id": "intro",
+      "domains": [
+        1,
+        2,
+        3,
+        4
+      ],
+      "source_heading": "# 1. Como funciona a prova e como estudar",
+      "subheadings": [
+        {
+          "id": "c01-1-1-metodo-de-aprendizagem",
+          "title": "1.1. Método de aprendizagem",
+          "heading_level": 3
+        },
+        {
+          "id": "c01-1-2-vocabulario-base",
+          "title": "1.2. Vocabulário-base",
+          "heading_level": 3
+        }
+      ]
+    },
+    {
+      "id": "chapter-02",
+      "original_number": 2,
+      "title": "O que é computação em nuvem",
+      "module_id": "fundamentos",
+      "domains": [
+        1
+      ],
+      "source_heading": "# 2. O que é computação em nuvem",
+      "subheadings": [
+        {
+          "id": "c02-2-1-a-pergunta-que-originou-a-nuvem",
+          "title": "2.1. A pergunta que originou a nuvem",
+          "heading_level": 2
+        },
+        {
+          "id": "c02-cinco-propriedades-para-internalizar",
+          "title": "Cinco propriedades para internalizar",
+          "heading_level": 3
+        },
+        {
+          "id": "c02-2-2-cloud-publica-privada-hibrida-e-on-premises",
+          "title": "2.2. Cloud pública, privada, híbrida e on-premises",
+          "heading_level": 2
+        },
+        {
+          "id": "c02-2-3-escalabilidade-versus-elasticidade",
+          "title": "2.3. Escalabilidade versus elasticidade",
+          "heading_level": 2
+        },
+        {
+          "id": "c02-2-4-agilidade-disponibilidade-confiabilidade-e-resiliencia",
+          "title": "2.4. Agilidade, disponibilidade, confiabilidade e resiliência",
+          "heading_level": 2
+        },
+        {
+          "id": "c02-2-5-alcance-global-latencia-e-economia-de-escala",
+          "title": "2.5. Alcance global, latência e economia de escala",
+          "heading_level": 2
+        },
+        {
+          "id": "c02-verifique-se-entendeu",
+          "title": "Verifique se entendeu",
+          "heading_level": 3
+        }
+      ]
+    },
+    {
+      "id": "chapter-03",
+      "original_number": 3,
+      "title": "Infraestrutura global, disponibilidade e resiliência",
+      "module_id": "fundamentos",
+      "domains": [
+        1,
+        3
+      ],
+      "source_heading": "# 3. Infraestrutura global, disponibilidade e resiliência",
+      "subheadings": [
+        {
+          "id": "c03-3-1-regiao-az-e-edge-location-tres-escalas-diferentes",
+          "title": "3.1. Região, AZ e Edge Location: três escalas diferentes",
+          "heading_level": 2
+        },
+        {
+          "id": "c03-3-2-single-az-multi-az-e-multi-region",
+          "title": "3.2. Single-AZ, Multi-AZ e Multi-Region",
+          "heading_level": 2
+        },
+        {
+          "id": "c03-3-3-rto-e-rpo-o-que-o-negocio-tolera",
+          "title": "3.3. RTO e RPO: o que o negócio tolera?",
+          "heading_level": 2
+        },
+        {
+          "id": "c03-estrategias-comuns-de-disaster-recovery",
+          "title": "Estratégias comuns de Disaster Recovery",
+          "heading_level": 3
+        },
+        {
+          "id": "c03-3-4-durabilidade-redundancia-e-replicacao",
+          "title": "3.4. Durabilidade, redundância e replicação",
+          "heading_level": 2
+        },
+        {
+          "id": "c03-3-5-residencia-e-soberania-de-dados",
+          "title": "3.5. Residência e soberania de dados",
+          "heading_level": 2
+        },
+        {
+          "id": "c03-dica-de-prova",
+          "title": "Dica de prova",
+          "heading_level": 3
+        }
+      ]
+    },
+    {
+      "id": "chapter-04",
+      "original_number": 4,
+      "title": "Princípios de arquitetura e Well-Architected",
+      "module_id": "fundamentos",
+      "domains": [
+        1
+      ],
+      "source_heading": "# 4. Princípios de arquitetura e Well-Architected",
+      "subheadings": [
+        {
+          "id": "c04-4-1-os-seis-pilares",
+          "title": "4.1. Os seis pilares",
+          "heading_level": 2
+        },
+        {
+          "id": "c04-4-2-principios-de-arquitetura-que-aparecem-indiretamente",
+          "title": "4.2. Princípios de arquitetura que aparecem indiretamente",
+          "heading_level": 2
+        },
+        {
+          "id": "c04-exemplo-integrado",
+          "title": "Exemplo integrado",
+          "heading_level": 3
+        },
+        {
+          "id": "c04-4-3-well-architected-versus-cloud-adoption-framework",
+          "title": "4.3. Well-Architected versus Cloud Adoption Framework",
+          "heading_level": 2
+        }
+      ]
+    },
+    {
+      "id": "chapter-05",
+      "original_number": 5,
+      "title": "Economia da nuvem, adoção e migração",
+      "module_id": "fundamentos",
+      "domains": [
+        1,
+        4
+      ],
+      "source_heading": "# 5. Economia da nuvem, adoção e migração",
+      "subheadings": [
+        {
+          "id": "c05-5-1-capex-e-opex",
+          "title": "5.1. CAPEX e OPEX",
+          "heading_level": 2
+        },
+        {
+          "id": "c05-por-que-isso-importa",
+          "title": "Por que isso importa?",
+          "heading_level": 3
+        },
+        {
+          "id": "c05-5-2-custos-fixos-variaveis-tco-e-direitos-de-licenciamento",
+          "title": "5.2. Custos fixos, variáveis, TCO e direitos de licenciamento",
+          "heading_level": 2
+        },
+        {
+          "id": "c05-5-3-aws-cloud-adoption-framework-caf-as-seis-perspectivas",
+          "title": "5.3. AWS Cloud Adoption Framework (CAF): as seis perspectivas",
+          "heading_level": 2
+        },
+        {
+          "id": "c05-5-4-as-estrategias-7-rs-de-migracao",
+          "title": "5.4. As estratégias 7 Rs de migração",
+          "heading_level": 2
+        },
+        {
+          "id": "c05-5-5-ferramentas-aws-de-migracao-e-suas-funcoes",
+          "title": "5.5. Ferramentas AWS de migração e suas funções",
+          "heading_level": 2
+        },
+        {
+          "id": "c05-questoes-de-revisao",
+          "title": "Questões de revisão",
+          "heading_level": 3
+        }
+      ]
+    },
+    {
+      "id": "chapter-06",
+      "original_number": 6,
+      "title": "Responsabilidade compartilhada",
+      "module_id": "seguranca",
+      "domains": [
+        2
+      ],
+      "source_heading": "# 6. Responsabilidade compartilhada",
+      "subheadings": [
+        {
+          "id": "c06-6-1-o-que-a-aws-normalmente-assume",
+          "title": "6.1. O que a AWS normalmente assume?",
+          "heading_level": 2
+        },
+        {
+          "id": "c06-6-2-o-que-o-cliente-normalmente-assume",
+          "title": "6.2. O que o cliente normalmente assume?",
+          "heading_level": 2
+        },
+        {
+          "id": "c06-6-3-a-responsabilidade-muda-conforme-o-servico",
+          "title": "6.3. A responsabilidade muda conforme o serviço",
+          "heading_level": 2
+        },
+        {
+          "id": "c06-6-4-se-os-dados-vazarem-de-quem-e-a-culpa",
+          "title": "6.4. Se os dados vazarem, de quem é a culpa?",
+          "heading_level": 2
+        },
+        {
+          "id": "c06-6-5-outro-exemplo-conteineres",
+          "title": "6.5. Outro exemplo: contêineres",
+          "heading_level": 2
+        }
+      ]
+    },
+    {
+      "id": "chapter-07",
+      "original_number": 7,
+      "title": "IAM, autenticação, autorização e identidades",
+      "module_id": "seguranca",
+      "domains": [
+        2
+      ],
+      "source_heading": "# 7. IAM, autenticação, autorização e identidades",
+      "subheadings": [
+        {
+          "id": "c07-7-1-conta-root-o-superusuario",
+          "title": "7.1. Conta root: o superusuário",
+          "heading_level": 2
+        },
+        {
+          "id": "c07-7-2-iam-user-group-role-policy",
+          "title": "7.2. IAM User, Group, Role, Policy",
+          "heading_level": 2
+        },
+        {
+          "id": "c07-exemplo-de-politica-conceitual",
+          "title": "Exemplo de política conceitual",
+          "heading_level": 3
+        },
+        {
+          "id": "c07-trust-policy-versus-permission-policy",
+          "title": "Trust policy versus permission policy",
+          "heading_level": 3
+        },
+        {
+          "id": "c07-7-3-a-logica-de-autorizacao-modelo-mental-correto",
+          "title": "7.3. A lógica de autorização — modelo mental correto",
+          "heading_level": 2
+        },
+        {
+          "id": "c07-7-4-menor-privilegio-least-privilege",
+          "title": "7.4. Menor privilégio (least privilege)",
+          "heading_level": 2
+        },
+        {
+          "id": "c07-7-5-mfa-access-keys-e-credenciais-temporarias",
+          "title": "7.5. MFA, access keys e credenciais temporárias",
+          "heading_level": 2
+        },
+        {
+          "id": "c07-7-6-identidades-humanas-corporativas-e-de-aplicativos",
+          "title": "7.6. Identidades humanas, corporativas e de aplicativos",
+          "heading_level": 2
+        },
+        {
+          "id": "c07-federacao-saml-e-oidc",
+          "title": "Federação, SAML e OIDC",
+          "heading_level": 3
+        },
+        {
+          "id": "c07-7-7-iam-em-multiplas-contas",
+          "title": "7.7. IAM em múltiplas contas",
+          "heading_level": 2
+        },
+        {
+          "id": "c07-mini-caso-por-que-o-allow-nao-funcionou",
+          "title": "Mini-caso: por que o “Allow” não funcionou?",
+          "heading_level": 3
+        }
+      ]
+    },
+    {
+      "id": "chapter-08",
+      "original_number": 8,
+      "title": "Segurança de dados, criptografia e conformidade",
+      "module_id": "seguranca",
+      "domains": [
+        2
+      ],
+      "source_heading": "# 8. Segurança de dados, criptografia e conformidade",
+      "subheadings": [
+        {
+          "id": "c08-8-1-tres-objetivos-centrais",
+          "title": "8.1. Três objetivos centrais",
+          "heading_level": 2
+        },
+        {
+          "id": "c08-8-2-criptografia-em-transito-e-em-repouso",
+          "title": "8.2. Criptografia em trânsito e em repouso",
+          "heading_level": 2
+        },
+        {
+          "id": "c08-8-3-aws-kms-versus-cloudhsm-versus-acm",
+          "title": "8.3. AWS KMS versus CloudHSM versus ACM",
+          "heading_level": 2
+        },
+        {
+          "id": "c08-8-4-segredos-nao-sao-chaves-de-criptografia",
+          "title": "8.4. Segredos não são chaves de criptografia",
+          "heading_level": 2
+        },
+        {
+          "id": "c08-8-5-seguranca-em-camadas",
+          "title": "8.5. Segurança em camadas",
+          "heading_level": 2
+        },
+        {
+          "id": "c08-8-6-compliance-aws-artifact-e-requisitos-regionais",
+          "title": "8.6. Compliance, AWS Artifact e requisitos regionais",
+          "heading_level": 2
+        },
+        {
+          "id": "c08-conformidade-e-geografia",
+          "title": "Conformidade e geografia",
+          "heading_level": 3
+        },
+        {
+          "id": "c08-8-7-politicas-e-controles-uteis",
+          "title": "8.7. Políticas e controles úteis",
+          "heading_level": 2
+        }
+      ]
+    },
+    {
+      "id": "chapter-09",
+      "original_number": 9,
+      "title": "Detecção de ameaças, auditoria e governança",
+      "module_id": "seguranca",
+      "domains": [
+        2,
+        3
+      ],
+      "source_heading": "# 9. Detecção de ameaças, auditoria e governança",
+      "subheadings": [
+        {
+          "id": "c09-9-1-cloudtrail-cloudwatch-e-config-a-triade",
+          "title": "9.1. CloudTrail, CloudWatch e Config — a tríade",
+          "heading_level": 2
+        },
+        {
+          "id": "c09-9-2-guardduty-inspector-macie-security-hub-e-detective",
+          "title": "9.2. GuardDuty, Inspector, Macie, Security Hub e Detective",
+          "heading_level": 2
+        },
+        {
+          "id": "c09-9-3-waf-shield-e-firewall-manager",
+          "title": "9.3. WAF, Shield e Firewall Manager",
+          "heading_level": 2
+        },
+        {
+          "id": "c09-9-4-aws-organizations-scp-control-tower-ram-e-service-catalog",
+          "title": "9.4. AWS Organizations, SCP, Control Tower, RAM e Service Catalog",
+          "heading_level": 2
+        },
+        {
+          "id": "c09-outros-servicos-de-operacoes-e-governanca",
+          "title": "Outros serviços de operações e governança",
+          "heading_level": 3
+        },
+        {
+          "id": "c09-fluxo-ilustrativo-de-investigacao",
+          "title": "Fluxo ilustrativo de investigação",
+          "heading_level": 3
+        }
+      ]
+    },
+    {
+      "id": "chapter-10",
+      "original_number": 10,
+      "title": "Acesso à AWS, automação e infraestrutura como código",
+      "module_id": "construcao",
+      "domains": [
+        3
+      ],
+      "source_heading": "# 10. Acesso à AWS, automação e infraestrutura como código",
+      "subheadings": [
+        {
+          "id": "c10-10-1-management-console-cli-sdk-e-apis",
+          "title": "10.1. Management Console, CLI, SDK e APIs",
+          "heading_level": 2
+        },
+        {
+          "id": "c10-10-2-declarativo-versus-imperativo",
+          "title": "10.2. Declarativo versus imperativo",
+          "heading_level": 2
+        },
+        {
+          "id": "c10-vantagens-da-iac",
+          "title": "Vantagens da IaC",
+          "heading_level": 3
+        },
+        {
+          "id": "c10-10-3-provisionamento-versus-deploy-de-aplicacoes",
+          "title": "10.3. Provisionamento versus deploy de aplicações",
+          "heading_level": 2
+        },
+        {
+          "id": "c10-10-4-implantacao-local-cloud-e-hibrida",
+          "title": "10.4. Implantação local, cloud e híbrida",
+          "heading_level": 2
+        }
+      ]
+    },
+    {
+      "id": "chapter-11",
+      "original_number": 11,
+      "title": "Computação: EC2, escalabilidade, contêineres e serverless",
+      "module_id": "construcao",
+      "domains": [
+        3
+      ],
+      "source_heading": "# 11. Computação: EC2, escalabilidade, contêineres e serverless",
+      "subheadings": [
+        {
+          "id": "c11-11-1-o-que-e-amazon-ec2",
+          "title": "11.1. O que é Amazon EC2?",
+          "heading_level": 2
+        },
+        {
+          "id": "c11-conceitos-ec2-mais-cobrados",
+          "title": "Conceitos EC2 mais cobrados",
+          "heading_level": 3
+        },
+        {
+          "id": "c11-familias-de-instancia-por-que-ha-tantas",
+          "title": "Famílias de instância: por que há tantas?",
+          "heading_level": 3
+        },
+        {
+          "id": "c11-estados-e-persistencia",
+          "title": "Estados e persistência",
+          "heading_level": 3
+        },
+        {
+          "id": "c11-11-2-auto-scaling-versus-load-balancing",
+          "title": "11.2. Auto Scaling versus Load Balancing",
+          "heading_level": 2
+        },
+        {
+          "id": "c11-tipos-importantes-de-balanceador",
+          "title": "Tipos importantes de balanceador",
+          "heading_level": 3
+        },
+        {
+          "id": "c11-11-3-conteineres-o-que-resolvem",
+          "title": "11.3. Contêineres: o que resolvem?",
+          "heading_level": 2
+        },
+        {
+          "id": "c11-ecs-eks-ecr-e-fargate",
+          "title": "ECS, EKS, ECR e Fargate",
+          "heading_level": 3
+        },
+        {
+          "id": "c11-ecs-em-ec2-versus-ecs-em-fargate",
+          "title": "ECS em EC2 versus ECS em Fargate",
+          "heading_level": 3
+        },
+        {
+          "id": "c11-exemplo-concreto-com-uma-api",
+          "title": "Exemplo concreto com uma API",
+          "heading_level": 3
+        },
+        {
+          "id": "c11-11-4-aws-lambda",
+          "title": "11.4. AWS Lambda",
+          "heading_level": 2
+        },
+        {
+          "id": "c11-11-5-servicos-adicionais-de-computacao",
+          "title": "11.5. Serviços adicionais de computação",
+          "heading_level": 2
+        },
+        {
+          "id": "c11-11-6-arvore-de-decisao-onde-executar-uma-aplicacao",
+          "title": "11.6. Árvore de decisão: onde executar uma aplicação?",
+          "heading_level": 2
+        },
+        {
+          "id": "c11-revisao-ativa",
+          "title": "Revisão ativa",
+          "heading_level": 3
+        }
+      ]
+    },
+    {
+      "id": "chapter-12",
+      "original_number": 12,
+      "title": "Redes: VPC, sub-redes, DNS, CDN e conectividade",
+      "module_id": "construcao",
+      "domains": [
+        3
+      ],
+      "source_heading": "# 12. Redes: VPC, sub-redes, DNS, CDN e conectividade",
+      "subheadings": [
+        {
+          "id": "c12-12-1-o-que-e-uma-vpc",
+          "title": "12.1. O que é uma VPC?",
+          "heading_level": 2
+        },
+        {
+          "id": "c12-enderecos",
+          "title": "Endereços",
+          "heading_level": 3
+        },
+        {
+          "id": "c12-12-2-public-subnet-versus-private-subnet",
+          "title": "12.2. Public subnet versus private subnet",
+          "heading_level": 2
+        },
+        {
+          "id": "c12-internet-gateway-e-nat-gateway",
+          "title": "Internet Gateway e NAT Gateway",
+          "heading_level": 3
+        },
+        {
+          "id": "c12-12-3-tabela-de-rotas-a-decisao-de-caminho",
+          "title": "12.3. Tabela de rotas: a decisão de caminho",
+          "heading_level": 2
+        },
+        {
+          "id": "c12-12-4-security-groups-versus-network-acls",
+          "title": "12.4. Security Groups versus Network ACLs",
+          "heading_level": 2
+        },
+        {
+          "id": "c12-12-5-arquitetura-vpc-de-tres-camadas",
+          "title": "12.5. Arquitetura VPC de três camadas",
+          "heading_level": 2
+        },
+        {
+          "id": "c12-12-6-route-53-cloudfront-api-gateway-e-global-accelerator",
+          "title": "12.6. Route 53, CloudFront, API Gateway e Global Accelerator",
+          "heading_level": 2
+        },
+        {
+          "id": "c12-comparativo-de-escolha",
+          "title": "Comparativo de escolha",
+          "heading_level": 3
+        },
+        {
+          "id": "c12-12-7-conectividade-privada-e-hibrida",
+          "title": "12.7. Conectividade privada e híbrida",
+          "heading_level": 2
+        },
+        {
+          "id": "c12-nao-confunda",
+          "title": "Não confunda",
+          "heading_level": 3
+        }
+      ]
+    },
+    {
+      "id": "chapter-13",
+      "original_number": 13,
+      "title": "Armazenamento: S3, EBS, EFS, FSx, backup e recuperação",
+      "module_id": "construcao",
+      "domains": [
+        3
+      ],
+      "source_heading": "# 13. Armazenamento: S3, EBS, EFS, FSx, backup e recuperação",
+      "subheadings": [
+        {
+          "id": "c13-13-1-amazon-s3-armazenamento-de-objetos",
+          "title": "13.1. Amazon S3: armazenamento de objetos",
+          "heading_level": 2
+        },
+        {
+          "id": "c13-classes-de-armazenamento-s3",
+          "title": "Classes de armazenamento S3",
+          "heading_level": 3
+        },
+        {
+          "id": "c13-como-decidir",
+          "title": "Como decidir?",
+          "heading_level": 3
+        },
+        {
+          "id": "c13-13-2-s3-conceitos-operacionais-que-valem-entender",
+          "title": "13.2. S3: conceitos operacionais que valem entender",
+          "heading_level": 2
+        },
+        {
+          "id": "c13-exemplo-de-lifecycle",
+          "title": "Exemplo de lifecycle",
+          "heading_level": 3
+        },
+        {
+          "id": "c13-13-3-ebs-e-instance-store",
+          "title": "13.3. EBS e instance store",
+          "heading_level": 2
+        },
+        {
+          "id": "c13-13-4-amazon-efs-e-amazon-fsx",
+          "title": "13.4. Amazon EFS e Amazon FSx",
+          "heading_level": 2
+        },
+        {
+          "id": "c13-13-5-aws-storage-gateway",
+          "title": "13.5. AWS Storage Gateway",
+          "heading_level": 2
+        },
+        {
+          "id": "c13-13-6-aws-backup-e-aws-elastic-disaster-recovery",
+          "title": "13.6. AWS Backup e AWS Elastic Disaster Recovery",
+          "heading_level": 2
+        },
+        {
+          "id": "c13-13-7-exercicio-de-arquitetura",
+          "title": "13.7. Exercício de arquitetura",
+          "heading_level": 2
+        }
+      ]
+    },
+    {
+      "id": "chapter-14",
+      "original_number": 14,
+      "title": "Bancos de dados: relacionais, NoSQL, cache e migração",
+      "module_id": "construcao",
+      "domains": [
+        3
+      ],
+      "source_heading": "# 14. Bancos de dados: relacionais, NoSQL, cache e migração",
+      "subheadings": [
+        {
+          "id": "c14-14-1-primeiro-entenda-o-problema-que-bancos-resolvem",
+          "title": "14.1. Primeiro entenda o problema que bancos resolvem",
+          "heading_level": 2
+        },
+        {
+          "id": "c14-14-2-relacionais-versus-nosql",
+          "title": "14.2. Relacionais versus NoSQL",
+          "heading_level": 2
+        },
+        {
+          "id": "c14-exemplo-de-dados",
+          "title": "Exemplo de dados",
+          "heading_level": 3
+        },
+        {
+          "id": "c14-14-3-rds-banco-relacional-gerenciado",
+          "title": "14.3. RDS: banco relacional gerenciado",
+          "heading_level": 2
+        },
+        {
+          "id": "c14-14-4-amazon-aurora",
+          "title": "14.4. Amazon Aurora",
+          "heading_level": 2
+        },
+        {
+          "id": "c14-14-5-multi-az-versus-read-replica",
+          "title": "14.5. Multi-AZ versus Read Replica",
+          "heading_level": 2
+        },
+        {
+          "id": "c14-14-6-dynamodb",
+          "title": "14.6. DynamoDB",
+          "heading_level": 2
+        },
+        {
+          "id": "c14-14-7-elasticache-o-cache-em-memoria",
+          "title": "14.7. ElastiCache: o cache em memória",
+          "heading_level": 2
+        },
+        {
+          "id": "c14-cache-nao-e-o-banco-definitivo-de-qualquer-aplicacao",
+          "title": "Cache não é o “banco definitivo” de qualquer aplicação",
+          "heading_level": 3
+        },
+        {
+          "id": "c14-14-8-documentdb-e-neptune",
+          "title": "14.8. DocumentDB e Neptune",
+          "heading_level": 2
+        },
+        {
+          "id": "c14-14-9-banco-autogerenciado-em-ec2-versus-gerenciado",
+          "title": "14.9. Banco autogerenciado em EC2 versus gerenciado",
+          "heading_level": 2
+        },
+        {
+          "id": "c14-14-10-migracao-de-bancos-dms-e-sct-revisados",
+          "title": "14.10. Migração de bancos: DMS e SCT, revisados",
+          "heading_level": 2
+        },
+        {
+          "id": "c14-checklist-mental-do-capitulo",
+          "title": "Checklist mental do capítulo",
+          "heading_level": 3
+        }
+      ]
+    },
+    {
+      "id": "chapter-15",
+      "original_number": 15,
+      "title": "Monitoramento, operações e ferramentas de desenvolvedor",
+      "module_id": "integracao",
+      "domains": [
+        3
+      ],
+      "source_heading": "# 15. Monitoramento, operações e ferramentas de desenvolvedor",
+      "subheadings": [
+        {
+          "id": "c15-15-1-observabilidade-metricas-logs-e-traces",
+          "title": "15.1. Observabilidade: métricas, logs e traces",
+          "heading_level": 2
+        },
+        {
+          "id": "c15-15-2-amazon-cloudwatch",
+          "title": "15.2. Amazon CloudWatch",
+          "heading_level": 2
+        },
+        {
+          "id": "c15-15-3-aws-cloudtrail",
+          "title": "15.3. AWS CloudTrail",
+          "heading_level": 2
+        },
+        {
+          "id": "c15-15-4-aws-config",
+          "title": "15.4. AWS Config",
+          "heading_level": 2
+        },
+        {
+          "id": "c15-15-5-x-ray-e-saude-dos-servicos",
+          "title": "15.5. X-Ray e saúde dos serviços",
+          "heading_level": 2
+        },
+        {
+          "id": "c15-15-6-trusted-advisor-versus-compute-optimizer-versus-well-architected-tool",
+          "title": "15.6. Trusted Advisor versus Compute Optimizer versus Well-Architected Tool",
+          "heading_level": 2
+        },
+        {
+          "id": "c15-15-7-systems-manager-service-quotas-e-license-manager",
+          "title": "15.7. Systems Manager, Service Quotas e License Manager",
+          "heading_level": 2
+        },
+        {
+          "id": "c15-15-8-ci-cd-codebuild-codepipeline-e-o-resto",
+          "title": "15.8. CI/CD: CodeBuild, CodePipeline e o resto",
+          "heading_level": 2
+        }
+      ]
+    },
+    {
+      "id": "chapter-16",
+      "original_number": 16,
+      "title": "Integração, mensageria e aplicações empresariais",
+      "module_id": "integracao",
+      "domains": [
+        3
+      ],
+      "source_heading": "# 16. Integração, mensageria e aplicações empresariais",
+      "subheadings": [
+        {
+          "id": "c16-16-1-chamadas-sincronas-versus-assincronas",
+          "title": "16.1. Chamadas síncronas versus assíncronas",
+          "heading_level": 2
+        },
+        {
+          "id": "c16-exemplo-exportacao-de-planilha",
+          "title": "Exemplo: exportação de planilha",
+          "heading_level": 3
+        },
+        {
+          "id": "c16-16-2-amazon-sqs-fila-de-mensagens",
+          "title": "16.2. Amazon SQS — fila de mensagens",
+          "heading_level": 2
+        },
+        {
+          "id": "c16-standard-versus-fifo",
+          "title": "Standard versus FIFO",
+          "heading_level": 3
+        },
+        {
+          "id": "c16-16-3-amazon-sns-pub-sub-e-fan-out",
+          "title": "16.3. Amazon SNS — pub/sub e fan-out",
+          "heading_level": 2
+        },
+        {
+          "id": "c16-16-4-amazon-eventbridge-roteamento-de-eventos",
+          "title": "16.4. Amazon EventBridge — roteamento de eventos",
+          "heading_level": 2
+        },
+        {
+          "id": "c16-16-5-aws-step-functions-workflows",
+          "title": "16.5. AWS Step Functions — workflows",
+          "heading_level": 2
+        },
+        {
+          "id": "c16-16-6-amazon-ses-e-amazon-connect",
+          "title": "16.6. Amazon SES e Amazon Connect",
+          "heading_level": 2
+        },
+        {
+          "id": "c16-16-7-escolha-por-intencao",
+          "title": "16.7. Escolha por intenção",
+          "heading_level": 2
+        },
+        {
+          "id": "c16-mais-uma-diferenca-importante-evento-fila-e-stream",
+          "title": "Mais uma diferença importante: evento, fila e stream",
+          "heading_level": 3
+        }
+      ]
+    },
+    {
+      "id": "chapter-17",
+      "original_number": 17,
+      "title": "Analytics, inteligência artificial e machine learning",
+      "module_id": "integracao",
+      "domains": [
+        3
+      ],
+      "source_heading": "# 17. Analytics, inteligência artificial e machine learning",
+      "subheadings": [
+        {
+          "id": "c17-17-1-diferencie-analytics-machine-learning-e-ia-generativa",
+          "title": "17.1. Diferencie Analytics, Machine Learning e IA generativa",
+          "heading_level": 2
+        },
+        {
+          "id": "c17-17-2-amazon-athena",
+          "title": "17.2. Amazon Athena",
+          "heading_level": 2
+        },
+        {
+          "id": "c17-17-3-aws-glue",
+          "title": "17.3. AWS Glue",
+          "heading_level": 2
+        },
+        {
+          "id": "c17-17-4-amazon-kinesis",
+          "title": "17.4. Amazon Kinesis",
+          "heading_level": 2
+        },
+        {
+          "id": "c17-17-5-amazon-redshift",
+          "title": "17.5. Amazon Redshift",
+          "heading_level": 2
+        },
+        {
+          "id": "c17-17-6-amazon-emr",
+          "title": "17.6. Amazon EMR",
+          "heading_level": 2
+        },
+        {
+          "id": "c17-17-7-amazon-quicksight-e-opensearch-service",
+          "title": "17.7. Amazon QuickSight e OpenSearch Service",
+          "heading_level": 2
+        },
+        {
+          "id": "c17-17-8-amazon-sagemaker-ai",
+          "title": "17.8. Amazon SageMaker AI",
+          "heading_level": 2
+        },
+        {
+          "id": "c17-17-9-servicos-de-ia-prontos-memorizar-por-acao",
+          "title": "17.9. Serviços de IA prontos: memorizar por ação",
+          "heading_level": 2
+        },
+        {
+          "id": "c17-comparacoes-extremamente-cobraveis",
+          "title": "Comparações extremamente cobraveis",
+          "heading_level": 3
+        },
+        {
+          "id": "c17-17-10-pipeline-ilustrativo-de-telemetria",
+          "title": "17.10. Pipeline ilustrativo de telemetria",
+          "heading_level": 2
+        }
+      ]
+    },
+    {
+      "id": "chapter-18",
+      "original_number": 18,
+      "title": "Catálogo complementar: todos os serviços oficiais em escopo",
+      "module_id": "integracao",
+      "domains": [
+        3
+      ],
+      "source_heading": "# 18. Catálogo complementar: todos os serviços oficiais em escopo",
+      "subheadings": [
+        {
+          "id": "c18-18-1-analytics",
+          "title": "18.1. Analytics",
+          "heading_level": 2
+        },
+        {
+          "id": "c18-18-2-application-integration",
+          "title": "18.2. Application Integration",
+          "heading_level": 2
+        },
+        {
+          "id": "c18-18-3-business-applications",
+          "title": "18.3. Business Applications",
+          "heading_level": 2
+        },
+        {
+          "id": "c18-18-4-cloud-financial-management",
+          "title": "18.4. Cloud Financial Management",
+          "heading_level": 2
+        },
+        {
+          "id": "c18-18-5-compute",
+          "title": "18.5. Compute",
+          "heading_level": 2
+        },
+        {
+          "id": "c18-18-6-containers",
+          "title": "18.6. Containers",
+          "heading_level": 2
+        },
+        {
+          "id": "c18-18-7-customer-enablement",
+          "title": "18.7. Customer Enablement",
+          "heading_level": 2
+        },
+        {
+          "id": "c18-18-8-database",
+          "title": "18.8. Database",
+          "heading_level": 2
+        },
+        {
+          "id": "c18-18-9-developer-tools",
+          "title": "18.9. Developer Tools",
+          "heading_level": 2
+        },
+        {
+          "id": "c18-18-10-end-user-computing",
+          "title": "18.10. End User Computing",
+          "heading_level": 2
+        },
+        {
+          "id": "c18-18-11-frontend-web-and-mobile",
+          "title": "18.11. Frontend Web and Mobile",
+          "heading_level": 2
+        },
+        {
+          "id": "c18-18-12-internet-of-things",
+          "title": "18.12. Internet of Things",
+          "heading_level": 2
+        },
+        {
+          "id": "c18-18-13-machine-learning",
+          "title": "18.13. Machine Learning",
+          "heading_level": 2
+        },
+        {
+          "id": "c18-18-14-management-and-governance",
+          "title": "18.14. Management and Governance",
+          "heading_level": 2
+        },
+        {
+          "id": "c18-18-15-migration-and-transfer",
+          "title": "18.15. Migration and Transfer",
+          "heading_level": 2
+        },
+        {
+          "id": "c18-18-16-networking-and-content-delivery",
+          "title": "18.16. Networking and Content Delivery",
+          "heading_level": 2
+        },
+        {
+          "id": "c18-18-17-security-identity-and-compliance",
+          "title": "18.17. Security, Identity and Compliance",
+          "heading_level": 2
+        },
+        {
+          "id": "c18-18-18-serverless",
+          "title": "18.18. Serverless",
+          "heading_level": 2
+        },
+        {
+          "id": "c18-18-19-storage",
+          "title": "18.19. Storage",
+          "heading_level": 2
+        },
+        {
+          "id": "c18-18-20-servicos-menos-frequentes-exemplos-para-realmente-entender",
+          "title": "18.20. Serviços menos frequentes: exemplos para realmente entender",
+          "heading_level": 2
+        },
+        {
+          "id": "c18-computacao-de-usuario-final",
+          "title": "Computação de usuário final",
+          "heading_level": 3
+        },
+        {
+          "id": "c18-aws-amplify-e-aplicacoes-web-mobile",
+          "title": "AWS Amplify e aplicações web/mobile",
+          "heading_level": 3
+        },
+        {
+          "id": "c18-iot-core",
+          "title": "IoT Core",
+          "heading_level": 3
+        },
+        {
+          "id": "c18-amazon-connect",
+          "title": "Amazon Connect",
+          "heading_level": 3
+        },
+        {
+          "id": "c18-migration-evaluator-discovery-e-migration-hub",
+          "title": "Migration Evaluator, Discovery e Migration Hub",
+          "heading_level": 3
+        },
+        {
+          "id": "c18-cloud-governance-na-vida-real",
+          "title": "Cloud governance na vida real",
+          "heading_level": 3
+        },
+        {
+          "id": "c18-estrategia-de-memorizacao-do-catalogo",
+          "title": "Estratégia de memorização do catálogo",
+          "heading_level": 3
+        }
+      ]
+    },
+    {
+      "id": "chapter-19",
+      "original_number": 19,
+      "title": "Preços, descontos, Billing e otimização financeira",
+      "module_id": "custos",
+      "domains": [
+        1,
+        4
+      ],
+      "source_heading": "# 19. Preços, descontos, Billing e otimização financeira",
+      "subheadings": [
+        {
+          "id": "c19-19-1-pagamento-por-uso-nao-significa-que-todo-preco-e-por-requisicao",
+          "title": "19.1. Pagamento por uso não significa que todo preço é por requisição",
+          "heading_level": 2
+        },
+        {
+          "id": "c19-19-2-modelos-de-compra-ec2",
+          "title": "19.2. Modelos de compra EC2",
+          "heading_level": 2
+        },
+        {
+          "id": "c19-on-demand",
+          "title": "On-Demand",
+          "heading_level": 3
+        },
+        {
+          "id": "c19-reserved-instances-ris",
+          "title": "Reserved Instances (RIs)",
+          "heading_level": 3
+        },
+        {
+          "id": "c19-spot-instances",
+          "title": "Spot Instances",
+          "heading_level": 3
+        },
+        {
+          "id": "c19-savings-plans",
+          "title": "Savings Plans",
+          "heading_level": 3
+        },
+        {
+          "id": "c19-dedicated-instances-dedicated-hosts",
+          "title": "Dedicated Instances / Dedicated Hosts",
+          "heading_level": 3
+        },
+        {
+          "id": "c19-on-demand-capacity-reservations",
+          "title": "On-Demand Capacity Reservations",
+          "heading_level": 3
+        },
+        {
+          "id": "c19-19-3-tabela-resumo-de-compras",
+          "title": "19.3. Tabela-resumo de compras",
+          "heading_level": 2
+        },
+        {
+          "id": "c19-19-4-exemplo-de-custos-inteiramente-hipotetico",
+          "title": "19.4. Exemplo de custos (inteiramente hipotético)",
+          "heading_level": 2
+        },
+        {
+          "id": "c19-19-5-transferencia-de-dados-e-egress",
+          "title": "19.5. Transferência de dados e egress",
+          "heading_level": 2
+        },
+        {
+          "id": "c19-19-6-s3-custo-por-classe-e-frequencia",
+          "title": "19.6. S3: custo por classe e frequência",
+          "heading_level": 2
+        },
+        {
+          "id": "c19-19-7-ferramentas-financeiras-diferencas-cobradas",
+          "title": "19.7. Ferramentas financeiras: diferenças cobradas",
+          "heading_level": 2
+        },
+        {
+          "id": "c19-aws-pricing-calculator",
+          "title": "AWS Pricing Calculator",
+          "heading_level": 3
+        },
+        {
+          "id": "c19-aws-cost-explorer",
+          "title": "AWS Cost Explorer",
+          "heading_level": 3
+        },
+        {
+          "id": "c19-aws-budgets",
+          "title": "AWS Budgets",
+          "heading_level": 3
+        },
+        {
+          "id": "c19-cost-and-usage-reports-cur",
+          "title": "Cost and Usage Reports (CUR)",
+          "heading_level": 3
+        },
+        {
+          "id": "c19-billing-and-cost-management",
+          "title": "Billing and Cost Management",
+          "heading_level": 3
+        },
+        {
+          "id": "c19-19-8-cost-allocation-tags",
+          "title": "19.8. Cost Allocation Tags",
+          "heading_level": 2
+        },
+        {
+          "id": "c19-19-9-aws-organizations-e-consolidated-billing",
+          "title": "19.9. AWS Organizations e consolidated billing",
+          "heading_level": 2
+        },
+        {
+          "id": "c19-19-10-aws-free-tier-versao-atualizada",
+          "title": "19.10. AWS Free Tier: versão atualizada",
+          "heading_level": 2
+        },
+        {
+          "id": "c19-19-11-finops-e-otimizacao-continua",
+          "title": "19.11. FinOps e otimização contínua",
+          "heading_level": 2
+        }
+      ]
+    },
+    {
+      "id": "chapter-20",
+      "original_number": 20,
+      "title": "Suporte, documentação, parceiros e AWS Health",
+      "module_id": "custos",
+      "domains": [
+        4
+      ],
+      "source_heading": "# 20. Suporte, documentação, parceiros e AWS Health",
+      "subheadings": [
+        {
+          "id": "c20-20-1-tipos-de-recursos-para-obter-ajuda",
+          "title": "20.1. Tipos de recursos para obter ajuda",
+          "heading_level": 2
+        },
+        {
+          "id": "c20-20-2-isv-versus-system-integrator",
+          "title": "20.2. ISV versus System Integrator",
+          "heading_level": 2
+        },
+        {
+          "id": "c20-20-3-planos-de-suporte-aws-transicao-em-2026",
+          "title": "20.3. Planos de suporte AWS: transição em 2026",
+          "heading_level": 2
+        },
+        {
+          "id": "c20-visao-de-servicos-atuais-outubro-de-2026",
+          "title": "Visão de serviços atuais (outubro de 2026)",
+          "heading_level": 3
+        },
+        {
+          "id": "c20-como-eram-descritos-os-planos-tradicionais",
+          "title": "Como eram descritos os planos tradicionais",
+          "heading_level": 3
+        },
+        {
+          "id": "c20-20-4-aws-trusted-advisor",
+          "title": "20.4. AWS Trusted Advisor",
+          "heading_level": 2
+        },
+        {
+          "id": "c20-20-5-aws-health-dashboard-e-health-api",
+          "title": "20.5. AWS Health Dashboard e Health API",
+          "heading_level": 2
+        },
+        {
+          "id": "c20-20-6-aws-trust-safety",
+          "title": "20.6. AWS Trust & Safety",
+          "heading_level": 2
+        }
+      ]
+    },
+    {
+      "id": "chapter-21",
+      "original_number": 21,
+      "title": "Estudo de caso: uma plataforma web na AWS",
+      "module_id": "revisao",
+      "domains": [
+        1,
+        2,
+        3,
+        4
+      ],
+      "source_heading": "# 21. Estudo de caso: uma plataforma web na AWS",
+      "subheadings": [
+        {
+          "id": "c21-21-1-requisitos-do-cenario",
+          "title": "21.1. Requisitos do cenário",
+          "heading_level": 2
+        },
+        {
+          "id": "c21-21-2-arquitetura-conceitual",
+          "title": "21.2. Arquitetura conceitual",
+          "heading_level": 2
+        },
+        {
+          "id": "c21-por-que-cada-peca-existe",
+          "title": "Por que cada peça existe?",
+          "heading_level": 3
+        },
+        {
+          "id": "c21-21-3-tres-decisoes-arquiteturais-explicadas",
+          "title": "21.3. Três decisões arquiteturais explicadas",
+          "heading_level": 2
+        },
+        {
+          "id": "c21-decisao-a-por-que-nao-uma-unica-instancia-ec2-enorme",
+          "title": "Decisão A — por que não uma única instância EC2 enorme?",
+          "heading_level": 3
+        },
+        {
+          "id": "c21-decisao-b-por-que-a-fila-melhora-a-experiencia",
+          "title": "Decisão B — por que a fila melhora a experiência?",
+          "heading_level": 3
+        },
+        {
+          "id": "c21-decisao-c-como-proteger-certificados-e-dados-de-alunos",
+          "title": "Decisão C — como proteger certificados e dados de alunos?",
+          "heading_level": 3
+        },
+        {
+          "id": "c21-21-4-falhas-simuladas-e-resposta-correta",
+          "title": "21.4. Falhas simuladas e resposta correta",
+          "heading_level": 2
+        },
+        {
+          "id": "c21-21-5-exercicio-de-raciocinio-controle-de-acesso",
+          "title": "21.5. Exercício de raciocínio: controle de acesso",
+          "heading_level": 2
+        },
+        {
+          "id": "c21-21-6-exercicio-financeiro-operar-08h-21h",
+          "title": "21.6. Exercício financeiro: operar 08h–21h",
+          "heading_level": 2
+        }
+      ]
+    },
+    {
+      "id": "chapter-22",
+      "original_number": 22,
+      "title": "Comparativos e pegadinhas fundamentais",
+      "module_id": "revisao",
+      "domains": [
+        1,
+        2,
+        3,
+        4
+      ],
+      "source_heading": "# 22. Comparativos e pegadinhas fundamentais",
+      "subheadings": [
+        {
+          "id": "c22-22-1-matriz-de-conceitos-parecidos",
+          "title": "22.1. Matriz de conceitos parecidos",
+          "heading_level": 2
+        },
+        {
+          "id": "c22-22-2-nove-armadilhas-em-frases",
+          "title": "22.2. Nove armadilhas em frases",
+          "heading_level": 2
+        },
+        {
+          "id": "c22-22-3-trinta-pistas-de-enunciados",
+          "title": "22.3. Trinta pistas de enunciados",
+          "heading_level": 2
+        }
+      ]
+    },
+    {
+      "id": "chapter-23",
+      "original_number": 23,
+      "title": "Simulado original comentado: 80 questões",
+      "module_id": "revisao",
+      "domains": [
+        1,
+        2,
+        3,
+        4
+      ],
+      "source_heading": "# 23. Simulado original comentado: 80 questões",
+      "subheadings": [
+        {
+          "id": "c23-instrucoes",
+          "title": "Instruções",
+          "heading_level": 3
+        },
+        {
+          "id": "c23-parte-a-questoes",
+          "title": "Parte A — questões",
+          "heading_level": 2
+        },
+        {
+          "id": "c23-q01-dominio-1-escolha-unica",
+          "title": "Q01 — Domínio 1 — ESCOLHA ÚNICA",
+          "heading_level": 3
+        },
+        {
+          "id": "c23-q02-dominio-1-escolha-unica",
+          "title": "Q02 — Domínio 1 — ESCOLHA ÚNICA",
+          "heading_level": 3
+        },
+        {
+          "id": "c23-q03-dominio-1-escolha-unica",
+          "title": "Q03 — Domínio 1 — ESCOLHA ÚNICA",
+          "heading_level": 3
+        },
+        {
+          "id": "c23-q04-dominio-1-escolha-unica",
+          "title": "Q04 — Domínio 1 — ESCOLHA ÚNICA",
+          "heading_level": 3
+        },
+        {
+          "id": "c23-q05-dominio-1-escolha-unica",
+          "title": "Q05 — Domínio 1 — ESCOLHA ÚNICA",
+          "heading_level": 3
+        },
+        {
+          "id": "c23-q06-dominio-1-escolha-unica",
+          "title": "Q06 — Domínio 1 — ESCOLHA ÚNICA",
+          "heading_level": 3
+        },
+        {
+          "id": "c23-q07-dominio-1-escolha-unica",
+          "title": "Q07 — Domínio 1 — ESCOLHA ÚNICA",
+          "heading_level": 3
+        },
+        {
+          "id": "c23-q08-dominio-1-escolha-unica",
+          "title": "Q08 — Domínio 1 — ESCOLHA ÚNICA",
+          "heading_level": 3
+        },
+        {
+          "id": "c23-q09-dominio-1-escolha-unica",
+          "title": "Q09 — Domínio 1 — ESCOLHA ÚNICA",
+          "heading_level": 3
+        },
+        {
+          "id": "c23-q10-dominio-1-escolha-unica",
+          "title": "Q10 — Domínio 1 — ESCOLHA ÚNICA",
+          "heading_level": 3
+        },
+        {
+          "id": "c23-q11-dominio-1-escolha-unica",
+          "title": "Q11 — Domínio 1 — ESCOLHA ÚNICA",
+          "heading_level": 3
+        },
+        {
+          "id": "c23-q12-dominio-1-escolha-unica",
+          "title": "Q12 — Domínio 1 — ESCOLHA ÚNICA",
+          "heading_level": 3
+        },
+        {
+          "id": "c23-q13-dominio-1-escolha-unica",
+          "title": "Q13 — Domínio 1 — ESCOLHA ÚNICA",
+          "heading_level": 3
+        },
+        {
+          "id": "c23-q14-dominio-1-escolha-unica",
+          "title": "Q14 — Domínio 1 — ESCOLHA ÚNICA",
+          "heading_level": 3
+        },
+        {
+          "id": "c23-q15-dominio-1-escolha-unica",
+          "title": "Q15 — Domínio 1 — ESCOLHA ÚNICA",
+          "heading_level": 3
+        },
+        {
+          "id": "c23-q16-dominio-1-escolha-unica",
+          "title": "Q16 — Domínio 1 — ESCOLHA ÚNICA",
+          "heading_level": 3
+        },
+        {
+          "id": "c23-q17-dominio-1-escolha-unica",
+          "title": "Q17 — Domínio 1 — ESCOLHA ÚNICA",
+          "heading_level": 3
+        },
+        {
+          "id": "c23-q18-dominio-1-multipla-resposta",
+          "title": "Q18 — Domínio 1 — MÚLTIPLA RESPOSTA",
+          "heading_level": 3
+        },
+        {
+          "id": "c23-q19-dominio-1-escolha-unica",
+          "title": "Q19 — Domínio 1 — ESCOLHA ÚNICA",
+          "heading_level": 3
+        },
+        {
+          "id": "c23-q20-dominio-1-escolha-unica",
+          "title": "Q20 — Domínio 1 — ESCOLHA ÚNICA",
+          "heading_level": 3
+        },
+        {
+          "id": "c23-q21-dominio-2-escolha-unica",
+          "title": "Q21 — Domínio 2 — ESCOLHA ÚNICA",
+          "heading_level": 3
+        },
+        {
+          "id": "c23-q22-dominio-2-escolha-unica",
+          "title": "Q22 — Domínio 2 — ESCOLHA ÚNICA",
+          "heading_level": 3
+        },
+        {
+          "id": "c23-q23-dominio-2-escolha-unica",
+          "title": "Q23 — Domínio 2 — ESCOLHA ÚNICA",
+          "heading_level": 3
+        },
+        {
+          "id": "c23-q24-dominio-2-escolha-unica",
+          "title": "Q24 — Domínio 2 — ESCOLHA ÚNICA",
+          "heading_level": 3
+        },
+        {
+          "id": "c23-q25-dominio-2-escolha-unica",
+          "title": "Q25 — Domínio 2 — ESCOLHA ÚNICA",
+          "heading_level": 3
+        },
+        {
+          "id": "c23-q26-dominio-2-escolha-unica",
+          "title": "Q26 — Domínio 2 — ESCOLHA ÚNICA",
+          "heading_level": 3
+        },
+        {
+          "id": "c23-q27-dominio-2-escolha-unica",
+          "title": "Q27 — Domínio 2 — ESCOLHA ÚNICA",
+          "heading_level": 3
+        },
+        {
+          "id": "c23-q28-dominio-2-escolha-unica",
+          "title": "Q28 — Domínio 2 — ESCOLHA ÚNICA",
+          "heading_level": 3
+        },
+        {
+          "id": "c23-q29-dominio-2-escolha-unica",
+          "title": "Q29 — Domínio 2 — ESCOLHA ÚNICA",
+          "heading_level": 3
+        },
+        {
+          "id": "c23-q30-dominio-2-escolha-unica",
+          "title": "Q30 — Domínio 2 — ESCOLHA ÚNICA",
+          "heading_level": 3
+        },
+        {
+          "id": "c23-q31-dominio-2-escolha-unica",
+          "title": "Q31 — Domínio 2 — ESCOLHA ÚNICA",
+          "heading_level": 3
+        },
+        {
+          "id": "c23-q32-dominio-2-escolha-unica",
+          "title": "Q32 — Domínio 2 — ESCOLHA ÚNICA",
+          "heading_level": 3
+        },
+        {
+          "id": "c23-q33-dominio-2-escolha-unica",
+          "title": "Q33 — Domínio 2 — ESCOLHA ÚNICA",
+          "heading_level": 3
+        },
+        {
+          "id": "c23-q34-dominio-2-escolha-unica",
+          "title": "Q34 — Domínio 2 — ESCOLHA ÚNICA",
+          "heading_level": 3
+        },
+        {
+          "id": "c23-q35-dominio-2-escolha-unica",
+          "title": "Q35 — Domínio 2 — ESCOLHA ÚNICA",
+          "heading_level": 3
+        },
+        {
+          "id": "c23-q36-dominio-2-escolha-unica",
+          "title": "Q36 — Domínio 2 — ESCOLHA ÚNICA",
+          "heading_level": 3
+        },
+        {
+          "id": "c23-q37-dominio-2-escolha-unica",
+          "title": "Q37 — Domínio 2 — ESCOLHA ÚNICA",
+          "heading_level": 3
+        },
+        {
+          "id": "c23-q38-dominio-2-escolha-unica",
+          "title": "Q38 — Domínio 2 — ESCOLHA ÚNICA",
+          "heading_level": 3
+        },
+        {
+          "id": "c23-q39-dominio-2-escolha-unica",
+          "title": "Q39 — Domínio 2 — ESCOLHA ÚNICA",
+          "heading_level": 3
+        },
+        {
+          "id": "c23-q40-dominio-2-escolha-unica",
+          "title": "Q40 — Domínio 2 — ESCOLHA ÚNICA",
+          "heading_level": 3
+        },
+        {
+          "id": "c23-q41-dominio-2-escolha-unica",
+          "title": "Q41 — Domínio 2 — ESCOLHA ÚNICA",
+          "heading_level": 3
+        },
+        {
+          "id": "c23-q42-dominio-2-escolha-unica",
+          "title": "Q42 — Domínio 2 — ESCOLHA ÚNICA",
+          "heading_level": 3
+        },
+        {
+          "id": "c23-q43-dominio-2-escolha-unica",
+          "title": "Q43 — Domínio 2 — ESCOLHA ÚNICA",
+          "heading_level": 3
+        },
+        {
+          "id": "c23-q44-dominio-2-multipla-resposta",
+          "title": "Q44 — Domínio 2 — MÚLTIPLA RESPOSTA",
+          "heading_level": 3
+        },
+        {
+          "id": "c23-q45-dominio-3-escolha-unica",
+          "title": "Q45 — Domínio 3 — ESCOLHA ÚNICA",
+          "heading_level": 3
+        },
+        {
+          "id": "c23-q46-dominio-3-escolha-unica",
+          "title": "Q46 — Domínio 3 — ESCOLHA ÚNICA",
+          "heading_level": 3
+        },
+        {
+          "id": "c23-q47-dominio-3-escolha-unica",
+          "title": "Q47 — Domínio 3 — ESCOLHA ÚNICA",
+          "heading_level": 3
+        },
+        {
+          "id": "c23-q48-dominio-3-escolha-unica",
+          "title": "Q48 — Domínio 3 — ESCOLHA ÚNICA",
+          "heading_level": 3
+        },
+        {
+          "id": "c23-q49-dominio-3-multipla-resposta",
+          "title": "Q49 — Domínio 3 — MÚLTIPLA RESPOSTA",
+          "heading_level": 3
+        },
+        {
+          "id": "c23-q50-dominio-3-escolha-unica",
+          "title": "Q50 — Domínio 3 — ESCOLHA ÚNICA",
+          "heading_level": 3
+        },
+        {
+          "id": "c23-q51-dominio-3-escolha-unica",
+          "title": "Q51 — Domínio 3 — ESCOLHA ÚNICA",
+          "heading_level": 3
+        },
+        {
+          "id": "c23-q52-dominio-3-escolha-unica",
+          "title": "Q52 — Domínio 3 — ESCOLHA ÚNICA",
+          "heading_level": 3
+        },
+        {
+          "id": "c23-q53-dominio-3-escolha-unica",
+          "title": "Q53 — Domínio 3 — ESCOLHA ÚNICA",
+          "heading_level": 3
+        },
+        {
+          "id": "c23-q54-dominio-3-escolha-unica",
+          "title": "Q54 — Domínio 3 — ESCOLHA ÚNICA",
+          "heading_level": 3
+        },
+        {
+          "id": "c23-q55-dominio-3-escolha-unica",
+          "title": "Q55 — Domínio 3 — ESCOLHA ÚNICA",
+          "heading_level": 3
+        },
+        {
+          "id": "c23-q56-dominio-3-escolha-unica",
+          "title": "Q56 — Domínio 3 — ESCOLHA ÚNICA",
+          "heading_level": 3
+        },
+        {
+          "id": "c23-q57-dominio-3-escolha-unica",
+          "title": "Q57 — Domínio 3 — ESCOLHA ÚNICA",
+          "heading_level": 3
+        },
+        {
+          "id": "c23-q58-dominio-3-escolha-unica",
+          "title": "Q58 — Domínio 3 — ESCOLHA ÚNICA",
+          "heading_level": 3
+        },
+        {
+          "id": "c23-q59-dominio-3-escolha-unica",
+          "title": "Q59 — Domínio 3 — ESCOLHA ÚNICA",
+          "heading_level": 3
+        },
+        {
+          "id": "c23-q60-dominio-3-escolha-unica",
+          "title": "Q60 — Domínio 3 — ESCOLHA ÚNICA",
+          "heading_level": 3
+        },
+        {
+          "id": "c23-q61-dominio-3-escolha-unica",
+          "title": "Q61 — Domínio 3 — ESCOLHA ÚNICA",
+          "heading_level": 3
+        },
+        {
+          "id": "c23-q62-dominio-3-escolha-unica",
+          "title": "Q62 — Domínio 3 — ESCOLHA ÚNICA",
+          "heading_level": 3
+        },
+        {
+          "id": "c23-q63-dominio-3-escolha-unica",
+          "title": "Q63 — Domínio 3 — ESCOLHA ÚNICA",
+          "heading_level": 3
+        },
+        {
+          "id": "c23-q64-dominio-3-escolha-unica",
+          "title": "Q64 — Domínio 3 — ESCOLHA ÚNICA",
+          "heading_level": 3
+        },
+        {
+          "id": "c23-q65-dominio-3-escolha-unica",
+          "title": "Q65 — Domínio 3 — ESCOLHA ÚNICA",
+          "heading_level": 3
+        },
+        {
+          "id": "c23-q66-dominio-3-escolha-unica",
+          "title": "Q66 — Domínio 3 — ESCOLHA ÚNICA",
+          "heading_level": 3
+        },
+        {
+          "id": "c23-q67-dominio-3-escolha-unica",
+          "title": "Q67 — Domínio 3 — ESCOLHA ÚNICA",
+          "heading_level": 3
+        },
+        {
+          "id": "c23-q68-dominio-3-escolha-unica",
+          "title": "Q68 — Domínio 3 — ESCOLHA ÚNICA",
+          "heading_level": 3
+        },
+        {
+          "id": "c23-q69-dominio-3-multipla-resposta",
+          "title": "Q69 — Domínio 3 — MÚLTIPLA RESPOSTA",
+          "heading_level": 3
+        },
+        {
+          "id": "c23-q70-dominio-3-escolha-unica",
+          "title": "Q70 — Domínio 3 — ESCOLHA ÚNICA",
+          "heading_level": 3
+        },
+        {
+          "id": "c23-q71-dominio-3-multipla-resposta",
+          "title": "Q71 — Domínio 3 — MÚLTIPLA RESPOSTA",
+          "heading_level": 3
+        },
+        {
+          "id": "c23-q72-dominio-4-escolha-unica",
+          "title": "Q72 — Domínio 4 — ESCOLHA ÚNICA",
+          "heading_level": 3
+        },
+        {
+          "id": "c23-q73-dominio-4-escolha-unica",
+          "title": "Q73 — Domínio 4 — ESCOLHA ÚNICA",
+          "heading_level": 3
+        },
+        {
+          "id": "c23-q74-dominio-4-escolha-unica",
+          "title": "Q74 — Domínio 4 — ESCOLHA ÚNICA",
+          "heading_level": 3
+        },
+        {
+          "id": "c23-q75-dominio-4-escolha-unica",
+          "title": "Q75 — Domínio 4 — ESCOLHA ÚNICA",
+          "heading_level": 3
+        },
+        {
+          "id": "c23-q76-dominio-4-escolha-unica",
+          "title": "Q76 — Domínio 4 — ESCOLHA ÚNICA",
+          "heading_level": 3
+        },
+        {
+          "id": "c23-q77-dominio-4-escolha-unica",
+          "title": "Q77 — Domínio 4 — ESCOLHA ÚNICA",
+          "heading_level": 3
+        },
+        {
+          "id": "c23-q78-dominio-4-escolha-unica",
+          "title": "Q78 — Domínio 4 — ESCOLHA ÚNICA",
+          "heading_level": 3
+        },
+        {
+          "id": "c23-q79-dominio-4-escolha-unica",
+          "title": "Q79 — Domínio 4 — ESCOLHA ÚNICA",
+          "heading_level": 3
+        },
+        {
+          "id": "c23-q80-dominio-4-escolha-unica",
+          "title": "Q80 — Domínio 4 — ESCOLHA ÚNICA",
+          "heading_level": 3
+        },
+        {
+          "id": "c23-parte-b-gabarito-rapido",
+          "title": "Parte B — gabarito rápido",
+          "heading_level": 2
+        },
+        {
+          "id": "c23-parte-c-gabarito-comentado",
+          "title": "Parte C — gabarito comentado",
+          "heading_level": 2
+        }
+      ]
+    },
+    {
+      "id": "chapter-24",
+      "original_number": 24,
+      "title": "Flashcards para revisão ativa",
+      "module_id": "revisao",
+      "domains": [
+        1,
+        2,
+        3,
+        4
+      ],
+      "source_heading": "# 24. Flashcards para revisão ativa",
+      "subheadings": [
+        {
+          "id": "c24-fundamentos",
+          "title": "Fundamentos",
+          "heading_level": 2
+        },
+        {
+          "id": "c24-arquitetura",
+          "title": "Arquitetura",
+          "heading_level": 2
+        },
+        {
+          "id": "c24-seguranca",
+          "title": "Segurança",
+          "heading_level": 2
+        },
+        {
+          "id": "c24-computacao",
+          "title": "Computação",
+          "heading_level": 2
+        },
+        {
+          "id": "c24-redes",
+          "title": "Redes",
+          "heading_level": 2
+        },
+        {
+          "id": "c24-storage",
+          "title": "Storage",
+          "heading_level": 2
+        },
+        {
+          "id": "c24-bancos",
+          "title": "Bancos",
+          "heading_level": 2
+        },
+        {
+          "id": "c24-integracao-e-dados",
+          "title": "Integração e dados",
+          "heading_level": 2
+        },
+        {
+          "id": "c24-ia",
+          "title": "IA",
+          "heading_level": 2
+        },
+        {
+          "id": "c24-custos-e-suporte",
+          "title": "Custos e suporte",
+          "heading_level": 2
+        }
+      ]
+    },
+    {
+      "id": "chapter-25",
+      "original_number": 25,
+      "title": "Laboratórios, cronograma e critérios de prontidão",
+      "module_id": "revisao",
+      "domains": [
+        1,
+        2,
+        3,
+        4
+      ],
+      "source_heading": "# 25. Laboratórios, cronograma e critérios de prontidão",
+      "subheadings": [
+        {
+          "id": "c25-25-1-laboratorio-1-desenhe-a-nuvem-e-encontre-pontos-de-falha",
+          "title": "25.1. Laboratório 1 — desenhe a nuvem e encontre pontos de falha",
+          "heading_level": 2
+        },
+        {
+          "id": "c25-25-2-laboratorio-2-responsabilidade-compartilhada-em-cinco-cenarios",
+          "title": "25.2. Laboratório 2 — responsabilidade compartilhada em cinco cenários",
+          "heading_level": 2
+        },
+        {
+          "id": "c25-25-3-laboratorio-3-avalie-uma-politica-iam",
+          "title": "25.3. Laboratório 3 — avalie uma política IAM",
+          "heading_level": 2
+        },
+        {
+          "id": "c25-25-4-laboratorio-4-faca-um-diagrama-de-vpc",
+          "title": "25.4. Laboratório 4 — faça um diagrama de VPC",
+          "heading_level": 2
+        },
+        {
+          "id": "c25-25-5-laboratorio-5-classifique-cenarios-de-armazenamento",
+          "title": "25.5. Laboratório 5 — classifique cenários de armazenamento",
+          "heading_level": 2
+        },
+        {
+          "id": "c25-25-6-laboratorio-6-escolha-o-servico-sem-citar-marcas",
+          "title": "25.6. Laboratório 6 — escolha o serviço sem citar marcas",
+          "heading_level": 2
+        },
+        {
+          "id": "c25-25-7-laboratorio-7-prepare-uma-estimativa-de-custo-sem-gastar",
+          "title": "25.7. Laboratório 7 — prepare uma estimativa de custo sem gastar",
+          "heading_level": 2
+        },
+        {
+          "id": "c25-25-8-laboratorio-8-faca-seu-proprio-threat-model-basico",
+          "title": "25.8. Laboratório 8 — faça seu próprio threat model básico",
+          "heading_level": 2
+        },
+        {
+          "id": "c25-25-9-plano-de-estudos-de-cinco-semanas",
+          "title": "25.9. Plano de estudos de cinco semanas",
+          "heading_level": 2
+        },
+        {
+          "id": "c25-semana-1-construir-os-alicerces",
+          "title": "Semana 1 — Construir os alicerces",
+          "heading_level": 3
+        },
+        {
+          "id": "c25-semana-2-seguranca-peso-de-30",
+          "title": "Semana 2 — Segurança (peso de 30%)",
+          "heading_level": 3
+        },
+        {
+          "id": "c25-semana-3-servicos-core-peso-elevado",
+          "title": "Semana 3 — Serviços core (peso elevado)",
+          "heading_level": 3
+        },
+        {
+          "id": "c25-semana-4-servicos-complementares-e-cobranca",
+          "title": "Semana 4 — Serviços complementares e cobrança",
+          "heading_level": 3
+        },
+        {
+          "id": "c25-semana-5-consolidacao",
+          "title": "Semana 5 — Consolidação",
+          "heading_level": 3
+        },
+        {
+          "id": "c25-regra-de-recuperacao-espacada",
+          "title": "Regra de recuperação espaçada",
+          "heading_level": 3
+        },
+        {
+          "id": "c25-25-10-como-saber-se-esta-pronto-para-marcar-a-prova",
+          "title": "25.10. Como saber se está pronto para marcar a prova?",
+          "heading_level": 2
+        }
+      ]
+    },
+    {
+      "id": "chapter-26",
+      "original_number": 26,
+      "title": "Mapa de cobertura CLF-C02 e fontes oficiais",
+      "module_id": "revisao",
+      "domains": [
+        1,
+        2,
+        3,
+        4
+      ],
+      "source_heading": "# 26. Mapa de cobertura CLF-C02 e fontes oficiais",
+      "subheadings": [
+        {
+          "id": "c26-26-1-auditoria-de-cobertura-por-declaracao-de-tarefa",
+          "title": "26.1. Auditoria de cobertura por declaração de tarefa",
+          "heading_level": 2
+        },
+        {
+          "id": "c26-26-2-fontes-oficiais-utilizadas-e-recomendadas",
+          "title": "26.2. Fontes oficiais utilizadas e recomendadas",
+          "heading_level": 2
+        },
+        {
+          "id": "c26-edital-tarefas-e-relacao-de-servicos-fonte-primaria-da-apostila",
+          "title": "Edital, tarefas e relação de serviços (fonte primária da apostila)",
+          "heading_level": 3
+        },
+        {
+          "id": "c26-principios-seguranca-e-infraestrutura",
+          "title": "Princípios, segurança e infraestrutura",
+          "heading_level": 3
+        },
+        {
+          "id": "c26-custos-e-suporte-atualizados",
+          "title": "Custos e suporte atualizados",
+          "heading_level": 3
+        },
+        {
+          "id": "c26-26-3-limites-deste-material-e-como-atualiza-lo",
+          "title": "26.3. Limites deste material e como atualizá-lo",
+          "heading_level": 2
+        },
+        {
+          "id": "c26-mensagem-final-para-estudar-com-entendimento",
+          "title": "Mensagem final para estudar com entendimento",
+          "heading_level": 2
+        }
+      ]
+    }
+  ]
+}

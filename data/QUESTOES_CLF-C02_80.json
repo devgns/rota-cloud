@@ -1,0 +1,2422 @@
+{
+  "metadata": {
+    "source": "Apostila_AWS_Cloud_Practitioner_CLF-C02_Completa.md",
+    "sha256": "3287b9304c5818488bfe8b34a5cfa981435a8fc3dc8ee0f41293e66b1c70799d",
+    "count": 80,
+    "domains": {
+      "1": 20,
+      "2": 24,
+      "3": 27,
+      "4": 9
+    },
+    "status": "authorial, not AWS official",
+    "expected_selection_mode": "single or multiple as indicated"
+  },
+  "questions": [
+    {
+      "id": "Q01",
+      "source_chapter_id": "chapter-23",
+      "domain": 1,
+      "kind": "single",
+      "selection_count": 1,
+      "statement_markdown": "Um e-commerce aumenta automaticamente de 2 para 12 instâncias no pico e retorna para 2 após a demanda. Qual benefício cloud é melhor demonstrado?",
+      "options": [
+        {
+          "id": "A",
+          "text": "Residência de dados"
+        },
+        {
+          "id": "B",
+          "text": "Agilidade contratual"
+        },
+        {
+          "id": "C",
+          "text": "Criptografia"
+        },
+        {
+          "id": "D",
+          "text": "Elasticidade"
+        }
+      ],
+      "correct_option_ids": [
+        "D"
+      ],
+      "explanation_markdown": "Elasticidade é o ajuste dinâmico de recursos conforme a demanda. Escalabilidade é capacidade de crescer; aqui há crescimento e redução automática."
+    },
+    {
+      "id": "Q02",
+      "source_chapter_id": "chapter-23",
+      "domain": 1,
+      "kind": "single",
+      "selection_count": 1,
+      "statement_markdown": "Substituir permanentemente uma instância de 2 vCPUs por outra com 16 vCPUs representa principalmente:",
+      "options": [
+        {
+          "id": "A",
+          "text": "Escala horizontal"
+        },
+        {
+          "id": "B",
+          "text": "Failover Multi-AZ"
+        },
+        {
+          "id": "C",
+          "text": "Escala vertical"
+        },
+        {
+          "id": "D",
+          "text": "CDN"
+        }
+      ],
+      "correct_option_ids": [
+        "C"
+      ],
+      "explanation_markdown": "Scale up aumenta a capacidade da mesma unidade. Scale out adicionaria outras instâncias."
+    },
+    {
+      "id": "Q03",
+      "source_chapter_id": "chapter-23",
+      "domain": 1,
+      "kind": "single",
+      "selection_count": 1,
+      "statement_markdown": "Uma solução guarda dados de forma muito durável, mas sua aplicação fica fora do ar quando a única VM falha. Qual explicação é correta?",
+      "options": [
+        {
+          "id": "A",
+          "text": "Objeto durável implica HA"
+        },
+        {
+          "id": "B",
+          "text": "Durabilidade de dados não garante disponibilidade da aplicação"
+        },
+        {
+          "id": "C",
+          "text": "Durabilidade e disponibilidade são idênticas"
+        },
+        {
+          "id": "D",
+          "text": "A única forma de obter HA é contratar um Dedicated Host"
+        }
+      ],
+      "correct_option_ids": [
+        "B"
+      ],
+      "explanation_markdown": "Durabilidade é preservação dos dados; disponibilidade é conseguir usar o serviço. Uma VM única segue sendo ponto de falha."
+    },
+    {
+      "id": "Q04",
+      "source_chapter_id": "chapter-23",
+      "domain": 1,
+      "kind": "single",
+      "selection_count": 1,
+      "statement_markdown": "Uma empresa quer reduzir o impacto da falha de uma AZ sem implantar em outra Região. Qual é a estratégia inicial mais coerente?",
+      "options": [
+        {
+          "id": "A",
+          "text": "Implantar em AZs diferentes da mesma Região"
+        },
+        {
+          "id": "B",
+          "text": "Criar apenas mais buckets no mesmo local"
+        },
+        {
+          "id": "C",
+          "text": "Usar somente mais CPU numa VM"
+        },
+        {
+          "id": "D",
+          "text": "Trocar DNS por firewall"
+        }
+      ],
+      "correct_option_ids": [
+        "A"
+      ],
+      "explanation_markdown": "Multi-AZ distribui componentes por domínios de falha dentro da Região. A aplicação toda precisa ser preparada para redundância."
+    },
+    {
+      "id": "Q05",
+      "source_chapter_id": "chapter-23",
+      "domain": 1,
+      "kind": "single",
+      "selection_count": 1,
+      "statement_markdown": "Qual necessidade mais diretamente justifica arquitetura Multi-Region?",
+      "options": [
+        {
+          "id": "A",
+          "text": "Melhorar velocidade de um único disco local"
+        },
+        {
+          "id": "B",
+          "text": "Eliminar a necessidade de IAM"
+        },
+        {
+          "id": "C",
+          "text": "Recuperar de desastre regional e atender usuários em geografias distintas"
+        },
+        {
+          "id": "D",
+          "text": "Evitar totalmente custos de transferência"
+        }
+      ],
+      "correct_option_ids": [
+        "C"
+      ],
+      "explanation_markdown": "Multi-Region pode apoiar DR regional, residência de dados e proximidade; envolve complexidade e custos."
+    },
+    {
+      "id": "Q06",
+      "source_chapter_id": "chapter-23",
+      "domain": 1,
+      "kind": "single",
+      "selection_count": 1,
+      "statement_markdown": "O que melhor descreve uma Edge Location em comparação com uma AZ?",
+      "options": [
+        {
+          "id": "A",
+          "text": "Edge Location é o datacenter de um banco RDS"
+        },
+        {
+          "id": "B",
+          "text": "Uma Região contém exatamente uma Edge Location"
+        },
+        {
+          "id": "C",
+          "text": "É um local da rede de borda usado por serviços como CDN"
+        },
+        {
+          "id": "D",
+          "text": "Edge Location substitui VPC"
+        }
+      ],
+      "correct_option_ids": [
+        "C"
+      ],
+      "explanation_markdown": "Edge locations aproximam distribuição de conteúdo e funções de borda. AZ é domínio de falha de infraestrutura regional."
+    },
+    {
+      "id": "Q07",
+      "source_chapter_id": "chapter-23",
+      "domain": 1,
+      "kind": "single",
+      "selection_count": 1,
+      "statement_markdown": "A troca de compra de servidores físicos por recursos contratados conforme uso ilustra qual movimento econômico típico?",
+      "options": [
+        {
+          "id": "A",
+          "text": "De disponibilidade para latência"
+        },
+        {
+          "id": "B",
+          "text": "De CAPEX para despesas operacionais variáveis"
+        },
+        {
+          "id": "C",
+          "text": "De conformidade para criptografia"
+        },
+        {
+          "id": "D",
+          "text": "De OPEX para CAPEX"
+        }
+      ],
+      "correct_option_ids": [
+        "B"
+      ],
+      "explanation_markdown": "A nuvem tende a trocar parte de investimentos iniciais em hardware por despesas ligadas ao consumo. Tratamento contábil específico depende do contrato."
+    },
+    {
+      "id": "Q08",
+      "source_chapter_id": "chapter-23",
+      "domain": 1,
+      "kind": "single",
+      "selection_count": 1,
+      "statement_markdown": "Na análise de TCO para migrar um banco on-premises à AWS, o que deve ser incluído?",
+      "options": [
+        {
+          "id": "A",
+          "text": "Custos de energia, manutenção, licenças, pessoas, migração e operação"
+        },
+        {
+          "id": "B",
+          "text": "Somente o hardware antigo"
+        },
+        {
+          "id": "C",
+          "text": "Somente a mensalidade do novo banco"
+        },
+        {
+          "id": "D",
+          "text": "Apenas a tarifa de armazenamento"
+        }
+      ],
+      "correct_option_ids": [
+        "A"
+      ],
+      "explanation_markdown": "TCO incorpora custos diretos/indiretos ao longo do ciclo de vida, e não somente a etiqueta de preço do serviço."
+    },
+    {
+      "id": "Q09",
+      "source_chapter_id": "chapter-23",
+      "domain": 1,
+      "kind": "single",
+      "selection_count": 1,
+      "statement_markdown": "Por que economias de escala são um benefício potencial da nuvem?",
+      "options": [
+        {
+          "id": "A",
+          "text": "Todas as máquinas ficam ociosas por padrão"
+        },
+        {
+          "id": "B",
+          "text": "Provedores compram e operam infraestrutura em grande escala"
+        },
+        {
+          "id": "C",
+          "text": "Cada cliente passa a ter datacenter próprio"
+        },
+        {
+          "id": "D",
+          "text": "Tráfego entre Regiões é sempre grátis"
+        }
+      ],
+      "correct_option_ids": [
+        "B"
+      ],
+      "explanation_markdown": "Grandes volumes podem reduzir custos unitários e melhorar eficiência, mas não tornam toda migração automaticamente barata."
+    },
+    {
+      "id": "Q10",
+      "source_chapter_id": "chapter-23",
+      "domain": 1,
+      "kind": "single",
+      "selection_count": 1,
+      "statement_markdown": "Qual conjunto contém somente perspectivas do AWS Cloud Adoption Framework?",
+      "options": [
+        {
+          "id": "A",
+          "text": "Business, People, Governance, Platform, Security, Operations"
+        },
+        {
+          "id": "B",
+          "text": "Security, Reliability, Sustainability, Cost Optimization, Operational Excellence, Performance Efficiency"
+        },
+        {
+          "id": "C",
+          "text": "Cost Explorer, KMS, IAM, WAF, Shield, GuardDuty"
+        },
+        {
+          "id": "D",
+          "text": "EC2, Lambda, S3, EBS, RDS, VPC"
+        }
+      ],
+      "correct_option_ids": [
+        "A"
+      ],
+      "explanation_markdown": "As seis perspectivas do CAF descrevem capacidades de transformação organizacional; o conjunto da alternativa B é o Well-Architected."
+    },
+    {
+      "id": "Q11",
+      "source_chapter_id": "chapter-23",
+      "domain": 1,
+      "kind": "single",
+      "selection_count": 1,
+      "statement_markdown": "Uma revisão sistemática avalia segurança, confiabilidade, eficiência, custos, excelência operacional e sustentabilidade de uma workload. Qual framework?",
+      "options": [
+        {
+          "id": "A",
+          "text": "AWS Organizations"
+        },
+        {
+          "id": "B",
+          "text": "AWS CAF"
+        },
+        {
+          "id": "C",
+          "text": "AWS Well-Architected Framework"
+        },
+        {
+          "id": "D",
+          "text": "AWS Artifact"
+        }
+      ],
+      "correct_option_ids": [
+        "C"
+      ],
+      "explanation_markdown": "Os seis pilares pertencem ao Well-Architected Framework, não ao CAF."
+    },
+    {
+      "id": "Q12",
+      "source_chapter_id": "chapter-23",
+      "domain": 1,
+      "kind": "single",
+      "selection_count": 1,
+      "statement_markdown": "Um time quer automatizar deploys, detectar erros rapidamente e aprimorar rotinas de resposta a incidentes. Qual pilar Well-Architected está mais diretamente em foco?",
+      "options": [
+        {
+          "id": "A",
+          "text": "Sustentabilidade exclusivamente"
+        },
+        {
+          "id": "B",
+          "text": "Excelência operacional"
+        },
+        {
+          "id": "C",
+          "text": "Otimização de custos exclusivamente"
+        },
+        {
+          "id": "D",
+          "text": "Eficiência de desempenho exclusivamente"
+        }
+      ],
+      "correct_option_ids": [
+        "B"
+      ],
+      "explanation_markdown": "Operar, monitorar e melhorar continuamente processos são capacidades do pilar excelência operacional."
+    },
+    {
+      "id": "Q13",
+      "source_chapter_id": "chapter-23",
+      "domain": 1,
+      "kind": "single",
+      "selection_count": 1,
+      "statement_markdown": "Reduzir processamento desnecessário e melhorar utilização de recursos para diminuir impacto ambiental está mais ligado a qual pilar?",
+      "options": [
+        {
+          "id": "A",
+          "text": "Confiabilidade"
+        },
+        {
+          "id": "B",
+          "text": "Segurança física"
+        },
+        {
+          "id": "C",
+          "text": "Migração rehost"
+        },
+        {
+          "id": "D",
+          "text": "Sustentabilidade"
+        }
+      ],
+      "correct_option_ids": [
+        "D"
+      ],
+      "explanation_markdown": "Sustentabilidade visa minimizar consumo e impactos ambientais, aproveitando recursos de forma eficiente."
+    },
+    {
+      "id": "Q14",
+      "source_chapter_id": "chapter-23",
+      "domain": 1,
+      "kind": "single",
+      "selection_count": 1,
+      "statement_markdown": "Uma organização move uma VM on-premises para EC2 com pouquíssimas alterações. Qual estratégia 7 Rs?",
+      "options": [
+        {
+          "id": "A",
+          "text": "Repurchase"
+        },
+        {
+          "id": "B",
+          "text": "Retire"
+        },
+        {
+          "id": "C",
+          "text": "Rehost"
+        },
+        {
+          "id": "D",
+          "text": "Refactor"
+        }
+      ],
+      "correct_option_ids": [
+        "C"
+      ],
+      "explanation_markdown": "Rehost é lift-and-shift, com poucas mudanças de aplicação."
+    },
+    {
+      "id": "Q15",
+      "source_chapter_id": "chapter-23",
+      "domain": 1,
+      "kind": "single",
+      "selection_count": 1,
+      "statement_markdown": "Um time migra o banco instalado em VM para RDS, mantendo essencialmente a aplicação. Qual 7 R é mais adequada?",
+      "options": [
+        {
+          "id": "A",
+          "text": "Repurchase"
+        },
+        {
+          "id": "B",
+          "text": "Retain"
+        },
+        {
+          "id": "C",
+          "text": "Retire"
+        },
+        {
+          "id": "D",
+          "text": "Replatform"
+        }
+      ],
+      "correct_option_ids": [
+        "D"
+      ],
+      "explanation_markdown": "Replatform moderniza um componente sem redesenho substancial da aplicação."
+    },
+    {
+      "id": "Q16",
+      "source_chapter_id": "chapter-23",
+      "domain": 1,
+      "kind": "single",
+      "selection_count": 1,
+      "statement_markdown": "Um monolito é amplamente redesenhado para arquitetura orientada a eventos. Qual estratégia melhor descreve isso?",
+      "options": [
+        {
+          "id": "A",
+          "text": "Retain"
+        },
+        {
+          "id": "B",
+          "text": "Relocate sem alterações"
+        },
+        {
+          "id": "C",
+          "text": "Refactor / rearchitect"
+        },
+        {
+          "id": "D",
+          "text": "Rehost"
+        }
+      ],
+      "correct_option_ids": [
+        "C"
+      ],
+      "explanation_markdown": "Refactor envolve mudar a arquitetura/código, não apenas o ambiente."
+    },
+    {
+      "id": "Q17",
+      "source_chapter_id": "chapter-23",
+      "domain": 1,
+      "kind": "single",
+      "selection_count": 1,
+      "statement_markdown": "Após inventário, descobre-se um sistema antigo sem usuários que deve ser desativado. Qual 7 R?",
+      "options": [
+        {
+          "id": "A",
+          "text": "Rehost"
+        },
+        {
+          "id": "B",
+          "text": "Retire"
+        },
+        {
+          "id": "C",
+          "text": "Replatform"
+        },
+        {
+          "id": "D",
+          "text": "Refactor"
+        }
+      ],
+      "correct_option_ids": [
+        "B"
+      ],
+      "explanation_markdown": "Retire encerra sistemas sem valor. Retain significaria manter sem migrar."
+    },
+    {
+      "id": "Q18",
+      "source_chapter_id": "chapter-23",
+      "domain": 1,
+      "kind": "multiple",
+      "selection_count": 2,
+      "statement_markdown": "**Selecione DUAS.** Quais situações ilustram adequadamente modelos de implantação?",
+      "options": [
+        {
+          "id": "A",
+          "text": "Banco RDS é, por definição, uma nuvem privada on-premises"
+        },
+        {
+          "id": "B",
+          "text": "Parte do sistema local e parte AWS: híbrido"
+        },
+        {
+          "id": "C",
+          "text": "Três instâncias EC2 na mesma Região: necessariamente multicloud"
+        },
+        {
+          "id": "D",
+          "text": "Aplicação inteiramente em instalações próprias: on-premises"
+        }
+      ],
+      "correct_option_ids": [
+        "B",
+        "D"
+      ],
+      "explanation_markdown": "On-premises corresponde ao ambiente local; híbrido integra local e nuvem. Várias instâncias AWS não caracterizam multicloud."
+    },
+    {
+      "id": "Q19",
+      "source_chapter_id": "chapter-23",
+      "domain": 1,
+      "kind": "single",
+      "selection_count": 1,
+      "statement_markdown": "O que significa rightsizing?",
+      "options": [
+        {
+          "id": "A",
+          "text": "Atribuir AdministratorAccess aos usuários"
+        },
+        {
+          "id": "B",
+          "text": "Ajustar capacidade/tipo de recurso à demanda observada"
+        },
+        {
+          "id": "C",
+          "text": "Aumentar recursos sem analisar uso"
+        },
+        {
+          "id": "D",
+          "text": "Adicionar uma Região obrigatoriamente"
+        }
+      ],
+      "correct_option_ids": [
+        "B"
+      ],
+      "explanation_markdown": "Rightsizing evita recursos super/subdimensionados conforme padrões de uso e desempenho."
+    },
+    {
+      "id": "Q20",
+      "source_chapter_id": "chapter-23",
+      "domain": 1,
+      "kind": "single",
+      "selection_count": 1,
+      "statement_markdown": "Qual afirmação sobre licenciamento na nuvem é mais correta?",
+      "options": [
+        {
+          "id": "A",
+          "text": "Licenças de software são sempre gratuitas na nuvem"
+        },
+        {
+          "id": "B",
+          "text": "BYOL significa que toda licença pode ser usada em qualquer serviço"
+        },
+        {
+          "id": "C",
+          "text": "BYOL elimina custos de computação"
+        },
+        {
+          "id": "D",
+          "text": "Licença incluída e BYOL são opções distintas, sujeitas a elegibilidade e contrato"
+        }
+      ],
+      "correct_option_ids": [
+        "D"
+      ],
+      "explanation_markdown": "BYOL exige observância dos termos do fornecedor e modalidade; licença incluída está precificada no serviço quando oferecida."
+    },
+    {
+      "id": "Q21",
+      "source_chapter_id": "chapter-23",
+      "domain": 2,
+      "kind": "single",
+      "selection_count": 1,
+      "statement_markdown": "No modelo de responsabilidade compartilhada, quem é responsável principalmente pela segurança física dos datacenters AWS?",
+      "options": [
+        {
+          "id": "A",
+          "text": "Fornecedor de domínio DNS"
+        },
+        {
+          "id": "B",
+          "text": "Usuário final"
+        },
+        {
+          "id": "C",
+          "text": "AWS"
+        },
+        {
+          "id": "D",
+          "text": "Cliente"
+        }
+      ],
+      "correct_option_ids": [
+        "C"
+      ],
+      "explanation_markdown": "Segurança física e infraestrutura subjacente são responsabilidades da AWS."
+    },
+    {
+      "id": "Q22",
+      "source_chapter_id": "chapter-23",
+      "domain": 2,
+      "kind": "single",
+      "selection_count": 1,
+      "statement_markdown": "Uma aplicação roda em EC2 com sistema operacional administrado pela equipe. Quem normalmente aplica patches do SO dessa instância?",
+      "options": [
+        {
+          "id": "A",
+          "text": "O provedor de internet do usuário"
+        },
+        {
+          "id": "B",
+          "text": "O cliente"
+        },
+        {
+          "id": "C",
+          "text": "A equipe de suporte da certificação"
+        },
+        {
+          "id": "D",
+          "text": "AWS automaticamente em toda instância"
+        }
+      ],
+      "correct_option_ids": [
+        "B"
+      ],
+      "explanation_markdown": "Em EC2, o cliente administra o sistema operacional convidado; a AWS cuida da infraestrutura abaixo da VM."
+    },
+    {
+      "id": "Q23",
+      "source_chapter_id": "chapter-23",
+      "domain": 2,
+      "kind": "single",
+      "selection_count": 1,
+      "statement_markdown": "Uma função Lambda contém uma dependência de terceiros desatualizada. De quem é, normalmente, a responsabilidade pela dependência incluída no código?",
+      "options": [
+        {
+          "id": "A",
+          "text": "Do cliente desenvolvedor da função"
+        },
+        {
+          "id": "B",
+          "text": "Do datacenter"
+        },
+        {
+          "id": "C",
+          "text": "Do serviço Route 53"
+        },
+        {
+          "id": "D",
+          "text": "Somente da AWS"
+        }
+      ],
+      "correct_option_ids": [
+        "A"
+      ],
+      "explanation_markdown": "A AWS opera a infraestrutura da Lambda, mas a aplicação e suas dependências seguem sob responsabilidade do cliente."
+    },
+    {
+      "id": "Q24",
+      "source_chapter_id": "chapter-23",
+      "domain": 2,
+      "kind": "single",
+      "selection_count": 1,
+      "statement_markdown": "Quem define privilégios dos usuários do banco de dados em um RDS gerenciado?",
+      "options": [
+        {
+          "id": "A",
+          "text": "A AWS decide o acesso lógico aos dados de cada empresa"
+        },
+        {
+          "id": "B",
+          "text": "O ISP da aplicação"
+        },
+        {
+          "id": "C",
+          "text": "O cliente"
+        },
+        {
+          "id": "D",
+          "text": "O CloudFront"
+        }
+      ],
+      "correct_option_ids": [
+        "C"
+      ],
+      "explanation_markdown": "RDS reduz administração de infraestrutura, mas não escolhe a autorização lógica dos dados da aplicação."
+    },
+    {
+      "id": "Q25",
+      "source_chapter_id": "chapter-23",
+      "domain": 2,
+      "kind": "single",
+      "selection_count": 1,
+      "statement_markdown": "Qual prática é recomendada para a conta root AWS?",
+      "options": [
+        {
+          "id": "A",
+          "text": "Proteger com MFA e usar somente em tarefas que exigem root"
+        },
+        {
+          "id": "B",
+          "text": "Usá-la diariamente em deploys"
+        },
+        {
+          "id": "C",
+          "text": "Dar a senha root a todos os desenvolvedores"
+        },
+        {
+          "id": "D",
+          "text": "Criar e compartilhar access keys root"
+        }
+      ],
+      "correct_option_ids": [
+        "A"
+      ],
+      "explanation_markdown": "Root é altamente privilegiado; deve ser protegido e pouco utilizado."
+    },
+    {
+      "id": "Q26",
+      "source_chapter_id": "chapter-23",
+      "domain": 2,
+      "kind": "single",
+      "selection_count": 1,
+      "statement_markdown": "Uma tarefa ECS precisa ler um bucket privado S3 sem gravar credenciais fixas na imagem. Qual recurso é mais apropriado?",
+      "options": [
+        {
+          "id": "A",
+          "text": "Deixar senha no código"
+        },
+        {
+          "id": "B",
+          "text": "IAM role atribuída à tarefa, com permissão mínima"
+        },
+        {
+          "id": "C",
+          "text": "Access key root no Dockerfile"
+        },
+        {
+          "id": "D",
+          "text": "Abrir o bucket publicamente"
+        }
+      ],
+      "correct_option_ids": [
+        "B"
+      ],
+      "explanation_markdown": "Roles de workload fornecem credenciais temporárias e políticas adequadas."
+    },
+    {
+      "id": "Q27",
+      "source_chapter_id": "chapter-23",
+      "domain": 2,
+      "kind": "single",
+      "selection_count": 1,
+      "statement_markdown": "Um usuário tem IAM Allow para uma operação, mas a SCP aplicável a nega explicitamente. O resultado é:",
+      "options": [
+        {
+          "id": "A",
+          "text": "Negado"
+        },
+        {
+          "id": "B",
+          "text": "Uma alteração automática do SCP"
+        },
+        {
+          "id": "C",
+          "text": "Permitido, pois IAM sobrepõe SCP"
+        },
+        {
+          "id": "D",
+          "text": "Permitido apenas por ser root sempre"
+        }
+      ],
+      "correct_option_ids": [
+        "A"
+      ],
+      "explanation_markdown": "Deny explícito prevalece; SCP define limites e não concede permissões."
+    },
+    {
+      "id": "Q28",
+      "source_chapter_id": "chapter-23",
+      "domain": 2,
+      "kind": "single",
+      "selection_count": 1,
+      "statement_markdown": "Uma IAM role permite leitura no S3, mas não pode ser assumida pelo serviço esperado. O que investigar prioritariamente?",
+      "options": [
+        {
+          "id": "A",
+          "text": "Preço do Direct Connect"
+        },
+        {
+          "id": "B",
+          "text": "Trust policy da role"
+        },
+        {
+          "id": "C",
+          "text": "Tipo de instância EC2"
+        },
+        {
+          "id": "D",
+          "text": "Classe Glacier"
+        }
+      ],
+      "correct_option_ids": [
+        "B"
+      ],
+      "explanation_markdown": "Trust policy define quem pode assumir uma role, não as ações após assumi-la."
+    },
+    {
+      "id": "Q29",
+      "source_chapter_id": "chapter-23",
+      "domain": 2,
+      "kind": "single",
+      "selection_count": 1,
+      "statement_markdown": "Uma API só precisa ler objetos em um prefixo S3 específico. Qual política segue menor privilégio?",
+      "options": [
+        {
+          "id": "A",
+          "text": "s3:GetObject somente nos ARNs de objetos necessários"
+        },
+        {
+          "id": "B",
+          "text": "s3:* em todos os buckets"
+        },
+        {
+          "id": "C",
+          "text": "AdministratorAccess"
+        },
+        {
+          "id": "D",
+          "text": "IAMFullAccess"
+        }
+      ],
+      "correct_option_ids": [
+        "A"
+      ],
+      "explanation_markdown": "Permissões devem abranger apenas ações/recursos indispensáveis."
+    },
+    {
+      "id": "Q30",
+      "source_chapter_id": "chapter-23",
+      "domain": 2,
+      "kind": "single",
+      "selection_count": 1,
+      "statement_markdown": "Funcionários precisam acessar diversas contas AWS via identidade corporativa e SSO. Qual serviço especializado?",
+      "options": [
+        {
+          "id": "A",
+          "text": "Amazon EFS"
+        },
+        {
+          "id": "B",
+          "text": "Amazon SES"
+        },
+        {
+          "id": "C",
+          "text": "IAM Identity Center"
+        },
+        {
+          "id": "D",
+          "text": "Amazon Rekognition"
+        }
+      ],
+      "correct_option_ids": [
+        "C"
+      ],
+      "explanation_markdown": "IAM Identity Center centraliza identidade/atribuições de força de trabalho. Cognito é tipicamente orientado a usuários finais de apps."
+    },
+    {
+      "id": "Q31",
+      "source_chapter_id": "chapter-23",
+      "domain": 2,
+      "kind": "single",
+      "selection_count": 1,
+      "statement_markdown": "Uma aplicação de assinaturas web precisa gerenciar autenticação de usuários finais. Qual serviço AWS costuma ser candidato direto?",
+      "options": [
+        {
+          "id": "A",
+          "text": "AWS Config"
+        },
+        {
+          "id": "B",
+          "text": "AWS Direct Connect"
+        },
+        {
+          "id": "C",
+          "text": "Amazon Cognito"
+        },
+        {
+          "id": "D",
+          "text": "AWS Pricing Calculator"
+        }
+      ],
+      "correct_option_ids": [
+        "C"
+      ],
+      "explanation_markdown": "Cognito fornece capacidades de identidade para aplicações web/mobile."
+    },
+    {
+      "id": "Q32",
+      "source_chapter_id": "chapter-23",
+      "domain": 2,
+      "kind": "single",
+      "selection_count": 1,
+      "statement_markdown": "Qual mecanismo está mais associado à emissão de credenciais AWS temporárias ao assumir roles?",
+      "options": [
+        {
+          "id": "A",
+          "text": "AWS Artifact"
+        },
+        {
+          "id": "B",
+          "text": "CloudFront"
+        },
+        {
+          "id": "C",
+          "text": "AWS Batch"
+        },
+        {
+          "id": "D",
+          "text": "AWS STS"
+        }
+      ],
+      "correct_option_ids": [
+        "D"
+      ],
+      "explanation_markdown": "STS fornece credenciais temporárias de sessão; reduz necessidade de chaves fixas."
+    },
+    {
+      "id": "Q33",
+      "source_chapter_id": "chapter-23",
+      "domain": 2,
+      "kind": "single",
+      "selection_count": 1,
+      "statement_markdown": "Uma aplicação precisa armazenar e rotacionar senha de banco e token de API de terceiros. Qual serviço é mais adequado?",
+      "options": [
+        {
+          "id": "A",
+          "text": "AWS Secrets Manager"
+        },
+        {
+          "id": "B",
+          "text": "Route 53"
+        },
+        {
+          "id": "C",
+          "text": "Shield"
+        },
+        {
+          "id": "D",
+          "text": "CloudTrail"
+        }
+      ],
+      "correct_option_ids": [
+        "A"
+      ],
+      "explanation_markdown": "Secrets Manager cuida do armazenamento/gerenciamento e rotação de segredos, quando configurado."
+    },
+    {
+      "id": "Q34",
+      "source_chapter_id": "chapter-23",
+      "domain": 2,
+      "kind": "single",
+      "selection_count": 1,
+      "statement_markdown": "Qual serviço AWS é tipicamente usado para gerir chaves criptográficas integradas a serviços AWS?",
+      "options": [
+        {
+          "id": "A",
+          "text": "Amazon Athena"
+        },
+        {
+          "id": "B",
+          "text": "AWS KMS"
+        },
+        {
+          "id": "C",
+          "text": "Amazon Lex"
+        },
+        {
+          "id": "D",
+          "text": "Amazon Connect"
+        }
+      ],
+      "correct_option_ids": [
+        "B"
+      ],
+      "explanation_markdown": "KMS gerencia chaves criptográficas; CloudHSM atende requisitos de HSM dedicado."
+    },
+    {
+      "id": "Q35",
+      "source_chapter_id": "chapter-23",
+      "domain": 2,
+      "kind": "single",
+      "selection_count": 1,
+      "statement_markdown": "Para provisionar e gerenciar certificados TLS em integrações compatíveis, escolha:",
+      "options": [
+        {
+          "id": "A",
+          "text": "AWS Config"
+        },
+        {
+          "id": "B",
+          "text": "AWS Compute Optimizer"
+        },
+        {
+          "id": "C",
+          "text": "Amazon Inspector"
+        },
+        {
+          "id": "D",
+          "text": "AWS Certificate Manager"
+        }
+      ],
+      "correct_option_ids": [
+        "D"
+      ],
+      "explanation_markdown": "ACM gerencia certificados. KMS é gerenciamento de chaves para criptografia."
+    },
+    {
+      "id": "Q36",
+      "source_chapter_id": "chapter-23",
+      "domain": 2,
+      "kind": "single",
+      "selection_count": 1,
+      "statement_markdown": "O auditor solicita um relatório de certificação/conformidade da infraestrutura AWS. Onde encontrá-lo?",
+      "options": [
+        {
+          "id": "A",
+          "text": "Amazon EC2"
+        },
+        {
+          "id": "B",
+          "text": "AWS Artifact"
+        },
+        {
+          "id": "C",
+          "text": "Amazon ElastiCache"
+        },
+        {
+          "id": "D",
+          "text": "Amazon CloudWatch"
+        }
+      ],
+      "correct_option_ids": [
+        "B"
+      ],
+      "explanation_markdown": "Artifact disponibiliza documentação de conformidade e determinados acordos."
+    },
+    {
+      "id": "Q37",
+      "source_chapter_id": "chapter-23",
+      "domain": 2,
+      "kind": "single",
+      "selection_count": 1,
+      "statement_markdown": "Um security group foi alterado ontem. Qual serviço ajuda a identificar a chamada de API que fez a mudança?",
+      "options": [
+        {
+          "id": "A",
+          "text": "AWS CloudTrail"
+        },
+        {
+          "id": "B",
+          "text": "AWS Pricing Calculator"
+        },
+        {
+          "id": "C",
+          "text": "Amazon EFS"
+        },
+        {
+          "id": "D",
+          "text": "Amazon Polly"
+        }
+      ],
+      "correct_option_ids": [
+        "A"
+      ],
+      "explanation_markdown": "CloudTrail audita eventos/ações de API."
+    },
+    {
+      "id": "Q38",
+      "source_chapter_id": "chapter-23",
+      "domain": 2,
+      "kind": "single",
+      "selection_count": 1,
+      "statement_markdown": "Qual serviço centraliza métricas, logs operacionais e alarmes de uma aplicação?",
+      "options": [
+        {
+          "id": "A",
+          "text": "AWS Artifact"
+        },
+        {
+          "id": "B",
+          "text": "Amazon CloudWatch"
+        },
+        {
+          "id": "C",
+          "text": "AWS DMS"
+        },
+        {
+          "id": "D",
+          "text": "AWS Firewall Manager"
+        }
+      ],
+      "correct_option_ids": [
+        "B"
+      ],
+      "explanation_markdown": "CloudWatch observa workload com métricas, logs, dashboards e alarmes."
+    },
+    {
+      "id": "Q39",
+      "source_chapter_id": "chapter-23",
+      "domain": 2,
+      "kind": "single",
+      "selection_count": 1,
+      "statement_markdown": "Uma empresa quer avaliar continuamente se recursos seguem regras de configuração aprovadas. Qual serviço?",
+      "options": [
+        {
+          "id": "A",
+          "text": "Amazon SES"
+        },
+        {
+          "id": "B",
+          "text": "Amazon WorkSpaces"
+        },
+        {
+          "id": "C",
+          "text": "Amazon Kinesis"
+        },
+        {
+          "id": "D",
+          "text": "AWS Config"
+        }
+      ],
+      "correct_option_ids": [
+        "D"
+      ],
+      "explanation_markdown": "Config registra estados de configuração e verifica regras de conformidade."
+    },
+    {
+      "id": "Q40",
+      "source_chapter_id": "chapter-23",
+      "domain": 2,
+      "kind": "single",
+      "selection_count": 1,
+      "statement_markdown": "Qual serviço identifica ameaças e atividades potencialmente maliciosas em ambientes AWS?",
+      "options": [
+        {
+          "id": "A",
+          "text": "Amazon GuardDuty"
+        },
+        {
+          "id": "B",
+          "text": "Amazon QuickSight"
+        },
+        {
+          "id": "C",
+          "text": "Amazon EFS"
+        },
+        {
+          "id": "D",
+          "text": "AWS Pricing Calculator"
+        }
+      ],
+      "correct_option_ids": [
+        "A"
+      ],
+      "explanation_markdown": "GuardDuty é detecção de ameaças, não varredura genérica de CVEs."
+    },
+    {
+      "id": "Q41",
+      "source_chapter_id": "chapter-23",
+      "domain": 2,
+      "kind": "single",
+      "selection_count": 1,
+      "statement_markdown": "Um time precisa detectar pacotes de software vulneráveis em instâncias e imagens compatíveis. Qual serviço?",
+      "options": [
+        {
+          "id": "A",
+          "text": "AWS Artifact"
+        },
+        {
+          "id": "B",
+          "text": "Amazon Inspector"
+        },
+        {
+          "id": "C",
+          "text": "Amazon Translate"
+        },
+        {
+          "id": "D",
+          "text": "Amazon Macie"
+        }
+      ],
+      "correct_option_ids": [
+        "B"
+      ],
+      "explanation_markdown": "Inspector avalia vulnerabilidades. Macie identifica dados sensíveis em S3."
+    },
+    {
+      "id": "Q42",
+      "source_chapter_id": "chapter-23",
+      "domain": 2,
+      "kind": "single",
+      "selection_count": 1,
+      "statement_markdown": "A equipe quer localizar dados pessoais sensíveis em objetos armazenados no S3. Qual serviço é candidato direto?",
+      "options": [
+        {
+          "id": "A",
+          "text": "AWS CloudFormation"
+        },
+        {
+          "id": "B",
+          "text": "AWS CodeBuild"
+        },
+        {
+          "id": "C",
+          "text": "AWS DMS"
+        },
+        {
+          "id": "D",
+          "text": "Amazon Macie"
+        }
+      ],
+      "correct_option_ids": [
+        "D"
+      ],
+      "explanation_markdown": "Macie é especializado em descobrir/classificar dados sensíveis no S3."
+    },
+    {
+      "id": "Q43",
+      "source_chapter_id": "chapter-23",
+      "domain": 2,
+      "kind": "single",
+      "selection_count": 1,
+      "statement_markdown": "A empresa quer um painel unificado com descobertas de segurança de diversos serviços e meios de investigar relações entre eventos. Qual combinação atende melhor?",
+      "options": [
+        {
+          "id": "A",
+          "text": "SQS e SES"
+        },
+        {
+          "id": "B",
+          "text": "EBS e Route 53"
+        },
+        {
+          "id": "C",
+          "text": "Athena e WorkSpaces"
+        },
+        {
+          "id": "D",
+          "text": "Security Hub e Detective"
+        }
+      ],
+      "correct_option_ids": [
+        "D"
+      ],
+      "explanation_markdown": "Security Hub agrega achados; Detective apoia investigação contextual. Um não substitui o outro."
+    },
+    {
+      "id": "Q44",
+      "source_chapter_id": "chapter-23",
+      "domain": 2,
+      "kind": "multiple",
+      "selection_count": 2,
+      "statement_markdown": "**Selecione DUAS.** Uma API precisa filtrar padrões de requisições HTTP maliciosas e ter proteção contra DDoS. Quais serviços atendem diretamente a esses requisitos?",
+      "options": [
+        {
+          "id": "A",
+          "text": "AWS Glue"
+        },
+        {
+          "id": "B",
+          "text": "Amazon EFS"
+        },
+        {
+          "id": "C",
+          "text": "AWS Shield"
+        },
+        {
+          "id": "D",
+          "text": "AWS WAF"
+        }
+      ],
+      "correct_option_ids": [
+        "C",
+        "D"
+      ],
+      "explanation_markdown": "WAF filtra tráfego HTTP(S) por regras; Shield foca mitigação DDoS. Firewall Manager centraliza políticas, mas não é a resposta direta aos dois controles pedidos."
+    },
+    {
+      "id": "Q45",
+      "source_chapter_id": "chapter-23",
+      "domain": 3,
+      "kind": "single",
+      "selection_count": 1,
+      "statement_markdown": "Um operador deseja executar comandos de AWS de maneira repetível no terminal. Qual ferramenta?",
+      "options": [
+        {
+          "id": "A",
+          "text": "AWS Artifact"
+        },
+        {
+          "id": "B",
+          "text": "Amazon Route 53"
+        },
+        {
+          "id": "C",
+          "text": "AWS CLI"
+        },
+        {
+          "id": "D",
+          "text": "Amazon Macie"
+        }
+      ],
+      "correct_option_ids": [
+        "C"
+      ],
+      "explanation_markdown": "AWS CLI é interface de linha de comando para APIs AWS. SDKs são bibliotecas para aplicações."
+    },
+    {
+      "id": "Q46",
+      "source_chapter_id": "chapter-23",
+      "domain": 3,
+      "kind": "single",
+      "selection_count": 1,
+      "statement_markdown": "Uma equipe deseja provisionar VPC, subnets e recursos de modo declarativo e versionável. Qual serviço?",
+      "options": [
+        {
+          "id": "A",
+          "text": "AWS CloudFormation"
+        },
+        {
+          "id": "B",
+          "text": "AWS Shield"
+        },
+        {
+          "id": "C",
+          "text": "Amazon Comprehend"
+        },
+        {
+          "id": "D",
+          "text": "Amazon WorkSpaces"
+        }
+      ],
+      "correct_option_ids": [
+        "A"
+      ],
+      "explanation_markdown": "CloudFormation usa templates para representar stacks de infraestrutura e controlar alterações."
+    },
+    {
+      "id": "Q47",
+      "source_chapter_id": "chapter-23",
+      "domain": 3,
+      "kind": "single",
+      "selection_count": 1,
+      "statement_markdown": "Qual afirmação sobre as subnets de uma VPC é correta?",
+      "options": [
+        {
+          "id": "A",
+          "text": "Toda subnet é acessível publicamente"
+        },
+        {
+          "id": "B",
+          "text": "Cada subnet pode pertencer a várias Regiões ao mesmo tempo"
+        },
+        {
+          "id": "C",
+          "text": "Edge Locations são subnets privadas"
+        },
+        {
+          "id": "D",
+          "text": "Uma subnet fica em uma AZ; uma VPC regional pode conter subnets em várias AZs"
+        }
+      ],
+      "correct_option_ids": [
+        "D"
+      ],
+      "explanation_markdown": "Subnets pertencem a uma AZ. Uma VPC pode cobrir AZs da Região."
+    },
+    {
+      "id": "Q48",
+      "source_chapter_id": "chapter-23",
+      "domain": 3,
+      "kind": "single",
+      "selection_count": 1,
+      "statement_markdown": "Uma aplicação científica fica limitada principalmente por processamento de CPU. Qual família EC2 investigar primeiro?",
+      "options": [
+        {
+          "id": "A",
+          "text": "Storage optimized obrigatoriamente"
+        },
+        {
+          "id": "B",
+          "text": "Compute optimized"
+        },
+        {
+          "id": "C",
+          "text": "Lightsail somente"
+        },
+        {
+          "id": "D",
+          "text": "Memory optimized"
+        }
+      ],
+      "correct_option_ids": [
+        "B"
+      ],
+      "explanation_markdown": "Compute optimized é a família orientada a processamento. Medição real é sempre necessária antes de dimensionar."
+    },
+    {
+      "id": "Q49",
+      "source_chapter_id": "chapter-23",
+      "domain": 3,
+      "kind": "multiple",
+      "selection_count": 2,
+      "statement_markdown": "**Selecione DUAS.** A aplicação web precisa distribuir requisições HTTP entre instâncias e aumentar a quantidade de instâncias quando o tráfego cresce. Quais recursos se complementam?",
+      "options": [
+        {
+          "id": "A",
+          "text": "Application Load Balancer"
+        },
+        {
+          "id": "B",
+          "text": "AWS Artifact"
+        },
+        {
+          "id": "C",
+          "text": "Amazon Polly"
+        },
+        {
+          "id": "D",
+          "text": "EC2 Auto Scaling"
+        }
+      ],
+      "correct_option_ids": [
+        "A",
+        "D"
+      ],
+      "explanation_markdown": "ALB distribui tráfego entre destinos; EC2 Auto Scaling aumenta/reduz instâncias."
+    },
+    {
+      "id": "Q50",
+      "source_chapter_id": "chapter-23",
+      "domain": 3,
+      "kind": "single",
+      "selection_count": 1,
+      "statement_markdown": "Onde armazenar imagens privadas de contêiner de uma aplicação para execução posterior em serviços AWS?",
+      "options": [
+        {
+          "id": "A",
+          "text": "Amazon EFS obrigatoriamente"
+        },
+        {
+          "id": "B",
+          "text": "AWS Config"
+        },
+        {
+          "id": "C",
+          "text": "Amazon ECR"
+        },
+        {
+          "id": "D",
+          "text": "Amazon Connect"
+        }
+      ],
+      "correct_option_ids": [
+        "C"
+      ],
+      "explanation_markdown": "ECR é registro de imagens. ECS/EKS orquestram a execução."
+    },
+    {
+      "id": "Q51",
+      "source_chapter_id": "chapter-23",
+      "domain": 3,
+      "kind": "single",
+      "selection_count": 1,
+      "statement_markdown": "O time usa ECS e deseja eliminar a administração de hosts EC2 para os contêineres. Qual opção?",
+      "options": [
+        {
+          "id": "A",
+          "text": "S3 Glacier"
+        },
+        {
+          "id": "B",
+          "text": "AWS Artifact"
+        },
+        {
+          "id": "C",
+          "text": "AWS Fargate"
+        },
+        {
+          "id": "D",
+          "text": "Amazon Textract"
+        }
+      ],
+      "correct_option_ids": [
+        "C"
+      ],
+      "explanation_markdown": "Fargate fornece compute serverless para contêineres compatíveis com ECS e EKS."
+    },
+    {
+      "id": "Q52",
+      "source_chapter_id": "chapter-23",
+      "domain": 3,
+      "kind": "single",
+      "selection_count": 1,
+      "statement_markdown": "A empresa depende de Kubernetes e quer usar serviço gerenciado pela AWS. Qual produto?",
+      "options": [
+        {
+          "id": "A",
+          "text": "Amazon EKS"
+        },
+        {
+          "id": "B",
+          "text": "AWS Storage Gateway"
+        },
+        {
+          "id": "C",
+          "text": "Amazon SES"
+        },
+        {
+          "id": "D",
+          "text": "Amazon S3"
+        }
+      ],
+      "correct_option_ids": [
+        "A"
+      ],
+      "explanation_markdown": "EKS oferece orquestração Kubernetes gerenciada."
+    },
+    {
+      "id": "Q53",
+      "source_chapter_id": "chapter-23",
+      "domain": 3,
+      "kind": "single",
+      "selection_count": 1,
+      "statement_markdown": "Um código pequeno deve executar quando um objeto chega ao S3, sem provisionar servidor dedicado. Qual compute mais natural?",
+      "options": [
+        {
+          "id": "A",
+          "text": "AWS Direct Connect"
+        },
+        {
+          "id": "B",
+          "text": "Amazon Redshift"
+        },
+        {
+          "id": "C",
+          "text": "AWS Lambda"
+        },
+        {
+          "id": "D",
+          "text": "Amazon WorkSpaces"
+        }
+      ],
+      "correct_option_ids": [
+        "C"
+      ],
+      "explanation_markdown": "Lambda executa funções acionadas por eventos e abstrai servidores subjacentes."
+    },
+    {
+      "id": "Q54",
+      "source_chapter_id": "chapter-23",
+      "domain": 3,
+      "kind": "single",
+      "selection_count": 1,
+      "statement_markdown": "Uma empresa precisa agendar e executar milhares de trabalhos de processamento em lote. Qual serviço foi feito para isso?",
+      "options": [
+        {
+          "id": "A",
+          "text": "AWS WAF"
+        },
+        {
+          "id": "B",
+          "text": "Amazon Route 53"
+        },
+        {
+          "id": "C",
+          "text": "Amazon Lex"
+        },
+        {
+          "id": "D",
+          "text": "AWS Batch"
+        }
+      ],
+      "correct_option_ids": [
+        "D"
+      ],
+      "explanation_markdown": "AWS Batch administra o agendamento e execução de workloads batch com recursos compatíveis."
+    },
+    {
+      "id": "Q55",
+      "source_chapter_id": "chapter-23",
+      "domain": 3,
+      "kind": "single",
+      "selection_count": 1,
+      "statement_markdown": "Uma equipe quer reduzir a operação de um banco PostgreSQL transacional. Qual serviço?",
+      "options": [
+        {
+          "id": "A",
+          "text": "AWS Shield"
+        },
+        {
+          "id": "B",
+          "text": "Amazon SNS"
+        },
+        {
+          "id": "C",
+          "text": "Amazon Kinesis"
+        },
+        {
+          "id": "D",
+          "text": "Amazon RDS"
+        }
+      ],
+      "correct_option_ids": [
+        "D"
+      ],
+      "explanation_markdown": "RDS gerencia parte relevante da infraestrutura e operação de banco relacional."
+    },
+    {
+      "id": "Q56",
+      "source_chapter_id": "chapter-23",
+      "domain": 3,
+      "kind": "single",
+      "selection_count": 1,
+      "statement_markdown": "Qual opção é desenhada para melhorar disponibilidade/failover de um banco RDS frente à falha de uma AZ?",
+      "options": [
+        {
+          "id": "A",
+          "text": "S3 Intelligent-Tiering"
+        },
+        {
+          "id": "B",
+          "text": "Multi-AZ deployment"
+        },
+        {
+          "id": "C",
+          "text": "Read Replica obrigatoriamente substituindo backups"
+        },
+        {
+          "id": "D",
+          "text": "Somente Route 53"
+        }
+      ],
+      "correct_option_ids": [
+        "B"
+      ],
+      "explanation_markdown": "Multi-AZ atende alta disponibilidade; réplicas de leitura são outra capacidade com objetivo principal distinto."
+    },
+    {
+      "id": "Q57",
+      "source_chapter_id": "chapter-23",
+      "domain": 3,
+      "kind": "single",
+      "selection_count": 1,
+      "statement_markdown": "O banco relacional está saudável, mas as consultas de leitura aumentaram muito. Que capacidade considerar?",
+      "options": [
+        {
+          "id": "A",
+          "text": "AWS Artifact"
+        },
+        {
+          "id": "B",
+          "text": "Um certificado ACM"
+        },
+        {
+          "id": "C",
+          "text": "Aumentar WAF rules"
+        },
+        {
+          "id": "D",
+          "text": "Read replicas"
+        }
+      ],
+      "correct_option_ids": [
+        "D"
+      ],
+      "explanation_markdown": "Read replicas podem distribuir consultas; dependem de mecanismo e requisitos de consistência."
+    },
+    {
+      "id": "Q58",
+      "source_chapter_id": "chapter-23",
+      "domain": 3,
+      "kind": "single",
+      "selection_count": 1,
+      "statement_markdown": "Para uma aplicação com dados chave-valor em altíssima escala e sem servidores de banco gerenciados pelo cliente, qual serviço?",
+      "options": [
+        {
+          "id": "A",
+          "text": "Amazon DynamoDB"
+        },
+        {
+          "id": "B",
+          "text": "AWS CodePipeline"
+        },
+        {
+          "id": "C",
+          "text": "Amazon FSx"
+        },
+        {
+          "id": "D",
+          "text": "Amazon CloudFront"
+        }
+      ],
+      "correct_option_ids": [
+        "A"
+      ],
+      "explanation_markdown": "DynamoDB é NoSQL serverless gerenciado para modelos chave-valor/documento."
+    },
+    {
+      "id": "Q59",
+      "source_chapter_id": "chapter-23",
+      "domain": 3,
+      "kind": "single",
+      "selection_count": 1,
+      "statement_markdown": "Um serviço precisa acelerar leituras frequentes ao reduzir consultas à origem. Qual serviço é diretamente dedicado a cache em memória?",
+      "options": [
+        {
+          "id": "A",
+          "text": "Amazon Macie"
+        },
+        {
+          "id": "B",
+          "text": "Amazon Neptune"
+        },
+        {
+          "id": "C",
+          "text": "Amazon ElastiCache"
+        },
+        {
+          "id": "D",
+          "text": "AWS CloudTrail"
+        }
+      ],
+      "correct_option_ids": [
+        "C"
+      ],
+      "explanation_markdown": "ElastiCache é cache em memória; requer política coerente de expiração e invalidação."
+    },
+    {
+      "id": "Q60",
+      "source_chapter_id": "chapter-23",
+      "domain": 3,
+      "kind": "single",
+      "selection_count": 1,
+      "statement_markdown": "O cliente deseja uma rede virtual logicamente isolada, com subnets e rotas próprias. Qual serviço?",
+      "options": [
+        {
+          "id": "A",
+          "text": "Amazon SES"
+        },
+        {
+          "id": "B",
+          "text": "Amazon QuickSight"
+        },
+        {
+          "id": "C",
+          "text": "Amazon Textract"
+        },
+        {
+          "id": "D",
+          "text": "Amazon VPC"
+        }
+      ],
+      "correct_option_ids": [
+        "D"
+      ],
+      "explanation_markdown": "VPC cria rede virtual regional com subnets, rotas e controles."
+    },
+    {
+      "id": "Q61",
+      "source_chapter_id": "chapter-23",
+      "domain": 3,
+      "kind": "single",
+      "selection_count": 1,
+      "statement_markdown": "Qual afirmação distingue Security Group de Network ACL?",
+      "options": [
+        {
+          "id": "A",
+          "text": "SG é stateful e associado a recursos; NACL é stateless e controla subnet"
+        },
+        {
+          "id": "B",
+          "text": "NACL só administra IAM roles"
+        },
+        {
+          "id": "C",
+          "text": "SG é stateless, NACL é stateful"
+        },
+        {
+          "id": "D",
+          "text": "Ambos são bancos de dados"
+        }
+      ],
+      "correct_option_ids": [
+        "A"
+      ],
+      "explanation_markdown": "Security Groups acompanham conexões; NACL exige regras de entrada e saída e admite denies."
+    },
+    {
+      "id": "Q62",
+      "source_chapter_id": "chapter-23",
+      "domain": 3,
+      "kind": "single",
+      "selection_count": 1,
+      "statement_markdown": "Uma instância em subnet privada precisa fazer requisições IPv4 de saída à internet sem aceitar novas conexões externas diretas. Qual componente?",
+      "options": [
+        {
+          "id": "A",
+          "text": "Amazon Cognito"
+        },
+        {
+          "id": "B",
+          "text": "Amazon S3 Glacier"
+        },
+        {
+          "id": "C",
+          "text": "NAT Gateway"
+        },
+        {
+          "id": "D",
+          "text": "AWS Organizations"
+        }
+      ],
+      "correct_option_ids": [
+        "C"
+      ],
+      "explanation_markdown": "NAT Gateway pode viabilizar saída IPv4 de subnets privadas quando há rotas e configurações adequadas."
+    },
+    {
+      "id": "Q63",
+      "source_chapter_id": "chapter-23",
+      "domain": 3,
+      "kind": "single",
+      "selection_count": 1,
+      "statement_markdown": "Uma companhia quer conexão dedicada do escritório/datacenter à AWS em vez de usar somente VPN sobre internet. Qual serviço?",
+      "options": [
+        {
+          "id": "A",
+          "text": "Amazon Athena"
+        },
+        {
+          "id": "B",
+          "text": "AWS Step Functions"
+        },
+        {
+          "id": "C",
+          "text": "AWS Direct Connect"
+        },
+        {
+          "id": "D",
+          "text": "Amazon SNS"
+        }
+      ],
+      "correct_option_ids": [
+        "C"
+      ],
+      "explanation_markdown": "Direct Connect oferece conectividade dedicada. Criptografia ponta a ponta deve ser analisada separadamente."
+    },
+    {
+      "id": "Q64",
+      "source_chapter_id": "chapter-23",
+      "domain": 3,
+      "kind": "single",
+      "selection_count": 1,
+      "statement_markdown": "Qual serviço constrói um túnel criptografado pela internet entre a rede corporativa e a AWS?",
+      "options": [
+        {
+          "id": "A",
+          "text": "Amazon ElastiCache"
+        },
+        {
+          "id": "B",
+          "text": "Amazon WorkSpaces"
+        },
+        {
+          "id": "C",
+          "text": "AWS Site-to-Site VPN"
+        },
+        {
+          "id": "D",
+          "text": "AWS Glue"
+        }
+      ],
+      "correct_option_ids": [
+        "C"
+      ],
+      "explanation_markdown": "Site-to-Site VPN é opção de conectividade híbrida por túnel criptografado."
+    },
+    {
+      "id": "Q65",
+      "source_chapter_id": "chapter-23",
+      "domain": 3,
+      "kind": "single",
+      "selection_count": 1,
+      "statement_markdown": "O sistema precisa que `api.exemplo.com` resolva para o endpoint correto. Qual serviço tem DNS como função principal?",
+      "options": [
+        {
+          "id": "A",
+          "text": "Amazon EBS"
+        },
+        {
+          "id": "B",
+          "text": "AWS Fargate"
+        },
+        {
+          "id": "C",
+          "text": "Amazon Inspector"
+        },
+        {
+          "id": "D",
+          "text": "Amazon Route 53"
+        }
+      ],
+      "correct_option_ids": [
+        "D"
+      ],
+      "explanation_markdown": "Route 53 oferece DNS e recursos associados de roteamento."
+    },
+    {
+      "id": "Q66",
+      "source_chapter_id": "chapter-23",
+      "domain": 3,
+      "kind": "single",
+      "selection_count": 1,
+      "statement_markdown": "O frontend serve JS, CSS e imagens para usuários mundialmente, buscando reduzir latência de entrega. Qual serviço?",
+      "options": [
+        {
+          "id": "A",
+          "text": "Amazon CloudFront"
+        },
+        {
+          "id": "B",
+          "text": "Amazon Neptune"
+        },
+        {
+          "id": "C",
+          "text": "AWS Database Migration Service"
+        },
+        {
+          "id": "D",
+          "text": "AWS CloudHSM"
+        }
+      ],
+      "correct_option_ids": [
+        "A"
+      ],
+      "explanation_markdown": "CloudFront é CDN com pontos de borda e mecanismos de cache/distribuição."
+    },
+    {
+      "id": "Q67",
+      "source_chapter_id": "chapter-23",
+      "domain": 3,
+      "kind": "single",
+      "selection_count": 1,
+      "statement_markdown": "Um sistema precisa armazenar milhões de relatórios em arquivos acessíveis por API, organizados em buckets e chaves. Qual serviço?",
+      "options": [
+        {
+          "id": "A",
+          "text": "Amazon EC2 Instance Store"
+        },
+        {
+          "id": "B",
+          "text": "Amazon S3"
+        },
+        {
+          "id": "C",
+          "text": "Amazon RDS"
+        },
+        {
+          "id": "D",
+          "text": "Amazon EBS"
+        }
+      ],
+      "correct_option_ids": [
+        "B"
+      ],
+      "explanation_markdown": "S3 é object storage. EBS fornece blocos e RDS banco relacional."
+    },
+    {
+      "id": "Q68",
+      "source_chapter_id": "chapter-23",
+      "domain": 3,
+      "kind": "single",
+      "selection_count": 1,
+      "statement_markdown": "Os arquivos precisam ficar retidos por muitos anos e serão recuperados rarissimamente, aceitando espera para recuperação. Qual classe é candidata?",
+      "options": [
+        {
+          "id": "A",
+          "text": "S3 Glacier Deep Archive"
+        },
+        {
+          "id": "B",
+          "text": "S3 Standard"
+        },
+        {
+          "id": "C",
+          "text": "S3 Standard-IA obrigatoriamente"
+        },
+        {
+          "id": "D",
+          "text": "EBS gp3"
+        }
+      ],
+      "correct_option_ids": [
+        "A"
+      ],
+      "explanation_markdown": "Deep Archive é voltada a arquivamento de longa duração com recuperação não imediata."
+    },
+    {
+      "id": "Q69",
+      "source_chapter_id": "chapter-23",
+      "domain": 3,
+      "kind": "multiple",
+      "selection_count": 2,
+      "statement_markdown": "**Selecione DUAS.** Qual solução combina corretamente o modelo de armazenamento com o requisito?",
+      "options": [
+        {
+          "id": "A",
+          "text": "S3: disco de boot obrigatório de toda EC2"
+        },
+        {
+          "id": "B",
+          "text": "EFS: sistema compartilhado NFS para instâncias Linux compatíveis"
+        },
+        {
+          "id": "C",
+          "text": "EBS: volume persistente em bloco para instância EC2"
+        },
+        {
+          "id": "D",
+          "text": "Instance Store: storage de backup persistente independente da instância"
+        }
+      ],
+      "correct_option_ids": [
+        "B",
+        "C"
+      ],
+      "explanation_markdown": "EBS é bloco persistente; EFS é arquivo compartilhado. S3 é objeto e instance store é efêmero."
+    },
+    {
+      "id": "Q70",
+      "source_chapter_id": "chapter-23",
+      "domain": 3,
+      "kind": "single",
+      "selection_count": 1,
+      "statement_markdown": "Uma equipe deseja consultar arquivos Parquet no S3 usando SQL sem gerenciar cluster e manter um catálogo de metadados/ETL. Qual dupla é mais adequada?",
+      "options": [
+        {
+          "id": "A",
+          "text": "WorkSpaces e Polly"
+        },
+        {
+          "id": "B",
+          "text": "Athena e Glue"
+        },
+        {
+          "id": "C",
+          "text": "CloudTrail e Shield"
+        },
+        {
+          "id": "D",
+          "text": "Neptune e Route 53"
+        }
+      ],
+      "correct_option_ids": [
+        "B"
+      ],
+      "explanation_markdown": "Athena consulta dados por SQL; Glue cataloga/transforma. Não implica que Glue seja obrigatório em toda consulta Athena."
+    },
+    {
+      "id": "Q71",
+      "source_chapter_id": "chapter-23",
+      "domain": 3,
+      "kind": "multiple",
+      "selection_count": 2,
+      "statement_markdown": "**Selecione DUAS.** Uma plataforma precisa armazenar trabalhos em fila para processamento posterior e enviar eventos a vários assinantes. Quais serviços respectivamente são relevantes?",
+      "options": [
+        {
+          "id": "A",
+          "text": "Amazon SQS"
+        },
+        {
+          "id": "B",
+          "text": "Amazon SNS"
+        },
+        {
+          "id": "C",
+          "text": "AWS Certificate Manager"
+        },
+        {
+          "id": "D",
+          "text": "Amazon EFS"
+        }
+      ],
+      "correct_option_ids": [
+        "A",
+        "B"
+      ],
+      "explanation_markdown": "SQS desacopla produtores/consumidores por filas; SNS distribui mensagens via pub/sub."
+    },
+    {
+      "id": "Q72",
+      "source_chapter_id": "chapter-23",
+      "domain": 4,
+      "kind": "single",
+      "selection_count": 1,
+      "statement_markdown": "Jobs de simulação toleram interrupções e podem ser reiniciados. Qual modelo EC2 oferece grande desconto potencial aceitando interrupção?",
+      "options": [
+        {
+          "id": "A",
+          "text": "Somente On-Demand"
+        },
+        {
+          "id": "B",
+          "text": "Dedicated Hosts"
+        },
+        {
+          "id": "C",
+          "text": "On-Demand Capacity Reservation"
+        },
+        {
+          "id": "D",
+          "text": "Spot Instances"
+        }
+      ],
+      "correct_option_ids": [
+        "D"
+      ],
+      "explanation_markdown": "Spot usa capacidade disponível com interrupção possível; adequado para batch resiliente."
+    },
+    {
+      "id": "Q73",
+      "source_chapter_id": "chapter-23",
+      "domain": 4,
+      "kind": "single",
+      "selection_count": 1,
+      "statement_markdown": "Uma empresa tem carga EC2 estável por anos e aceita compromisso para economizar em relação ao On-Demand. Qual categoria deve avaliar?",
+      "options": [
+        {
+          "id": "A",
+          "text": "AWS Artifact"
+        },
+        {
+          "id": "B",
+          "text": "Reserved Instances"
+        },
+        {
+          "id": "C",
+          "text": "Somente NAT Gateway"
+        },
+        {
+          "id": "D",
+          "text": "Spot obrigatoriamente"
+        }
+      ],
+      "correct_option_ids": [
+        "B"
+      ],
+      "explanation_markdown": "RIs são opção de desconto por compromisso de prazo, com condições próprias."
+    },
+    {
+      "id": "Q74",
+      "source_chapter_id": "chapter-23",
+      "domain": 4,
+      "kind": "single",
+      "selection_count": 1,
+      "statement_markdown": "Qual afirmação sobre Savings Plans é correta?",
+      "options": [
+        {
+          "id": "A",
+          "text": "Oferecem descontos por compromisso de gasto/uso elegível por período"
+        },
+        {
+          "id": "B",
+          "text": "São um firewall de preço zero"
+        },
+        {
+          "id": "C",
+          "text": "Servem exclusivamente para DNS"
+        },
+        {
+          "id": "D",
+          "text": "Garantem, por si só, capacidade em qualquer AZ"
+        }
+      ],
+      "correct_option_ids": [
+        "A"
+      ],
+      "explanation_markdown": "Savings Plans não são mecanismo genérico de reserva de capacidade nem preço fixo zero."
+    },
+    {
+      "id": "Q75",
+      "source_chapter_id": "chapter-23",
+      "domain": 4,
+      "kind": "single",
+      "selection_count": 1,
+      "statement_markdown": "Qual opção atende cenário em que licenciamento exige controle sobre servidor físico dedicado?",
+      "options": [
+        {
+          "id": "A",
+          "text": "Dedicated Host"
+        },
+        {
+          "id": "B",
+          "text": "S3 One Zone-IA"
+        },
+        {
+          "id": "C",
+          "text": "Amazon Macie"
+        },
+        {
+          "id": "D",
+          "text": "Amazon EventBridge"
+        }
+      ],
+      "correct_option_ids": [
+        "A"
+      ],
+      "explanation_markdown": "Dedicated Hosts atendem isolamento físico e requisitos de licenciamento compatíveis."
+    },
+    {
+      "id": "Q76",
+      "source_chapter_id": "chapter-23",
+      "domain": 4,
+      "kind": "single",
+      "selection_count": 1,
+      "statement_markdown": "Você ainda não implantou a arquitetura e precisa estimar sua conta mensal a partir de hipóteses de uso. Qual ferramenta?",
+      "options": [
+        {
+          "id": "A",
+          "text": "Amazon EKS"
+        },
+        {
+          "id": "B",
+          "text": "AWS Pricing Calculator"
+        },
+        {
+          "id": "C",
+          "text": "AWS CloudTrail"
+        },
+        {
+          "id": "D",
+          "text": "Amazon GuardDuty"
+        }
+      ],
+      "correct_option_ids": [
+        "B"
+      ],
+      "explanation_markdown": "Pricing Calculator ajuda a simular custos futuros antes da implantação."
+    },
+    {
+      "id": "Q77",
+      "source_chapter_id": "chapter-23",
+      "domain": 4,
+      "kind": "single",
+      "selection_count": 1,
+      "statement_markdown": "A conta aumentou 40% no último mês e o time deseja explorar gastos por serviço e período. Qual recurso?",
+      "options": [
+        {
+          "id": "A",
+          "text": "AWS Step Functions"
+        },
+        {
+          "id": "B",
+          "text": "AWS Cost Explorer"
+        },
+        {
+          "id": "C",
+          "text": "AWS ACM"
+        },
+        {
+          "id": "D",
+          "text": "Amazon Lex"
+        }
+      ],
+      "correct_option_ids": [
+        "B"
+      ],
+      "explanation_markdown": "Cost Explorer permite exploração e análise de custos históricos, tendências e detalhamentos suportados."
+    },
+    {
+      "id": "Q78",
+      "source_chapter_id": "chapter-23",
+      "domain": 4,
+      "kind": "single",
+      "selection_count": 1,
+      "statement_markdown": "O gestor quer alertas quando o custo projetado ou efetivo se aproximar do limite planejado. Qual serviço?",
+      "options": [
+        {
+          "id": "A",
+          "text": "AWS Budgets"
+        },
+        {
+          "id": "B",
+          "text": "Amazon Textract"
+        },
+        {
+          "id": "C",
+          "text": "Amazon DocumentDB"
+        },
+        {
+          "id": "D",
+          "text": "AWS Direct Connect"
+        }
+      ],
+      "correct_option_ids": [
+        "A"
+      ],
+      "explanation_markdown": "Budgets define orçamento e notificação. Alerta não deve ser presumido como teto automático universal."
+    },
+    {
+      "id": "Q79",
+      "source_chapter_id": "chapter-23",
+      "domain": 4,
+      "kind": "single",
+      "selection_count": 1,
+      "statement_markdown": "Uma empresa quer fatura centralizada para várias contas e eventual compartilhamento de descontos elegíveis. Qual recurso?",
+      "options": [
+        {
+          "id": "A",
+          "text": "Amazon Route 53 exclusivamente"
+        },
+        {
+          "id": "B",
+          "text": "AWS X-Ray"
+        },
+        {
+          "id": "C",
+          "text": "Amazon Polly"
+        },
+        {
+          "id": "D",
+          "text": "AWS Organizations com consolidated billing"
+        }
+      ],
+      "correct_option_ids": [
+        "D"
+      ],
+      "explanation_markdown": "Organizations organiza contas e oferece cobrança consolidada; não unifica automaticamente permissões entre as contas."
+    },
+    {
+      "id": "Q80",
+      "source_chapter_id": "chapter-23",
+      "domain": 4,
+      "kind": "single",
+      "selection_count": 1,
+      "statement_markdown": "Em outubro de 2026, qual afirmação sobre planos AWS Support é mais precisa?",
+      "options": [
+        {
+          "id": "A",
+          "text": "O suporte não possui opção gratuita"
+        },
+        {
+          "id": "B",
+          "text": "AWS Support substitui IAM e WAF"
+        },
+        {
+          "id": "C",
+          "text": "A AWS já apresenta Business Support+ e Enterprise Support, enquanto o guia CLF-C02 ainda cita nomes tradicionais em transição"
+        },
+        {
+          "id": "D",
+          "text": "Todos os planos antigos foram extintos em 2020"
+        }
+      ],
+      "correct_option_ids": [
+        "C"
+      ],
+      "explanation_markdown": "Documentação atual lista Basic, Business Support+, Enterprise Support e Unified Operations; planos Developer, Business e Enterprise On-Ramp estão em transição com descontinuação anunciada para 2027."
+    }
+  ]
+}
