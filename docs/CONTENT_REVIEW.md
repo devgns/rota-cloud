@@ -17,7 +17,7 @@ Data da conferência desta implementação: 16 de outubro de 2026.
 
 ## O que não foi reescrito
 
-O Markdown da apostila permanece a fonte da leitura. Complementos do adendo viraram diagramas e notas rotuladas (`complemento`, `comparativo`, `nota de atualização`), fora do corpo original.
+O Markdown da apostila permanece a fonte da leitura. Complementos editoriais viraram diagramas e notas rotuladas (`complemento`, `comparativo`, `nota de atualização`), fora do corpo original.
 
 Perguntas `EXTRA-*` ficam só no leitor. Não entram nas 80 nem no simulado.
 

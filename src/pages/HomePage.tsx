@@ -7,8 +7,10 @@ import { DOMAIN_META, type Domain } from '@/lib/types'
 import { domainStats } from '@/lib/quiz'
 import { useProgress } from '@/state/ProgressContext'
 import { buttonClass, Panel } from '@/components/ui'
+import { useCoursePath } from '@/courses/CourseContext'
 
 export function HomePage() {
+  const p = useCoursePath()
   const corpus = getCorpus()
   const { progress } = useProgress()
   const next = recommendNext(corpus, progress)
@@ -27,13 +29,13 @@ export function HomePage() {
         Vinte e seis capítulos, oitenta questões comentadas e cento e trinta e dois flashcards. A leitura fica neste navegador, com o ponto em que você parou.
       </p>
       <div className="mt-6 flex flex-wrap gap-3">
-        <Link className={buttonClass()} to={next.href}>{progress.lastLocation ? 'Continuar de onde parei' : 'Começar pelo capítulo 1'}</Link>
-        <Link className={buttonClass('ghost')} to="/trilhas">Ver trilhas</Link>
+        <Link className={buttonClass()} to={p(next.href)}>{progress.lastLocation ? 'Continuar de onde parei' : 'Começar pelo capítulo 1'}</Link>
+        <Link className={buttonClass('ghost')} to={p('/trilhas')}>Ver trilhas</Link>
       </div>
       <Panel className="mt-8">
         <h2 className="text-lg font-semibold">O que estudar agora</h2>
         <p className="mt-1 text-[var(--color-ink-soft)]">{next.reason}</p>
-        <Link className="mt-3 inline-block font-semibold text-[var(--color-navy)]" to={next.href}>{next.title}</Link>
+        <Link className="mt-3 inline-block font-semibold text-[var(--color-navy)]" to={p(next.href)}>{next.title}</Link>
       </Panel>
       <div className="mt-6 grid gap-4 md:grid-cols-3">
         <Panel>
@@ -71,7 +73,7 @@ export function HomePage() {
         {corpus.modules.map((module) => {
           const done = module.chapter_ids.filter((id) => progress.completedChapterIds.includes(id)).length
           return (
-            <Link key={module.id} to={`/trilhas#${module.id}`} className="block">
+            <Link key={module.id} to={p(`/trilhas#${module.id}`)} className="block">
               <Panel>
                 <h3 className="font-semibold">{module.title}</h3>
                 <p className="mt-1 text-sm text-[var(--color-ink-soft)]">{MODULE_BLURB[module.id]}</p>

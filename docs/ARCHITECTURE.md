@@ -46,3 +46,18 @@ Os esquemas em texto da apostila (blocos ```text) viram figuras SVG estáticas e
 Cada capítulo da apostila começa com a linha `> **Nomes completos nesta página:** …`. O leitor não mostra essa linha: `src/lib/abbreviations.ts` a transforma em dados, e um plugin remark insere o nome completo na primeira menção de cada sigla no capítulo, entre parênteses e em texto discreto. As demais menções viram `<abbr title>`. Quando a própria apostila já explica a sigla, seja por um parêntese logo depois ou pelo nome por extenso na seção, nada é repetido. No capítulo 23, cujas questões não passam pelo markdown, a lista aparece recolhida em "Siglas usadas nesta página". Trilhas, Praticar e Flashcards usam a mesma lista recolhível (`ServiceNamesGuide`).
 
 A abertura do capítulo é montada nesta ordem: título, etiqueta `[ESSENCIAL — …]` (como selo), objetivos de aprendizagem (`studyLayer.ts`) e só então o texto.
+
+## Cursos
+
+A raiz (`/`) é o catálogo (`CatalogPage`, com a entrada animada em `components/landing/RouteHero.tsx`). Cada curso vive em `/cursos/:courseId/...`:
+
+- `src/courses/registry.ts` lista os cursos (`available` ou `soon`) e guarda a marca (`BRAND`), o autor e o link do GitHub.
+- `CourseLayout` (em `src/courses/CourseContext.tsx`) põe o curso no contexto. Um curso `soon` ou inexistente mostra uma página "em preparação".
+- Links internos passam por `useCoursePath()`: `p('/ler/x')` vira `/cursos/clf-c02/ler/x`. `lib/recommend.ts` e `lib/find.ts` continuam devolvendo caminhos relativos ao curso, e quem os exibe aplica o prefixo.
+- O `Shell` descobre o curso pela URL (`useMatch`). Dentro de um curso mostra o selo do curso, a navegação e a busca; no catálogo mostra só a marca e o GitHub.
+- Endereços antigos (`/ler/…`, `/trilhas`, `/praticar/…` etc.) redirecionam para o CLF-C02 (`LegacyRedirect`).
+
+Hoje o corpus (`lib/corpus.ts`), o progresso (`clf-c02-study-progress:v1`) e o `ProgressProvider` são do CLF-C02, e tema e fonte vivem nesse mesmo progresso. Quando o segundo curso chegar, vale extrair as preferências para uma chave global e carregar corpus e progresso por curso dentro do `CourseLayout`.
+
+A animação usa a biblioteca `motion` (`motion/react`) e respeita `prefers-reduced-motion` com `useReducedMotion()`. A assinatura do rodapé fica em `components/layout/Signature.tsx`.
+

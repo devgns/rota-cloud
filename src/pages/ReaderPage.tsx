@@ -12,6 +12,7 @@ import { getCorpus } from '@/lib/corpus'
 import { sectionHasStudyContent } from '@/lib/segment'
 import type { StudyChapter, StudySection } from '@/lib/types'
 import { useProgress } from '@/state/ProgressContext'
+import { useCoursePath } from '@/courses/CourseContext'
 
 function useChapter(): { chapter?: StudyChapter; preamble: boolean } {
   const { chapterId } = useParams()
@@ -21,6 +22,7 @@ function useChapter(): { chapter?: StudyChapter; preamble: boolean } {
 }
 
 export function ReaderPage() {
+  const p = useCoursePath()
   const params = useParams()
   const corpus = getCorpus()
   const { chapter, preamble } = useChapter()
@@ -104,7 +106,7 @@ export function ReaderPage() {
   const next = index >= 0 ? corpus.chapters[index + 1] : corpus.chapters[0]
 
   if (!target) {
-    return <div className="mx-auto max-w-3xl px-4 py-10"><h1>Capítulo não encontrado.</h1><Link to="/trilhas">Voltar às trilhas</Link></div>
+    return <div className="mx-auto max-w-3xl px-4 py-10"><h1>Capítulo não encontrado.</h1><Link to={p('/trilhas')}>Voltar às trilhas</Link></div>
   }
 
   const module = corpus.modules.find((item) => item.id === chapter?.moduleId)
@@ -156,10 +158,10 @@ export function ReaderPage() {
                   )}
                   {chapter.id === 'chapter-23' && abbr && <ServiceNamesGuide names={abbr.entries} />}
                   {chapter.id === 'chapter-23' && (
-                    <p className="mt-4 text-sm">As 80 questões estão logo abaixo, para marcar e corrigir nesta página. O simulado cronometrado de até 65 questões continua em <Link className="font-semibold text-[var(--color-navy)]" to="/praticar">Praticar</Link>.</p>
+                    <p className="mt-4 text-sm">As 80 questões estão logo abaixo, para marcar e corrigir nesta página. O simulado cronometrado de até 65 questões continua em <Link className="font-semibold text-[var(--color-navy)]" to={p('/praticar')}>Praticar</Link>.</p>
                   )}
                   {chapter.id === 'chapter-24' && (
-                    <p className="mt-4 text-sm"><Link className="font-semibold text-[var(--color-navy)]" to="/flashcards">Abrir os 132 flashcards com repetição.</Link> As tabelas originais continuam neste capítulo.</p>
+                    <p className="mt-4 text-sm"><Link className="font-semibold text-[var(--color-navy)]" to={p('/flashcards')}>Abrir os 132 flashcards com repetição.</Link> As tabelas originais continuam neste capítulo.</p>
                   )}
                   {opening.body.trim() && <MarkdownView source={opening.body} abbr={abbrFor(section.id)} />}
                   <Note sectionId={section.id} />
@@ -179,8 +181,8 @@ export function ReaderPage() {
           })}
           {extras.length > 0 && <Recall questions={extras} />}
           <div className="mt-10 flex flex-wrap justify-between gap-3 border-t border-[var(--color-line)] pt-6">
-            {previous ? <Link className={buttonClass('ghost')} to={`/ler/${previous.id}`}><ChevronLeft className="h-4 w-4" /> {previous.originalNumber}. {previous.title}</Link> : <span />}
-            {next && <Link className={buttonClass('ghost')} to={`/ler/${next.id}`}>{next.originalNumber}. {next.title} <ChevronRight className="h-4 w-4" /></Link>}
+            {previous ? <Link className={buttonClass('ghost')} to={p(`/ler/${previous.id}`)}><ChevronLeft className="h-4 w-4" /> {previous.originalNumber}. {previous.title}</Link> : <span />}
+            {next && <Link className={buttonClass('ghost')} to={p(`/ler/${next.id}`)}>{next.originalNumber}. {next.title} <ChevronRight className="h-4 w-4" /></Link>}
           </div>
         </article>
         <aside className="hidden lg:block">
@@ -238,6 +240,7 @@ function FontControls() {
 }
 
 function ChapterNav() {
+  const p = useCoursePath()
   const corpus = getCorpus()
   const { progress, update } = useProgress()
   const toggleChapter = (id: string) => {
@@ -267,7 +270,7 @@ function ChapterNav() {
                     aria-label={`${done ? 'Desmarcar' : 'Marcar'} capítulo ${item.originalNumber} como concluído`}
                     onChange={() => toggleChapter(id)}
                   />
-                  <Link to={`/ler/${id}`} className="min-w-0 flex-1 leading-snug">
+                  <Link to={p(`/ler/${id}`)} className="min-w-0 flex-1 leading-snug">
                     {item.originalNumber}. {item.title}
                   </Link>
                 </li>
@@ -276,12 +279,13 @@ function ChapterNav() {
           </ul>
         </div>
       ))}
-      <Link to="/ler/capa" className="mt-2 inline-block text-[var(--color-ink-soft)]">Capa e índice</Link>
+      <Link to={p('/ler/capa')} className="mt-2 inline-block text-[var(--color-ink-soft)]">Capa e índice</Link>
     </nav>
   )
 }
 
 function Toc({ chapterId, sections, active, onPick }: { chapterId: string; sections: StudySection[]; active?: string; onPick?: () => void }) {
+  const p = useCoursePath()
   return (
     <nav aria-label="Seções deste capítulo" className="max-h-[70vh] overflow-auto text-sm">
       <h2 className="module-label mb-2">Neste capítulo</h2>
@@ -289,7 +293,7 @@ function Toc({ chapterId, sections, active, onPick }: { chapterId: string; secti
         {sections.map((section) => (
           <li key={section.id}>
             <Link
-              to={`/ler/${chapterId}/${section.id}`}
+              to={p(`/ler/${chapterId}/${section.id}`)}
               onClick={() => {
                 onPick?.()
                 document.getElementById(section.id)?.scrollIntoView({ behavior: 'smooth', block: 'start' })

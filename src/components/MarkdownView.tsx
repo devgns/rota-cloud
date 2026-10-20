@@ -6,6 +6,7 @@ import { Link } from 'react-router-dom'
 import remarkGfm from 'remark-gfm'
 import { hasTextFigure, TextFigure } from '@/components/diagrams/figures'
 import { remarkAbbr, type AbbrEntry } from '@/lib/abbreviations'
+import { useCoursePath } from '@/courses/CourseContext'
 
 /** Texto de um bloco ```text, para trocar esquemas em ASCII por figuras. */
 function textBlock(children: ReactNode): string | null {
@@ -34,6 +35,7 @@ export interface AbbrOptions {
 }
 
 export function MarkdownView({ source, anchorId, abbr }: { source: string; anchorId?: string; abbr?: AbbrOptions }) {
+  const p = useCoursePath()
   let anchored = false
   const take = () => {
     if (anchored || !anchorId) return undefined
@@ -53,7 +55,7 @@ export function MarkdownView({ source, anchorId, abbr }: { source: string; ancho
     ),
     a: ({ href, children }) => {
       const chapterId = chapterFromIndexHref(href)
-      if (chapterId) return <Link to={`/ler/${chapterId}`}>{children}</Link>
+      if (chapterId) return <Link to={p(`/ler/${chapterId}`)}>{children}</Link>
       if (href?.startsWith('http')) {
         return (
           <a href={href} target="_blank" rel="noreferrer noopener">

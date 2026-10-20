@@ -9,8 +9,10 @@ import { missedQuestionIds } from '@/lib/quiz'
 import type { ActiveSession, Question } from '@/lib/types'
 import { DOMAIN_META, type Domain } from '@/lib/types'
 import { useProgress } from '@/state/ProgressContext'
+import { useCoursePath } from '@/courses/CourseContext'
 
 export function PracticeHub() {
+  const p = useCoursePath()
   const { progress } = useProgress()
   const missed = missedQuestionIds(progress)
   const exam = progress.activeSession?.mode === 'exam' && progress.activeSession.status === 'in_progress'
@@ -23,22 +25,22 @@ export function PracticeHub() {
       {exam && (
         <Panel className="mt-6">
           <h2 className="font-semibold">Simulado em andamento</h2>
-          <Link className="mt-2 inline-block font-semibold text-[var(--color-navy)]" to="/praticar/simulado">Retomar</Link>
+          <Link className="mt-2 inline-block font-semibold text-[var(--color-navy)]" to={p('/praticar/simulado')}>Retomar</Link>
         </Panel>
       )}
       <h2 className="mt-8 text-xl font-semibold">Treino rápido</h2>
       <div className="mt-3 flex flex-wrap gap-2">
-        <Link className={buttonClass('ghost')} to="/praticar/treino">Todas</Link>
+        <Link className={buttonClass('ghost')} to={p('/praticar/treino')}>Todas</Link>
         {([1, 2, 3, 4] as Domain[]).map((domain) => (
-          <Link className={buttonClass('ghost')} key={domain} to={`/praticar/treino?domain=${domain}`}>{domainLabel(domain)}</Link>
+          <Link className={buttonClass('ghost')} key={domain} to={p(`/praticar/treino?domain=${domain}`)}>{domainLabel(domain)}</Link>
         ))}
-        <Link className={buttonClass('ghost')} to="/praticar/treino?missed=1">Questões que errei ({missed.length})</Link>
+        <Link className={buttonClass('ghost')} to={p('/praticar/treino?missed=1')}>Questões que errei ({missed.length})</Link>
       </div>
       <h2 className="mt-8 text-xl font-semibold">Simulado</h2>
       <p className="mt-1 text-sm text-[var(--color-ink-soft)]">Até 65 questões, 90 minutos, ordem aleatória. Você pode pausar o cronômetro.</p>
       <div className="mt-3 flex flex-wrap gap-2">
         {[20, 40, 65].map((count) => (
-          <Link className={buttonClass()} key={count} to={`/praticar/simulado?n=${count}`}>{count} questões</Link>
+          <Link className={buttonClass()} key={count} to={p(`/praticar/simulado?n=${count}`)}>{count} questões</Link>
         ))}
       </div>
       <h2 className="mt-8 text-xl font-semibold">Tentativas anteriores</h2>
@@ -46,7 +48,7 @@ export function PracticeHub() {
         {progress.examAttempts.length === 0 && <li>Nenhum simulado finalizado ainda.</li>}
         {progress.examAttempts.map((attempt) => (
           <li key={attempt.id}>
-            <Link className="font-semibold text-[var(--color-navy)]" to={`/praticar/resultado/${attempt.id}`}>
+            <Link className="font-semibold text-[var(--color-navy)]" to={p(`/praticar/resultado/${attempt.id}`)}>
               {new Date(attempt.finishedAt).toLocaleString('pt-BR')} — {attempt.correct}/{attempt.questionIds.length} acertos nesta simulação
             </Link>
           </li>
@@ -62,6 +64,7 @@ function useQuestionMap() {
 }
 
 export function TrainPage() {
+  const p = useCoursePath()
   const [params] = useSearchParams()
   const corpus = getCorpus()
   const questions = useQuestionMap()
@@ -86,7 +89,7 @@ export function TrainPage() {
   }
 
   if (progress.activeSession?.mode === 'exam' && progress.activeSession.status === 'in_progress') {
-    return <div className="mx-auto max-w-3xl px-4 py-8"><p>Há um simulado aberto. Finalize ou abandone-o antes de um treino novo.</p><Link to="/praticar/simulado">Ir ao simulado</Link></div>
+    return <div className="mx-auto max-w-3xl px-4 py-8"><p>Há um simulado aberto. Finalize ou abandone-o antes de um treino novo.</p><Link to={p('/praticar/simulado')}>Ir ao simulado</Link></div>
   }
   if (!active) {
     return (
@@ -130,6 +133,7 @@ export function ExamPage() {
 }
 
 function Runner({ session, questions, mode }: { session: ActiveSession; questions: Map<string, Question>; mode: 'train' | 'exam' }) {
+  const p = useCoursePath()
   const { update } = useProgress()
   const navigate = useNavigate()
   const [now, setNow] = useState(() => Date.now())
@@ -157,8 +161,8 @@ function Runner({ session, questions, mode }: { session: ActiveSession; question
       examAttempts: [...progress.examAttempts, summary],
       questionAttempts: [...progress.questionAttempts, ...attempts],
     }))
-    navigate(`/praticar/resultado/${summary.id}`)
-  }, [mode, navigate, question, questions, session, update])
+    navigate(p(`/praticar/resultado/${summary.id}`))
+  }, [mode, navigate, p, question, questions, session, update])
 
   if (!question) return <p className="px-4 py-8">Questão indisponível.</p>
 
@@ -207,7 +211,7 @@ function Runner({ session, questions, mode }: { session: ActiveSession; question
       examAttempts: [...progress.examAttempts, summary],
       questionAttempts: [...progress.questionAttempts, ...attempts],
     }))
-    navigate(`/praticar/resultado/${summary.id}`)
+    navigate(p(`/praticar/resultado/${summary.id}`))
   }
   const clock = remainingMs(session, new Date(now))
 
@@ -266,7 +270,7 @@ function Runner({ session, questions, mode }: { session: ActiveSession; question
         <Panel className="mt-4">
           <p className="font-semibold">{gradeSelection(question, selected) ? 'Certa.' : 'Ainda não.'}</p>
           <p className="mt-2">{question.explanation_markdown}</p>
-          <p className="mt-2 text-sm">Gabarito: {question.correct_option_ids.join(', ')}. <Link to={`/ler/chapter-23`}>Ver na apostila</Link></p>
+          <p className="mt-2 text-sm">Gabarito: {question.correct_option_ids.join(', ')}. <Link to={p(`/ler/chapter-23`)}>Ver na apostila</Link></p>
           <Button className="mt-4" onClick={() => patch((current) => ({
             ...current,
             currentIndex: Math.min(current.questionIds.length - 1, current.currentIndex + 1),
@@ -297,11 +301,12 @@ function Runner({ session, questions, mode }: { session: ActiveSession; question
 }
 
 export function ResultPage() {
+  const p = useCoursePath()
   const { attemptId } = useParams()
   const corpus = getCorpus()
   const { progress } = useProgress()
   const attempt = progress.examAttempts.find((item) => item.id === attemptId)
-  if (!attempt) return <div className="px-4 py-8">Tentativa não encontrada. <Link to="/praticar">Voltar</Link></div>
+  if (!attempt) return <div className="px-4 py-8">Tentativa não encontrada. <Link to={p('/praticar')}>Voltar</Link></div>
   const byId = new Map(corpus.questions.map((question) => [question.id, question]))
   const percent = Math.round((attempt.correct / attempt.questionIds.length) * 100)
   return (

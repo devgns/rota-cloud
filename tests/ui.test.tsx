@@ -31,7 +31,7 @@ describe('início sem dados', () => {
     renderHome()
     const links = screen.getAllByRole('link', { name: /começar pelo capítulo 1/i })
     expect(links).toHaveLength(1)
-    expect(links[0]).toHaveAttribute('href', '#/ler/chapter-01')
+    expect(links[0]).toHaveAttribute('href', '#/cursos/clf-c02/ler/chapter-01')
   })
 })
 

@@ -2,8 +2,10 @@ import { useMemo } from 'react'
 import { Link, useSearchParams } from 'react-router-dom'
 import { getCorpus } from '@/lib/corpus'
 import { glossaryIndex, searchAll } from '@/lib/find'
+import { useCoursePath } from '@/courses/CourseContext'
 
 export function SearchPage() {
+  const p = useCoursePath()
   const [params, setParams] = useSearchParams()
   const query = params.get('q') ?? ''
   const corpus = getCorpus()
@@ -22,7 +24,7 @@ export function SearchPage() {
       <ul className="mt-4 space-y-3">
         {hits.map((hit) => (
           <li key={`${hit.kind}-${hit.id}`}>
-            <Link to={hit.href}>
+            <Link to={p(hit.href)}>
               <span className="text-xs uppercase text-[var(--color-amber)]">{hit.kind}</span>
               <span className="block font-semibold">{hit.title}</span>
               <span className="block text-sm text-[var(--color-ink-soft)]">{hit.excerpt}</span>

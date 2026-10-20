@@ -6,8 +6,10 @@ import { emptyProgress, mergeProgress, parseProgress, serializeProgress } from '
 import { domainStats } from '@/lib/quiz'
 import { DOMAIN_META, type Domain } from '@/lib/types'
 import { useProgress } from '@/state/ProgressContext'
+import { useCoursePath } from '@/courses/CourseContext'
 
 export function ProgressPage() {
+  const p = useCoursePath()
   const corpus = getCorpus()
   const { progress, replace, mode } = useProgress()
   const [message, setMessage] = useState('')
@@ -58,7 +60,7 @@ export function ProgressPage() {
       <Panel className="mt-4">
         <h2 className="font-semibold">Última posição</h2>
         {progress.lastLocation ? (
-          <Link className="text-[var(--color-navy)]" to={progress.lastLocation.sectionId ? `/ler/${progress.lastLocation.chapterId}/${progress.lastLocation.sectionId}` : `/ler/${progress.lastLocation.chapterId}`}>
+          <Link className="text-[var(--color-navy)]" to={p(progress.lastLocation.sectionId ? `/ler/${progress.lastLocation.chapterId}/${progress.lastLocation.sectionId}` : `/ler/${progress.lastLocation.chapterId}`)}>
             Continuar em {progress.lastLocation.chapterId}
           </Link>
         ) : <p>Nenhuma leitura registrada.</p>}

@@ -1,7 +1,9 @@
 import { useEffect, useMemo, useState } from 'react'
-import { HashRouter, Route, Routes } from 'react-router-dom'
+import { HashRouter, Navigate, Route, Routes } from 'react-router-dom'
 import { Shell } from '@/components/layout/Shell'
+import { CourseLayout, LegacyRedirect } from '@/courses/CourseContext'
 import { apostilaSource, curriculum, flashcardsFile, questionsFile, sha256Hex, validateCorpusData } from '@/lib/corpus'
+import { CatalogPage } from '@/pages/CatalogPage'
 import { FlashcardsPage } from '@/pages/FlashcardsPage'
 import { GlossaryPage } from '@/pages/GlossaryPage'
 import { HomePage } from '@/pages/HomePage'
@@ -47,17 +49,24 @@ export function App() {
       <HashRouter>
         <Routes>
           <Route element={<Shell />}>
-            <Route index element={<HomePage />} />
-            <Route path="trilhas" element={<TracksPage />} />
-            <Route path="ler/:chapterId/:sectionId?" element={<ReaderPage />} />
-            <Route path="praticar" element={<PracticeHub />} />
-            <Route path="praticar/treino" element={<TrainPage />} />
-            <Route path="praticar/simulado" element={<ExamPage />} />
-            <Route path="praticar/resultado/:attemptId" element={<ResultPage />} />
-            <Route path="flashcards" element={<FlashcardsPage />} />
-            <Route path="glossario/:entryId?" element={<GlossaryPage />} />
-            <Route path="progresso" element={<ProgressPage />} />
-            <Route path="busca" element={<SearchPage />} />
+            <Route index element={<CatalogPage />} />
+            <Route path="cursos/:courseId" element={<CourseLayout />}>
+              <Route index element={<HomePage />} />
+              <Route path="trilhas" element={<TracksPage />} />
+              <Route path="ler/:chapterId/:sectionId?" element={<ReaderPage />} />
+              <Route path="praticar" element={<PracticeHub />} />
+              <Route path="praticar/treino" element={<TrainPage />} />
+              <Route path="praticar/simulado" element={<ExamPage />} />
+              <Route path="praticar/resultado/:attemptId" element={<ResultPage />} />
+              <Route path="flashcards" element={<FlashcardsPage />} />
+              <Route path="glossario/:entryId?" element={<GlossaryPage />} />
+              <Route path="progresso" element={<ProgressPage />} />
+              <Route path="busca" element={<SearchPage />} />
+            </Route>
+            {['trilhas', 'ler/*', 'praticar/*', 'flashcards', 'glossario/*', 'progresso', 'busca'].map((path) => (
+              <Route key={path} path={path} element={<LegacyRedirect />} />
+            ))}
+            <Route path="*" element={<Navigate replace to="/" />} />
           </Route>
         </Routes>
       </HashRouter>

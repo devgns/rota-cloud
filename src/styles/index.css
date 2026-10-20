@@ -386,3 +386,150 @@ button[aria-pressed="true"]:hover {
 .names-guide dl > div { display: grid; grid-template-columns: 5.5rem 1fr; gap: 0.5rem; align-items: baseline; }
 .names-guide dt { font-weight: 700; }
 .names-guide dd { margin: 0; color: var(--color-ink-soft); }
+
+/* ---------- Rota Cloud: marca, catálogo e entrada ---------- */
+.course-chip {
+  border: 1px solid var(--color-amber);
+  border-radius: 999px;
+  padding: 0.1rem 0.6rem;
+  font-size: 0.75rem;
+  font-weight: 700;
+  letter-spacing: 0.04em;
+  color: var(--color-amber);
+}
+.course-chip:hover { background: var(--color-amber-soft); }
+
+.hero {
+  position: relative;
+  display: grid;
+  align-items: center;
+  gap: 1rem;
+  min-height: min(72vh, 40rem);
+  padding: 2.5rem 0 1rem;
+}
+@media (min-width: 1024px) { .hero { grid-template-columns: 1.15fr 1fr; gap: 2rem; } }
+.hero-copy { position: relative; z-index: 1; }
+.hero-kicker {
+  margin: 0;
+  font-size: 0.8rem;
+  font-weight: 600;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+  color: var(--color-amber);
+}
+.hero-title {
+  margin: 0.75rem 0 0;
+  font-family: var(--font-serif);
+  font-size: clamp(2.3rem, 5.6vw, 4.1rem);
+  line-height: 1.04;
+  letter-spacing: -0.02em;
+  perspective: 600px;
+}
+.hero-word { display: inline-block; margin-right: 0.24em; transform-origin: 50% 100%; }
+.hero-word-accent { position: relative; color: var(--color-navy); font-style: italic; }
+.hero-underline {
+  position: absolute;
+  left: 0;
+  right: 0.42em;
+  bottom: 0.02em;
+  height: 0.12em;
+  border-radius: 999px;
+  background: var(--color-amber);
+  transform-origin: left center;
+}
+.hero-layers { margin: 1.25rem 0 0; font-size: clamp(1.05rem, 2.2vw, 1.35rem); color: var(--color-ink-soft); }
+.hero-layer-slot { display: inline-block; min-width: 8.5em; }
+.hero-layer { display: inline-block; font-weight: 600; color: var(--color-ink); }
+.hero-art { position: relative; width: 100%; max-width: 36rem; justify-self: center; }
+.hero-svg { display: block; width: 100%; height: auto; overflow: visible; }
+.hero-node-label { fill: var(--color-ink); font-family: var(--font-sans); font-size: 15px; letter-spacing: 0.06em; }
+.hero-start { fill: var(--color-ink-soft); font-size: 13px; letter-spacing: 0; }
+.hero-period { color: var(--color-amber); font-style: normal; }
+
+.course-card {
+  display: flex;
+  flex-direction: column;
+  height: 100%;
+  padding: 1.1rem 1.1rem 1.15rem;
+  border: 1px solid var(--color-line);
+  border-radius: 1rem;
+  background: var(--color-paper-raised);
+  color: inherit;
+  text-decoration: none;
+  transition: transform 200ms ease, border-color 200ms ease, box-shadow 200ms ease;
+}
+.course-card-live { border-color: color-mix(in srgb, var(--color-amber) 60%, var(--color-line)); }
+.course-card-live:hover { transform: translateY(-3px); border-color: var(--color-amber); box-shadow: 0 10px 28px -14px color-mix(in srgb, var(--color-navy) 55%, transparent); }
+.course-card-soon { opacity: 0.6; border-style: dashed; }
+.course-code { font-family: ui-monospace, SFMono-Regular, Menlo, Consolas, monospace; font-size: 0.85rem; font-weight: 700; }
+.course-badge {
+  border: 1px solid var(--color-line);
+  border-radius: 999px;
+  padding: 0.05rem 0.55rem;
+  font-size: 0.7rem;
+  font-weight: 600;
+  color: var(--color-ink-soft);
+}
+.course-badge-ok { border-color: var(--color-ok); color: var(--color-ok); background: var(--color-ok-soft); }
+@media (prefers-reduced-motion: reduce) { .course-card { transition: none; } .course-card-live:hover { transform: none; } }
+
+/* Assinatura em terminal */
+.signature {
+  margin: 0 auto;
+  max-width: 30rem;
+  border-radius: 0.8rem;
+  background: #172033;
+  color: #f4efe6;
+  font-family: ui-monospace, SFMono-Regular, Menlo, Consolas, monospace;
+  font-size: 0.85rem;
+  box-shadow: 0 16px 34px -22px rgba(10, 16, 28, 0.8);
+  overflow: hidden;
+}
+.signature-bar { display: flex; align-items: center; gap: 0.35rem; padding: 0.5rem 0.75rem; background: #10182a; }
+.signature-bar span { width: 0.6rem; height: 0.6rem; border-radius: 999px; background: #3a4660; }
+.signature-bar span:first-child { background: #e07a5f; }
+.signature-bar span:nth-child(2) { background: #e9b949; }
+.signature-bar span:nth-child(3) { background: #6dbb8a; }
+.signature-bar p { margin: 0 auto; padding-right: 1.5rem; font-size: 0.72rem; color: #8b97ad; }
+.signature-line { margin: 0; padding: 0 1rem; line-height: 1.7; white-space: pre-wrap; word-break: break-word; }
+.signature-line:first-of-type { padding-top: 0.75rem; }
+.signature-output { padding-bottom: 0.85rem; }
+.signature-prompt { color: #6dbb8a; }
+.signature-heart { display: inline-block; color: #e9a23b; }
+.signature a { color: #f4efe6; font-weight: 700; text-decoration: underline; text-decoration-color: #e9a23b; text-underline-offset: 3px; }
+.signature a:hover { color: #e9a23b; }
+.signature-caret {
+  display: inline-block;
+  width: 0.55em;
+  height: 1.05em;
+  margin-left: 0.2em;
+  vertical-align: -0.15em;
+  background: #f4efe6;
+  animation: caret-blink 1.05s steps(1) infinite;
+}
+@keyframes caret-blink { 50% { opacity: 0; } }
+@media (prefers-reduced-motion: reduce) { .signature-caret { animation: none; } }
+.signature-mini { margin: 0; font-family: ui-monospace, SFMono-Regular, Menlo, Consolas, monospace; font-size: 0.72rem; color: var(--color-ink-soft); white-space: nowrap; }
+.signature-mini-heart { color: var(--color-amber); }
+.signature-mini a { color: inherit; font-weight: 700; text-decoration: none; }
+.signature-mini a:hover { color: var(--color-amber); text-decoration: underline; text-underline-offset: 3px; }
+
+/* Logo: um brilho âmbar curto percorre a rota a cada poucos segundos. */
+.brand-neon {
+  stroke: var(--color-amber);
+  stroke-width: 2.4;
+  stroke-dasharray: 16 120;
+  stroke-dashoffset: 16;
+  filter: drop-shadow(0 0 1.5px var(--color-amber)) drop-shadow(0 0 3px color-mix(in srgb, var(--color-amber) 60%, transparent));
+  opacity: 0;
+  animation: brand-run 7s cubic-bezier(0.45, 0, 0.35, 1) 1.2s infinite;
+}
+.brand-mark:hover .brand-neon { animation-duration: 2.4s; animation-delay: 0s; }
+@keyframes brand-run {
+  0% { stroke-dashoffset: 16; opacity: 0; }
+  4% { opacity: 0.9; }
+  30% { opacity: 0.9; }
+  36% { stroke-dashoffset: -104; opacity: 0; }
+  100% { stroke-dashoffset: -104; opacity: 0; }
+}
+@media (prefers-reduced-motion: reduce) { .brand-neon { animation: none; opacity: 0; } }

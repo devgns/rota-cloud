@@ -1,6 +1,8 @@
-# CLF-C02 — plataforma de estudos
+# Rota Cloud
 
-Leitura da apostila, 80 questões comentadas, simulados e 132 flashcards para a AWS Certified Cloud Practitioner. O progresso fica no navegador.
+Plataforma de estudos para certificações AWS, uma camada de cada vez. O primeiro curso é a **AWS Certified Cloud Practitioner (CLF-C02)**: leitura da apostila, 80 questões comentadas, simulados e 132 flashcards. O progresso fica no navegador.
+
+Os próximos cursos (AI Practitioner, Solutions Architect, Developer) já aparecem no catálogo como "em breve".
 
 Material independente de preparação; não afiliado nem endossado pela AWS.
 
@@ -20,7 +22,7 @@ npm run build
 npm run preview
 ```
 
-O dev server sobe em `http://127.0.0.1:5173`. As rotas usam hash (`/#/trilhas`), então o mesmo build abre no GitHub Pages.
+O dev server sobe em `http://127.0.0.1:5173`. As rotas usam hash (`/#/cursos/clf-c02/trilhas`); endereços antigos como `/#/trilhas` redirecionam para o CLF-C02, então o mesmo build abre no GitHub Pages.
 
 ## Atualizar a apostila
 
@@ -45,7 +47,6 @@ BASE_PATH=/nome-do-repo/ npm run build
 
 3. Publique o conteúdo de `dist/` no branch que o Pages usa, ou use uma GitHub Action que rode o build. O `HashRouter` não precisa de `404.html`.
 
-`references-private/` e qualquer PDF de terceiro estão no `.gitignore`. Não os envie.
 
 ## O que fica salvo
 
@@ -60,3 +61,12 @@ Chave `localStorage`: `clf-c02-study-progress:v1`.
 - tema, tamanho de fonte e segundos de estudo com a aba visível
 
 Em Progresso dá para exportar, fundir, substituir ou apagar. Nada disso sai do navegador.
+
+## Licença
+
+- **Código** (o site): [MIT](LICENSE).
+- **Conteúdo de estudo** (apostila, questões, flashcards e textos dos diagramas): [CC BY-NC-SA 4.0](LICENSE-CONTENT.md). Use, compartilhe e adapte com crédito, sem fins comerciais e mantendo a mesma licença.
+
+---
+
+Feito com ♥ por [@devgns](https://github.com/devgns).

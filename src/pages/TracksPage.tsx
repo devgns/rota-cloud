@@ -5,10 +5,12 @@ import { getCorpus } from '@/lib/corpus'
 import { useProgress } from '@/state/ProgressContext'
 import { Panel } from '@/components/ui'
 import { ServiceNamesGuide } from '@/components/ServiceNamesGuide'
+import { useCoursePath } from '@/courses/CourseContext'
 
 type Filter = 'todos' | 'nao' | 'andamento' | 'concluidos'
 
 export function TracksPage() {
+  const p = useCoursePath()
   const corpus = getCorpus()
   const { progress } = useProgress()
   const [filter, setFilter] = useState<Filter>('todos')
@@ -53,7 +55,7 @@ export function TracksPage() {
                     <div className="flex flex-wrap items-start justify-between gap-3">
                       <div>
                         <h3 className="font-semibold">
-                          <Link to={`/ler/${chapter.id}`}>{chapter.originalNumber}. {chapter.title}</Link>
+                          <Link to={p(`/ler/${chapter.id}`)}>{chapter.originalNumber}. {chapter.title}</Link>
                         </h3>
                         <p className="mt-1 text-sm text-[var(--color-ink-soft)]">
                           {done ? 'Concluído' : sectionsDone > 0 ? 'Em andamento' : 'Não iniciado'}
@@ -61,7 +63,7 @@ export function TracksPage() {
                           {' · '}{chapter.domains.map(domainLabel).join(', ')}
                         </p>
                       </div>
-                      <Link className="text-sm font-semibold text-[var(--color-navy)]" to={`/ler/${chapter.id}`}>Abrir</Link>
+                      <Link className="text-sm font-semibold text-[var(--color-navy)]" to={p(`/ler/${chapter.id}`)}>Abrir</Link>
                     </div>
                   </Panel>
                 )
@@ -70,7 +72,7 @@ export function TracksPage() {
           </section>
         )
       })}
-      <p className="mt-8 text-sm"><Link to="/ler/capa">Ler a capa e o índice original</Link></p>
+      <p className="mt-8 text-sm"><Link to={p('/ler/capa')}>Ler a capa e o índice original</Link></p>
     </div>
   )
 }

@@ -4,8 +4,10 @@ import { Panel } from '@/components/ui'
 import { COMPARISONS, glossaryFromCorpus } from '@/lib/glossary'
 import { getCorpus } from '@/lib/corpus'
 import { normalizeSearch } from '@/lib/search'
+import { useCoursePath } from '@/courses/CourseContext'
 
 export function GlossaryPage() {
+  const p = useCoursePath()
   const corpus = getCorpus()
   const entries = useMemo(() => glossaryFromCorpus(corpus), [corpus])
   const { entryId } = useParams()
@@ -23,7 +25,7 @@ export function GlossaryPage() {
         <input id="filtro-glossario" value={query} onChange={(event) => setQuery(event.target.value)} className="mt-2 w-full rounded-xl border border-[var(--color-line)] bg-transparent px-3 py-2" placeholder="CloudTrail, CloudWatch, Lambda" />
         <ul className="mt-3 max-h-[70vh] space-y-1 overflow-auto text-sm">
           {filtered.map((entry) => (
-            <li key={entry.id}><Link to={`/glossario/${entry.id}`}>{entry.name}</Link></li>
+            <li key={entry.id}><Link to={p(`/glossario/${entry.id}`)}>{entry.name}</Link></li>
           ))}
         </ul>
       </aside>
@@ -49,7 +51,7 @@ export function GlossaryPage() {
             {selected.doNotConfuse && <p className="mt-2"><strong>Não confundir com: </strong>{selected.doNotConfuse}</p>}
             {selected.scopeNote && <p className="mt-2 text-sm">{selected.scopeNote}</p>}
             <p className="mt-4 text-sm">
-              <Link className="font-semibold text-[var(--color-navy)]" to={`/ler/${selected.chapterId}`}>Abrir capítulo relacionado</Link>
+              <Link className="font-semibold text-[var(--color-navy)]" to={p(`/ler/${selected.chapterId}`)}>Abrir capítulo relacionado</Link>
               {selected.docUrl && <> · <a className="font-semibold text-[var(--color-navy)]" href={selected.docUrl} target="_blank" rel="noreferrer noopener">Documentação AWS</a></>}
             </p>
           </Panel>
