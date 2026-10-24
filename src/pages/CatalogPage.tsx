@@ -4,6 +4,7 @@ import { Link } from 'react-router-dom'
 import { RouteHero } from '@/components/landing/RouteHero'
 import { COURSES, coursePath } from '@/courses/registry'
 import { getCorpus } from '@/lib/corpus'
+import { readAifProgress } from '@/courses/aif/progress'
 import { useProgress } from '@/state/ProgressContext'
 
 export function CatalogPage() {
@@ -11,6 +12,7 @@ export function CatalogPage() {
   const { progress } = useProgress()
   const chapters = getCorpus().chapters.length
   const done = progress.completedChapterIds.length
+  const aifDone = readAifProgress().completed.length
 
   return (
     <div className="mx-auto max-w-6xl px-4">
@@ -21,6 +23,8 @@ export function CatalogPage() {
         <ul className="mt-6 grid list-none gap-4 p-0 sm:grid-cols-2 lg:grid-cols-4">
           {COURSES.map((course, index) => {
             const available = course.status === 'available'
+            const courseDone = course.id === 'aif-c01' ? aifDone : done
+            const courseChapters = course.id === 'aif-c01' ? 30 : chapters
             const card = (
               <>
                 <div className="flex items-center justify-between gap-2">
@@ -42,11 +46,11 @@ export function CatalogPage() {
                 )}
                 {available && (
                   <>
-                    <div className="mt-4 h-1.5 rounded-full bg-[var(--color-line)]" aria-label={`${done} de ${chapters} capítulos concluídos`} role="img">
-                      <div className="h-1.5 rounded-full bg-[var(--color-amber)]" style={{ width: `${(done / chapters) * 100}%` }} />
+                    <div className="mt-4 h-1.5 rounded-full bg-[var(--color-line)]" aria-label={`${courseDone} de ${courseChapters} capítulos concluídos`} role="img">
+                      <div className="h-1.5 rounded-full bg-[var(--color-amber)]" style={{ width: `${(courseDone / courseChapters) * 100}%` }} />
                     </div>
                     <p className="mt-3 flex items-center gap-1 text-sm font-semibold text-[var(--color-navy)]">
-                      {done > 0 ? 'Continuar' : 'Abrir curso'} <ArrowRight className="h-4 w-4" aria-hidden="true" />
+                      {courseDone > 0 ? 'Continuar' : 'Abrir curso'} <ArrowRight className="h-4 w-4" aria-hidden="true" />
                     </p>
                   </>
                 )}

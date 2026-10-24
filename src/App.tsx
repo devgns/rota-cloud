@@ -2,6 +2,7 @@ import { useEffect, useMemo, useState } from 'react'
 import { HashRouter, Navigate, Route, Routes } from 'react-router-dom'
 import { Shell } from '@/components/layout/Shell'
 import { CourseLayout, LegacyRedirect } from '@/courses/CourseContext'
+import { AifCourseApp } from '@/courses/aif/AifCourseApp'
 import { apostilaSource, curriculum, flashcardsFile, questionsFile, sha256Hex, validateCorpusData } from '@/lib/corpus'
 import { CatalogPage } from '@/pages/CatalogPage'
 import { FlashcardsPage } from '@/pages/FlashcardsPage'
@@ -50,6 +51,12 @@ export function App() {
         <Routes>
           <Route element={<Shell />}>
             <Route index element={<CatalogPage />} />
+            <Route path="cursos/aif-c01">
+              <Route index element={<AifCourseApp />} />
+              {['trilhas', 'ler/:chapterId/:sectionId?', 'praticar', 'praticar/:mode', 'flashcards', 'glossario/:entryId?', 'progresso', 'busca', '*'].map(path => (
+                <Route key={path} path={path} element={<AifCourseApp />} />
+              ))}
+            </Route>
             <Route path="cursos/:courseId" element={<CourseLayout />}>
               <Route index element={<HomePage />} />
               <Route path="trilhas" element={<TracksPage />} />

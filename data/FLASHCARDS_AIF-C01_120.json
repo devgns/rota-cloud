@@ -1,0 +1,605 @@
+{
+  "exam": "AIF-C01",
+  "flashcards": [
+    {
+      "id": "AIF-F001",
+      "front": "IA versus ML",
+      "back": "IA é a área ampla; ML aprende padrões a partir de dados."
+    },
+    {
+      "id": "AIF-F002",
+      "front": "Deep learning",
+      "back": "Família de ML baseada em redes neurais com múltiplas camadas."
+    },
+    {
+      "id": "AIF-F003",
+      "front": "IA generativa",
+      "back": "IA que cria conteúdo como texto, imagem, áudio ou vídeo."
+    },
+    {
+      "id": "AIF-F004",
+      "front": "IA agêntica",
+      "back": "Sistemas que planejam ações, usam ferramentas e gerem estado em workflows."
+    },
+    {
+      "id": "AIF-F005",
+      "front": "Treino",
+      "back": "Processo de ajustar parâmetros de um modelo usando dados."
+    },
+    {
+      "id": "AIF-F006",
+      "front": "Inferência",
+      "back": "Uso de modelo treinado para produzir previsão ou geração em novas entradas."
+    },
+    {
+      "id": "AIF-F007",
+      "front": "LLM",
+      "back": "Modelo de linguagem em grande escala, comumente baseado em Transformer."
+    },
+    {
+      "id": "AIF-F008",
+      "front": "FM",
+      "back": "Modelo de base pré-treinado amplo, adaptável a diferentes tarefas."
+    },
+    {
+      "id": "AIF-F009",
+      "front": "NLP",
+      "back": "Processamento de linguagem natural: entendimento e geração de linguagem."
+    },
+    {
+      "id": "AIF-F010",
+      "front": "Computer vision",
+      "back": "Técnicas que extraem informação de imagens e vídeo."
+    },
+    {
+      "id": "AIF-F011",
+      "front": "Dados estruturados",
+      "back": "Dados com esquema/colunas definidos, como tabelas."
+    },
+    {
+      "id": "AIF-F012",
+      "front": "Dados não estruturados",
+      "back": "Texto livre, imagens, áudio e outros formatos sem schema tabular fixo."
+    },
+    {
+      "id": "AIF-F013",
+      "front": "Dados rotulados",
+      "back": "Exemplos acompanhados do resultado desejado."
+    },
+    {
+      "id": "AIF-F014",
+      "front": "Supervisionado",
+      "back": "Aprendizado com exemplos e alvos conhecidos."
+    },
+    {
+      "id": "AIF-F015",
+      "front": "Não supervisionado",
+      "back": "Aprendizado que busca estrutura sem rótulos por exemplo."
+    },
+    {
+      "id": "AIF-F016",
+      "front": "Reforço",
+      "back": "Aprendizado por ações em um ambiente e sinais de recompensa."
+    },
+    {
+      "id": "AIF-F017",
+      "front": "Classificação",
+      "back": "Predizer classe ou probabilidade de classe."
+    },
+    {
+      "id": "AIF-F018",
+      "front": "Regressão",
+      "back": "Estimar valor numérico contínuo."
+    },
+    {
+      "id": "AIF-F019",
+      "front": "Clustering",
+      "back": "Agrupar observações similares sem rótulos prévios."
+    },
+    {
+      "id": "AIF-F020",
+      "front": "Data leakage",
+      "back": "Uso de informação no treino que não estará disponível na previsão real."
+    },
+    {
+      "id": "AIF-F021",
+      "front": "Treino/validação/teste",
+      "back": "Treino ajusta, validação orienta escolhas, teste mede generalização."
+    },
+    {
+      "id": "AIF-F022",
+      "front": "Quando evitar IA",
+      "back": "Quando regra determinística é suficiente, há pouco dado ou risco/custo supera benefício."
+    },
+    {
+      "id": "AIF-F023",
+      "front": "Modelo tradicional vs FM",
+      "back": "Traditional ML pode resolver tarefa tabular com menor custo; FM é versátil para linguagem."
+    },
+    {
+      "id": "AIF-F024",
+      "front": "Pipeline de ML",
+      "back": "Problema → dados → preparo → treino/seleção → avaliação → deploy → monitoramento."
+    },
+    {
+      "id": "AIF-F025",
+      "front": "Batch inference",
+      "back": "Inferência em lotes sem necessidade de resposta imediata."
+    },
+    {
+      "id": "AIF-F026",
+      "front": "Real-time inference",
+      "back": "Predição/geração em chamadas individuais com requisito de latência."
+    },
+    {
+      "id": "AIF-F027",
+      "front": "Inferência assíncrona",
+      "back": "Trabalho pode ser processado e consultado após período de execução."
+    },
+    {
+      "id": "AIF-F028",
+      "front": "Serverless",
+      "back": "Modelo operacional em que o cliente não gerencia servidores subjacentes."
+    },
+    {
+      "id": "AIF-F029",
+      "front": "API managed vs self hosted",
+      "back": "Serviço gerenciado reduz operação; hospedagem própria aumenta controle e responsabilidade."
+    },
+    {
+      "id": "AIF-F030",
+      "front": "MLOps",
+      "back": "Práticas repetíveis para ciclo de vida, implantação, monitoramento e atualização de ML."
+    },
+    {
+      "id": "AIF-F031",
+      "front": "Data drift",
+      "back": "Mudança na distribuição das entradas em produção."
+    },
+    {
+      "id": "AIF-F032",
+      "front": "Concept drift",
+      "back": "Mudança da relação entre entrada e alvo."
+    },
+    {
+      "id": "AIF-F033",
+      "front": "Overfitting",
+      "back": "Bom ajuste ao treino e falha em exemplos novos."
+    },
+    {
+      "id": "AIF-F034",
+      "front": "Underfitting",
+      "back": "Modelo simples demais, aprende insuficientemente o padrão relevante."
+    },
+    {
+      "id": "AIF-F035",
+      "front": "Precision",
+      "back": "TP / (TP + FP): qualidade dos alertas positivos emitidos."
+    },
+    {
+      "id": "AIF-F036",
+      "front": "Recall",
+      "back": "TP / (TP + FN): cobertura dos positivos reais."
+    },
+    {
+      "id": "AIF-F037",
+      "front": "Accuracy",
+      "back": "(TP + TN) / total: proporção de exemplos acertados."
+    },
+    {
+      "id": "AIF-F038",
+      "front": "F1",
+      "back": "Média harmônica de precision e recall."
+    },
+    {
+      "id": "AIF-F039",
+      "front": "Classe desbalanceada",
+      "back": "Accuracy pode enganar quando a classe rara tem maior importância."
+    },
+    {
+      "id": "AIF-F040",
+      "front": "ROI",
+      "back": "Benefício líquido de negócio em relação ao custo total da iniciativa."
+    },
+    {
+      "id": "AIF-F041",
+      "front": "Amazon Transcribe",
+      "back": "Áudio de fala → texto."
+    },
+    {
+      "id": "AIF-F042",
+      "front": "Amazon Polly",
+      "back": "Texto → voz sintetizada."
+    },
+    {
+      "id": "AIF-F043",
+      "front": "Amazon Translate",
+      "back": "Texto em um idioma → texto traduzido."
+    },
+    {
+      "id": "AIF-F044",
+      "front": "Amazon Comprehend",
+      "back": "NLP para sentimentos, entidades e análise de texto."
+    },
+    {
+      "id": "AIF-F045",
+      "front": "Amazon Lex",
+      "back": "Construção de interfaces conversacionais e bots."
+    },
+    {
+      "id": "AIF-F046",
+      "front": "Amazon Rekognition",
+      "back": "Análise de imagens e vídeos."
+    },
+    {
+      "id": "AIF-F047",
+      "front": "Amazon Textract",
+      "back": "Extração de texto, tabelas e formulários em documentos."
+    },
+    {
+      "id": "AIF-F048",
+      "front": "Amazon Personalize",
+      "back": "Sistema gerenciado de recomendações personalizadas."
+    },
+    {
+      "id": "AIF-F049",
+      "front": "SageMaker AI",
+      "back": "Plataforma para construir, treinar, implantar e operar ML."
+    },
+    {
+      "id": "AIF-F050",
+      "front": "SageMaker JumpStart",
+      "back": "Acesso inicial a modelos e soluções pré-construídos no ecossistema SageMaker."
+    },
+    {
+      "id": "AIF-F051",
+      "front": "Amazon Bedrock",
+      "back": "Serviço gerenciado para uso de FMs e componentes de aplicações GenAI."
+    },
+    {
+      "id": "AIF-F052",
+      "front": "Amazon Nova",
+      "back": "Família de modelos de IA da Amazon; não é a plataforma Bedrock."
+    },
+    {
+      "id": "AIF-F053",
+      "front": "Transformer",
+      "back": "Arquitetura que usa mecanismos de atenção para relacionar posições na sequência."
+    },
+    {
+      "id": "AIF-F054",
+      "front": "Self-attention",
+      "back": "Mecanismo para ponderar relações entre partes de uma sequência."
+    },
+    {
+      "id": "AIF-F055",
+      "front": "Token",
+      "back": "Unidade de processamento; pode ser palavra, parte de palavra ou pontuação."
+    },
+    {
+      "id": "AIF-F056",
+      "front": "Context window",
+      "back": "Orçamento de tokens disponíveis para instruções, histórico, fontes e saída."
+    },
+    {
+      "id": "AIF-F057",
+      "front": "Embeddings",
+      "back": "Representações vetoriais que ajudam a comparar significado."
+    },
+    {
+      "id": "AIF-F058",
+      "front": "Chunking",
+      "back": "Fragmentação de documentos para indexação/recuperação."
+    },
+    {
+      "id": "AIF-F059",
+      "front": "Vector store",
+      "back": "Índice/banco usado para guardar e recuperar embeddings por similaridade."
+    },
+    {
+      "id": "AIF-F060",
+      "front": "Busca semântica",
+      "back": "Recuperação de conteúdos pela proximidade de representação, não só palavras iguais."
+    },
+    {
+      "id": "AIF-F061",
+      "front": "Modelo multimodal",
+      "back": "Modelo que processa/gera mais de uma modalidade, como texto e imagem."
+    },
+    {
+      "id": "AIF-F062",
+      "front": "Alucinação",
+      "back": "Resposta gerada plausível porém incorreta ou sem evidência."
+    },
+    {
+      "id": "AIF-F063",
+      "front": "Não determinismo",
+      "back": "Mesma entrada pode gerar resultados diferentes, conforme sistema e parâmetros."
+    },
+    {
+      "id": "AIF-F064",
+      "front": "Temperatura",
+      "back": "Parâmetro que influencia diversidade/aleatoriedade de amostragem quando suportado."
+    },
+    {
+      "id": "AIF-F065",
+      "front": "Output token limit",
+      "back": "Teto de tokens de geração; baixo demais pode truncar resposta."
+    },
+    {
+      "id": "AIF-F066",
+      "front": "Prompt caching",
+      "back": "Reuso de prefixos/conteúdo elegível para potencial redução de custo/latência."
+    },
+    {
+      "id": "AIF-F067",
+      "front": "Custos por tokens",
+      "back": "Entrada e saída podem ter preços diferentes; total depende do consumo real."
+    },
+    {
+      "id": "AIF-F068",
+      "front": "Provisioned throughput",
+      "back": "Capacidade provisionada para inferência; pode custar se ficar ociosa."
+    },
+    {
+      "id": "AIF-F069",
+      "front": "Prompt engineering",
+      "back": "Design de instruções, exemplos, restrições e formato para modelo."
+    },
+    {
+      "id": "AIF-F070",
+      "front": "Zero-shot",
+      "back": "Instrução sem exemplos demonstrativos."
+    },
+    {
+      "id": "AIF-F071",
+      "front": "Few-shot",
+      "back": "Instrução com poucos exemplos no contexto."
+    },
+    {
+      "id": "AIF-F072",
+      "front": "Negative prompt",
+      "back": "Indicação do que evitar na saída."
+    },
+    {
+      "id": "AIF-F073",
+      "front": "Prompt template",
+      "back": "Estrutura reutilizável com variáveis."
+    },
+    {
+      "id": "AIF-F074",
+      "front": "Prompt Management",
+      "back": "Recurso Bedrock para armazenar, comparar e versionar prompts."
+    },
+    {
+      "id": "AIF-F075",
+      "front": "Context engineering",
+      "back": "Seleção e gestão de instruções, fatos, histórico, ferramentas e memória."
+    },
+    {
+      "id": "AIF-F076",
+      "front": "RAG",
+      "back": "Recupera informações externas para fundamentar geração sem mudar pesos."
+    },
+    {
+      "id": "AIF-F077",
+      "front": "Bedrock Knowledge Bases",
+      "back": "Recuperação de conteúdo corporativo para RAG gerenciado conforme opções."
+    },
+    {
+      "id": "AIF-F078",
+      "front": "Grounding",
+      "back": "Vincular outputs a dados de referência confiáveis."
+    },
+    {
+      "id": "AIF-F079",
+      "front": "Faithfulness",
+      "back": "Grau em que afirmações da resposta seguem evidências recuperadas."
+    },
+    {
+      "id": "AIF-F080",
+      "front": "Citação em RAG",
+      "back": "Identificação verificável da fonte efetivamente utilizada."
+    },
+    {
+      "id": "AIF-F081",
+      "front": "OpenSearch e vetores",
+      "back": "OpenSearch é opção de busca/analytics e pesquisa vetorial na AWS."
+    },
+    {
+      "id": "AIF-F082",
+      "front": "Aurora/RDS PostgreSQL em RAG",
+      "back": "Bancos relacionais PostgreSQL podem servir pesquisas vetoriais conforme capacidades."
+    },
+    {
+      "id": "AIF-F083",
+      "front": "Amazon Neptune",
+      "back": "Banco de grafos útil para dados relacionados e retrieval por relações."
+    },
+    {
+      "id": "AIF-F084",
+      "front": "Agente",
+      "back": "Sistema que coordena decisões e chamadas de ferramentas para completar tarefas."
+    },
+    {
+      "id": "AIF-F085",
+      "front": "MCP",
+      "back": "Protocolo de integração entre aplicações de IA e ferramentas/recursos externos."
+    },
+    {
+      "id": "AIF-F086",
+      "front": "AgentCore",
+      "back": "Infraestrutura modular AWS para operar agentes (identidade, memória, runtime, gateway etc.)."
+    },
+    {
+      "id": "AIF-F087",
+      "front": "Strands Agents",
+      "back": "Framework/SDK para construir agentes, não modelo nem provedor de IAM."
+    },
+    {
+      "id": "AIF-F088",
+      "front": "AgentCore Identity",
+      "back": "Gestão de identidade e credenciais para aplicações agênticas."
+    },
+    {
+      "id": "AIF-F089",
+      "front": "Memória curta do agente",
+      "back": "Estado útil para conversa ou tarefa atual."
+    },
+    {
+      "id": "AIF-F090",
+      "front": "Memória longa do agente",
+      "back": "Informação persistida entre sessões sob políticas de acesso e retenção."
+    },
+    {
+      "id": "AIF-F091",
+      "front": "Multiagent",
+      "back": "Padrão de distribuir subtarefas a agentes especializados; aumenta coordenação e risco."
+    },
+    {
+      "id": "AIF-F092",
+      "front": "Tool calling seguro",
+      "back": "Schema, mínimo privilégio, autorização externa, logs e confirmação para escrita."
+    },
+    {
+      "id": "AIF-F093",
+      "front": "Fine-tuning",
+      "back": "Adaptação dos pesos do modelo com exemplos e objetivo específico."
+    },
+    {
+      "id": "AIF-F094",
+      "front": "Instruction tuning",
+      "back": "Ajuste usando exemplos de instrução e resposta."
+    },
+    {
+      "id": "AIF-F095",
+      "front": "Continual pretraining",
+      "back": "Continuação do treinamento de base com dados adicionais."
+    },
+    {
+      "id": "AIF-F096",
+      "front": "RLHF",
+      "back": "Uso de feedback humano como sinal para alinhamento de modelo."
+    },
+    {
+      "id": "AIF-F097",
+      "front": "Destilação",
+      "back": "Treinar modelo estudante usando sinais de professor para maior eficiência."
+    },
+    {
+      "id": "AIF-F098",
+      "front": "ROUGE",
+      "back": "Métricas de sobreposição textual comuns em avaliação de resumos."
+    },
+    {
+      "id": "AIF-F099",
+      "front": "BLEU",
+      "back": "Métrica de sobreposição de n-gramas muito usada em tradução."
+    },
+    {
+      "id": "AIF-F100",
+      "front": "BERTScore",
+      "back": "Métrica de similaridade semântica com embeddings contextuais."
+    },
+    {
+      "id": "AIF-F101",
+      "front": "LLM-as-a-judge",
+      "back": "Usar modelo avaliador com critérios; requer calibração humana."
+    },
+    {
+      "id": "AIF-F102",
+      "front": "Human-in-the-loop",
+      "back": "Humano participa/revisa pontos de decisão importantes."
+    },
+    {
+      "id": "AIF-F103",
+      "front": "Fairness",
+      "back": "Avaliar e mitigar diferenças injustas de desempenho/impacto entre grupos."
+    },
+    {
+      "id": "AIF-F104",
+      "front": "Viés de dataset",
+      "back": "Distorção por amostragem, histórico, rotulagem ou proxies."
+    },
+    {
+      "id": "AIF-F105",
+      "front": "Transparência",
+      "back": "Informar finalidade, uso de IA, dados, limites e responsáveis."
+    },
+    {
+      "id": "AIF-F106",
+      "front": "Explicabilidade",
+      "back": "Oferecer explicação adequada e confiável sobre resultados e decisões."
+    },
+    {
+      "id": "AIF-F107",
+      "front": "SageMaker Model Cards",
+      "back": "Documentar finalidade, avaliação e limitações de modelos."
+    },
+    {
+      "id": "AIF-F108",
+      "front": "Bedrock Guardrails",
+      "back": "Filtros e controles configuráveis para entradas/saídas de GenAI."
+    },
+    {
+      "id": "AIF-F109",
+      "front": "Prompt injection",
+      "back": "Instruções hostis inseridas em entradas ou fontes para desviar o sistema."
+    },
+    {
+      "id": "AIF-F110",
+      "front": "Poisoning",
+      "back": "Contaminação deliberada de dados de treinamento ou fontes."
+    },
+    {
+      "id": "AIF-F111",
+      "front": "IAM",
+      "back": "Controle de identidades, papéis e permissões a recursos AWS."
+    },
+    {
+      "id": "AIF-F112",
+      "front": "KMS",
+      "back": "Gestão de chaves de criptografia e integrações AWS."
+    },
+    {
+      "id": "AIF-F113",
+      "front": "Secrets Manager",
+      "back": "Armazenamento e possível rotação de credenciais/segredos."
+    },
+    {
+      "id": "AIF-F114",
+      "front": "Macie",
+      "back": "Descoberta de informação sensível em S3."
+    },
+    {
+      "id": "AIF-F115",
+      "front": "AWS PrivateLink",
+      "back": "Acesso privado a serviços compatíveis conforme configuração."
+    },
+    {
+      "id": "AIF-F116",
+      "front": "CloudTrail",
+      "back": "Trilha de eventos e chamadas de API AWS."
+    },
+    {
+      "id": "AIF-F117",
+      "front": "AWS Config",
+      "back": "Histórico/avaliação da configuração de recursos AWS."
+    },
+    {
+      "id": "AIF-F118",
+      "front": "AWS Artifact",
+      "back": "Relatórios e acordos de conformidade da AWS."
+    },
+    {
+      "id": "AIF-F119",
+      "front": "Amazon Inspector",
+      "back": "Gestão de vulnerabilidades em workloads suportados."
+    },
+    {
+      "id": "AIF-F120",
+      "front": "Governança de dados",
+      "back": "Definir origem, qualidade, acesso, residência, retenção e descarte."
+    }
+  ]
+}

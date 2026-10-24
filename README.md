@@ -2,7 +2,9 @@
 
 Plataforma de estudos para certificações AWS, uma camada de cada vez. O primeiro curso é a **AWS Certified Cloud Practitioner (CLF-C02)**: leitura da apostila, 80 questões comentadas, simulados e 132 flashcards. O progresso fica no navegador.
 
-Os próximos cursos (AI Practitioner, Solutions Architect, Developer) já aparecem no catálogo como "em breve".
+O **AWS Certified AI Practitioner (AIF-C01)** está disponível: 30 capítulos em sequência didática, 15 diagramas, 80 questões comentadas, simulado e 120 flashcards. Abra `/#/cursos/aif-c01`. Solutions Architect e Developer continuam no catálogo como "em breve".
+
+O curso foi integrado a partir do material de referência fornecido pelo usuário. Veja [a validação da entrega](docs/AIF-C01-ENTREGA.md).
 
 Material independente de preparação; não afiliado nem endossado pela AWS.
 
@@ -40,7 +42,11 @@ O site está em **https://devgns.github.io/rota-cloud/**.
 
 A cada push na `main`, o workflow `.github/workflows/deploy.yml` roda lint, testes e build (com `BASE_PATH=/rota-cloud/`) e publica `dist/` no GitHub Pages. Também dá para disparar manualmente em Actions → "Deploy no GitHub Pages" → Run workflow. O `HashRouter` dispensa `404.html`.
 
-## O que fica salvo
+## Progresso AIF-C01
+
+O AIF-C01 salva capítulos, favoritos, cartões revisados e tentativas finalizadas separadamente. A página Progresso permite exportar ou apagar seus dados. Sessões de prática em andamento não sobrevivem a recarregamentos. Os 24 exercícios complementares do pacote ficam em `content/` e `data/` como material adicional, ainda fora da interface e do simulado.
+
+## O que fica salvo no CLF-C02
 
 Chave `localStorage`: `clf-c02-study-progress:v1`.
 

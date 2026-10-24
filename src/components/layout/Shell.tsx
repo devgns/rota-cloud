@@ -38,15 +38,18 @@ export function Shell() {
     const onKey = (event: KeyboardEvent) => {
       if (inCourse && (event.ctrlKey || event.metaKey) && event.key.toLowerCase() === 'k') {
         event.preventDefault()
-        setSearchOpen(true)
+        if (course?.id === 'aif-c01') navigate(coursePath('aif-c01', '/busca'))
+        else setSearchOpen(true)
       }
       if (event.key === 'Escape') setSearchOpen(false)
     }
     window.addEventListener('keydown', onKey)
     return () => window.removeEventListener('keydown', onKey)
-  }, [inCourse])
+  }, [inCourse, course?.id, navigate])
 
   useEffect(() => {
+    // The CLF-C02 study timer must not accrue while a different course is open.
+    if (course?.id === 'aif-c01') return
     const started = performance.now()
     const tick = window.setInterval(() => {
       if (document.hidden) return
@@ -55,7 +58,7 @@ export function Shell() {
       update((current) => ({ ...current, studySeconds: current.studySeconds + 15 }))
     }, 15000)
     return () => window.clearInterval(tick)
-  }, [update])
+  }, [update, course?.id])
 
   const cycleTheme = () => {
     update((current) => {
@@ -101,7 +104,7 @@ export function Shell() {
           )}
           <div className="ml-auto flex items-center gap-2">
             {inCourse ? (
-              <Button variant="ghost" aria-label="Buscar" onClick={() => setSearchOpen(true)}>
+              <Button variant="ghost" aria-label="Buscar" onClick={() => course?.id === 'aif-c01' ? navigate(coursePath('aif-c01', '/busca')) : setSearchOpen(true)}>
                 <Search className="h-4 w-4" aria-hidden="true" />
                 <span className="hidden sm:inline">Buscar</span>
               </Button>
@@ -161,7 +164,7 @@ export function Shell() {
           </div>
         </div>
       )}
-      {searchOpen && inCourse && (
+      {searchOpen && inCourse && course?.id !== 'aif-c01' && (
         <div className="fixed inset-0 z-50 bg-black/40 p-4" onClick={() => setSearchOpen(false)}>
           <div className="mx-auto mt-16 max-w-xl rounded-2xl bg-[var(--color-paper-raised)] p-4" role="dialog" aria-label="Busca" onClick={(event) => event.stopPropagation()}>
             <label className="block text-sm font-semibold" htmlFor="busca-global">Buscar na apostila, no glossário e nas questões</label>

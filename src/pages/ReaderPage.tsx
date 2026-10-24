@@ -1,10 +1,15 @@
-import { Bookmark, Check, ChevronLeft, ChevronRight } from 'lucide-react'
+import { Bookmark, Check } from 'lucide-react'
 import { useEffect, useMemo, useRef, useState } from 'react'
 import { Link, useParams } from 'react-router-dom'
 import { DiagramSlot } from '@/components/diagrams/registry'
+import { ChapterFooter } from '@/components/reader/ChapterFooter'
+import { ChapterNav } from '@/components/reader/ChapterNav'
+import { ReaderShell } from '@/components/reader/ReaderShell'
+import { SectionToc } from '@/components/reader/SectionToc'
+import { useReadingSpy } from '@/components/reader/useReadingSpy'
 import { MarkdownView } from '@/components/MarkdownView'
 import { ServiceNamesGuide } from '@/components/ServiceNamesGuide'
-import { Button, buttonClass, Panel } from '@/components/ui'
+import { Button, Panel } from '@/components/ui'
 import { ChapterWorksheet } from '@/pages/ChapterWorksheet'
 import { extrasForChapter, noteForSection, objectivesFor, type ExtraQuestion } from '@/content/studyLayer'
 import { chapterAbbr, namesNoteOf, withoutNamesNote } from '@/lib/abbreviations'
@@ -27,14 +32,9 @@ export function ReaderPage() {
   const corpus = getCorpus()
   const { chapter, preamble } = useChapter()
   const { progress, update } = useProgress()
-  const [tocOpen, setTocOpen] = useState(false)
-  const [navOpen, setNavOpen] = useState(false)
-  const [active, setActive] = useState<string | undefined>(params.sectionId)
-  const [readRatio, setReadRatio] = useState(0)
   const target = preamble ? corpus.preamble : chapter
   const savedLocation = useRef(progress.lastLocation)
   const restoredScroll = useRef(false)
-  const lastPersist = useRef(0)
 
   useEffect(() => {
     if (!target) return
@@ -57,41 +57,15 @@ export function ReaderPage() {
     return () => window.cancelAnimationFrame(frame)
   }, [chapter?.id, params.sectionId, target])
 
-  useEffect(() => {
-    if (!chapter && !preamble) return
-    const chapterId = chapter?.id ?? 'front-matter'
-    let frame = 0
-    const onScroll = () => {
-      window.cancelAnimationFrame(frame)
-      frame = window.requestAnimationFrame(() => {
-        const article = document.getElementById('artigo')
-        if (!article) return
-        const total = Math.max(article.offsetHeight - window.innerHeight, 1)
-        const passed = Math.min(1, Math.max(0, -article.getBoundingClientRect().top / total))
-        setReadRatio(passed)
-        const nodes = [...article.querySelectorAll('section[id]')]
-        const current = nodes.find((node) => {
-          const top = node.getBoundingClientRect().top
-          return top >= 0 && top < 180
-        }) ?? [...nodes].reverse().find((node) => node.getBoundingClientRect().top < 120)
-        const sectionId = current?.id
-        if (sectionId) setActive(sectionId)
-        const now = Date.now()
-        if (now - lastPersist.current < 800) return
-        lastPersist.current = now
-        update((currentProgress) => ({
-          ...currentProgress,
-          readingPercents: { ...currentProgress.readingPercents, [chapterId]: Math.round(passed * 100) },
-          lastLocation: { chapterId, sectionId, scrollY: window.scrollY },
-        }))
-      })
-    }
-    window.addEventListener('scroll', onScroll, { passive: true })
-    return () => {
-      window.removeEventListener('scroll', onScroll)
-      window.cancelAnimationFrame(frame)
-    }
-  }, [chapter, preamble, update])
+  const chapterKey = chapter?.id ?? (preamble ? 'front-matter' : undefined)
+  const { active, ratio: readRatio } = useReadingSpy(chapterKey, params.sectionId, (passed, sectionId) => {
+    const chapterId = chapterKey ?? 'front-matter'
+    update((currentProgress) => ({
+      ...currentProgress,
+      readingPercents: { ...currentProgress.readingPercents, [chapterId]: Math.round(passed * 100) },
+      lastLocation: { chapterId, sectionId, scrollY: window.scrollY },
+    }))
+  })
 
   const sections: StudySection[] = chapter ? [chapter.opening, ...chapter.sections] : corpus.preamble ? [corpus.preamble] : []
   const abbr = useMemo(() => {
@@ -113,25 +87,16 @@ export function ReaderPage() {
   const objectives = chapter ? objectivesFor(chapter.id) : []
   const extras = chapter ? extrasForChapter(chapter.id) : []
 
+  const tocFor = (onPick?: () => void) => <SectionToc sections={tocSections} active={active} hrefFor={(id) => p(`/ler/${chapter?.id ?? 'capa'}/${id}`)} onPick={onPick} />
+  const done = chapter ? progress.completedChapterIds.includes(chapter.id) : false
+
   return (
-    <div>
-      <div className="reading-progress" style={{ width: `${readRatio * 100}%` }} aria-hidden="true" />
-      <div className="mx-auto grid max-w-7xl gap-6 px-4 py-6 lg:grid-cols-[16rem_minmax(0,46rem)_14rem]">
-        <aside className="hidden lg:block">
-          <ChapterNav />
-        </aside>
-        <article id="artigo" className="min-w-0">
-          <p className="text-sm text-[var(--color-ink-soft)]">
-            {preamble ? 'Capa' : `${module?.title} · capítulo ${chapter?.originalNumber}`}
-          </p>
-          <div className="mt-3 flex flex-wrap gap-2 lg:hidden">
-            <Button variant="ghost" onClick={() => setNavOpen(true)}>Capítulos</Button>
-            <Button variant="ghost" onClick={() => setTocOpen((value) => !value)}>Seções</Button>
-            <FontControls />
-          </div>
-          {tocOpen && (
-            <Toc chapterId={chapter?.id ?? 'capa'} sections={tocSections} active={active} onPick={() => setTocOpen(false)} />
-          )}
+    <ReaderShell
+      ratio={readRatio}
+      context={preamble ? 'Capa' : `${module?.title} · capítulo ${chapter?.originalNumber}`}
+      nav={() => <ChapterNavClf activeId={chapter?.id} />}
+      toc={tocFor}
+    >
           {sections.map((section) => {
             if (chapter?.id === 'chapter-23' && isExamQuestionBlock(section.id)) {
               if (section.id !== 'c23-parte-a-questoes') return null
@@ -180,27 +145,13 @@ export function ReaderPage() {
             )
           })}
           {extras.length > 0 && <Recall questions={extras} />}
-          <div className="mt-10 flex flex-wrap justify-between gap-3 border-t border-[var(--color-line)] pt-6">
-            {previous ? <Link className={buttonClass('ghost')} to={p(`/ler/${previous.id}`)}><ChevronLeft className="h-4 w-4" /> {previous.originalNumber}. {previous.title}</Link> : <span />}
-            {next && <Link className={buttonClass('ghost')} to={p(`/ler/${next.id}`)}>{next.originalNumber}. {next.title} <ChevronRight className="h-4 w-4" /></Link>}
-          </div>
-        </article>
-        <aside className="hidden lg:block">
-          <div className="sticky top-20">
-            <FontControls />
-            <Toc chapterId={chapter?.id ?? 'capa'} sections={tocSections} active={active} />
-          </div>
-        </aside>
-      </div>
-      {navOpen && (
-        <div className="fixed inset-0 z-40 bg-black/40 lg:hidden" onClick={() => setNavOpen(false)}>
-          <div className="h-full w-80 overflow-auto bg-[var(--color-paper)] p-4" onClick={(event) => event.stopPropagation()}>
-            <Button variant="ghost" onClick={() => setNavOpen(false)}>Fechar</Button>
-            <ChapterNav />
-          </div>
-        </div>
-      )}
-    </div>
+          <ChapterFooter
+            done={done}
+            onToggle={chapter ? () => update((current) => ({ ...current, completedChapterIds: done ? current.completedChapterIds.filter((id) => id !== chapter.id) : [...current.completedChapterIds, chapter.id] })) : undefined}
+            previous={previous && { href: p(`/ler/${previous.id}`), label: `${previous.originalNumber}. ${previous.title}` }}
+            next={next && { href: p(`/ler/${next.id}`), label: `${next.originalNumber}. ${next.title}` }}
+          />
+    </ReaderShell>
   )
 }
 
@@ -225,88 +176,31 @@ function isExamAnswerKey(id: string): boolean {
   return id === 'c23-parte-b-gabarito-rapido' || id === 'c23-parte-c-gabarito-comentado'
 }
 
-function FontControls() {
-  const { progress, update } = useProgress()
-  const setScale = (fontScale: number) => update((current) => ({ ...current, settings: { ...current.settings, fontScale } }))
-  return (
-    <div className="mb-3 flex gap-2" aria-label="Tamanho da fonte">
-      {[0.92, 1, 1.12].map((scale) => (
-        <button key={scale} className="choice" aria-pressed={progress.settings.fontScale === scale} onClick={() => setScale(scale)}>
-          {scale === 0.92 ? 'A−' : scale === 1 ? 'A' : 'A+'}
-        </button>
-      ))}
-    </div>
-  )
-}
-
-function ChapterNav() {
+function ChapterNavClf({ activeId }: { activeId?: string }) {
   const p = useCoursePath()
   const corpus = getCorpus()
   const { progress, update } = useProgress()
-  const toggleChapter = (id: string) => {
-    update((current) => ({
-      ...current,
-      completedChapterIds: current.completedChapterIds.includes(id)
-        ? current.completedChapterIds.filter((chapterId) => chapterId !== id)
-        : [...current.completedChapterIds, id],
-    }))
-  }
+  const modules = corpus.modules.map((module) => ({
+    id: module.id,
+    title: module.title,
+    chapters: module.chapter_ids.flatMap((id) => {
+      const item = corpus.chapters.find((chapter) => chapter.id === id)
+      return item ? [{ id, number: item.originalNumber, title: item.title }] : []
+    }),
+  }))
+  const toggle = (id: string) => update((current) => ({
+    ...current,
+    completedChapterIds: current.completedChapterIds.includes(id) ? current.completedChapterIds.filter((chapterId) => chapterId !== id) : [...current.completedChapterIds, id],
+  }))
   return (
-    <nav aria-label="Capítulos" className="text-sm">
-      {corpus.modules.map((module) => (
-        <div key={module.id} className="mb-4">
-          <h2 className="module-label">{module.title}</h2>
-          <ul className="mt-1 space-y-1">
-            {module.chapter_ids.map((id) => {
-              const item = corpus.chapters.find((chapter) => chapter.id === id)
-              if (!item) return null
-              const done = progress.completedChapterIds.includes(id)
-              return (
-                <li key={id} className="flex items-start gap-2 rounded px-1 py-1 hover:bg-[var(--color-amber-soft)]">
-                  <input
-                    type="checkbox"
-                    className="chapter-check"
-                    checked={done}
-                    aria-label={`${done ? 'Desmarcar' : 'Marcar'} capítulo ${item.originalNumber} como concluído`}
-                    onChange={() => toggleChapter(id)}
-                  />
-                  <Link to={p(`/ler/${id}`)} className="min-w-0 flex-1 leading-snug">
-                    {item.originalNumber}. {item.title}
-                  </Link>
-                </li>
-              )
-            })}
-          </ul>
-        </div>
-      ))}
-      <Link to={p('/ler/capa')} className="mt-2 inline-block text-[var(--color-ink-soft)]">Capa e índice</Link>
-    </nav>
-  )
-}
-
-function Toc({ chapterId, sections, active, onPick }: { chapterId: string; sections: StudySection[]; active?: string; onPick?: () => void }) {
-  const p = useCoursePath()
-  return (
-    <nav aria-label="Seções deste capítulo" className="max-h-[70vh] overflow-auto text-sm">
-      <h2 className="module-label mb-2">Neste capítulo</h2>
-      <ul className="space-y-1">
-        {sections.map((section) => (
-          <li key={section.id}>
-            <Link
-              to={p(`/ler/${chapterId}/${section.id}`)}
-              onClick={() => {
-                onPick?.()
-                document.getElementById(section.id)?.scrollIntoView({ behavior: 'smooth', block: 'start' })
-              }}
-              className={`block rounded px-1 py-1 hover:bg-[var(--color-amber-soft)] ${active === section.id ? 'bg-[var(--color-amber-soft)] font-semibold' : ''}`}
-              aria-current={active === section.id ? 'location' : undefined}
-            >
-              {section.title}
-            </Link>
-          </li>
-        ))}
-      </ul>
-    </nav>
+    <ChapterNav
+      modules={modules}
+      completed={progress.completedChapterIds}
+      onToggle={toggle}
+      activeId={activeId}
+      hrefFor={(id) => p(`/ler/${id}`)}
+      footer={<Link to={p('/ler/capa')} className="mt-2 inline-block text-[var(--color-ink-soft)]">Capa e índice</Link>}
+    />
   )
 }
 

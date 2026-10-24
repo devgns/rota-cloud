@@ -1,6 +1,7 @@
 import { useEffect, useMemo, useState } from 'react'
 import { useSearchParams } from 'react-router-dom'
-import { Button, Panel } from '@/components/ui'
+import { Button } from '@/components/ui'
+import { FlipCard } from '@/components/flashcards/FlipCard'
 import { ServiceNamesGuide } from '@/components/ServiceNamesGuide'
 import { getCorpus } from '@/lib/corpus'
 import { isDue, scheduleReview } from '@/lib/progress'
@@ -67,18 +68,20 @@ export function FlashcardsPage() {
       </div>
       {!card && <p className="mt-6">Nenhum cartão nessa fila.</p>}
       {card && (
-        <Panel className="mt-6">
-          <p className="text-sm text-[var(--color-ink-soft)]">{card.category} · {card.id} · {index + 1}/{cards.length}</p>
-          <button className="mt-4 min-h-40 w-full text-left" onClick={() => setFlipped((value) => !value)} aria-expanded={flipped}>
-            <span className="block text-xs uppercase tracking-wide text-[var(--color-amber)]">{flipped ? 'Verso' : 'Frente'}</span>
-            <span className="mt-2 block font-serif text-2xl">{flipped ? card.back_markdown : card.front_markdown}</span>
-          </button>
+        <div className="mt-6">
+          <FlipCard
+            flipped={flipped}
+            onFlip={() => setFlipped((value) => !value)}
+            meta={`${card.category} · ${card.id} · ${index + 1}/${cards.length}`}
+            front={card.front_markdown}
+            back={card.back_markdown}
+          />
           <div className="mt-4 flex flex-wrap gap-2">
             <Button variant="ghost" disabled={!flipped} onClick={() => rate('again')}>Errei (1)</Button>
             <Button variant="ghost" disabled={!flipped} onClick={() => rate('hard')}>Hesitei (2)</Button>
             <Button variant="ghost" disabled={!flipped} onClick={() => rate('good')}>Sei (3)</Button>
           </div>
-        </Panel>
+        </div>
       )}
     </div>
   )

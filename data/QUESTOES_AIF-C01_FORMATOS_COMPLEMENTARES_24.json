@@ -1,0 +1,1072 @@
+{
+ "exam": "AIF-C01",
+ "authorial": true,
+ "status": "revisado-e-integrado",
+ "count": 26,
+ "note": "Itens autorais nos formatos múltipla resposta, ordenação e associação. Integrados à tela Praticar → Formatos da prova e ao simulado, com correção sem crédito parcial.",
+ "questions": [
+  {
+   "id": "AIF-MR01",
+   "type": "multiple_response",
+   "domain": 1,
+   "task": "1.2",
+   "prompt": "Uma empresa quer prever a probabilidade de inadimplência a partir de dados tabulares rotulados, com explicações auditáveis. Selecione as DUAS decisões mais razoáveis.",
+   "choices": [
+    {
+     "id": "A",
+     "text": "Começar com uma baseline de regressão logística ou árvore e avaliar os resultados."
+    },
+    {
+     "id": "B",
+     "text": "Escolher obrigatoriamente um LLM generalista apenas por ser maior."
+    },
+    {
+     "id": "C",
+     "text": "Medir precisão e recall por segmento e verificar vieses antes de usar o resultado."
+    },
+    {
+     "id": "D",
+     "text": "Dispensar validação porque os exemplos foram rotulados."
+    },
+    {
+     "id": "E",
+     "text": "Permitir que um chatbot aprove crédito sozinho sem controles de negócio."
+    }
+   ],
+   "number_to_select": 2,
+   "correct": [
+    "A",
+    "C"
+   ],
+   "explanation": "O problema é preditivo e estruturado. Uma baseline clássica e avaliação por segmento são decisões justificáveis; tamanho do LLM não implica adequação nem segurança."
+  },
+  {
+   "id": "AIF-MR02",
+   "type": "multiple_response",
+   "domain": 1,
+   "task": "1.3",
+   "prompt": "Fraudes confirmadas são raras e o conjunto é muito desbalanceado. Escolha as DUAS métricas que ajudam a interpretar erros relevantes para a classe fraude.",
+   "choices": [
+    {
+     "id": "A",
+     "text": "Número de tokens emitidos pelo prompt."
+    },
+    {
+     "id": "B",
+     "text": "Recall da classe fraude."
+    },
+    {
+     "id": "C",
+     "text": "Quantidade de imagens geradas."
+    },
+    {
+     "id": "D",
+     "text": "Precision da classe fraude."
+    },
+    {
+     "id": "E",
+     "text": "Apenas accuracy agregada sem matriz de confusão."
+    }
+   ],
+   "number_to_select": 2,
+   "correct": [
+    "B",
+    "D"
+   ],
+   "explanation": "Recall indica quantas fraudes foram encontradas; precision indica quantos alertas de fraude são realmente fraudes. Accuracy isolada pode esconder falhas em classes raras."
+  },
+  {
+   "id": "AIF-MR03",
+   "type": "multiple_response",
+   "domain": 2,
+   "task": "2.1",
+   "prompt": "Ao projetar uma chamada de foundation model, quais DUAS afirmações sobre tokens e contexto são válidas?",
+   "choices": [
+    {
+     "id": "A",
+     "text": "Uma janela de contexto tem tamanho infinito em modelos atuais."
+    },
+    {
+     "id": "B",
+     "text": "Adicionar conteúdo irrelevante ao prompt garante precisão maior."
+    },
+    {
+     "id": "C",
+     "text": "Tokens de entrada e saída podem influenciar o custo conforme o modelo de cobrança."
+    },
+    {
+     "id": "D",
+     "text": "Mais contexto nem sempre é melhor; pode elevar custo e dificultar recuperar instruções importantes."
+    },
+    {
+     "id": "E",
+     "text": "O número de tokens de saída é sempre igual ao de caracteres."
+    }
+   ],
+   "number_to_select": 2,
+   "correct": [
+    "C",
+    "D"
+   ],
+   "explanation": "Uso de tokens afeta preço e desempenho conforme a oferta. Contexto deve ser selecionado, relevante e limitado para sustentar a tarefa."
+  },
+  {
+   "id": "AIF-MR04",
+   "type": "multiple_response",
+   "domain": 2,
+   "task": "2.1",
+   "prompt": "Um agente usa ferramentas externas por MCP. Selecione DUAS boas práticas para reduzir riscos ao executar ações.",
+   "choices": [
+    {
+     "id": "A",
+     "text": "Aplicar autorização real no serviço que executa a ferramenta e restringir o escopo."
+    },
+    {
+     "id": "B",
+     "text": "Assumir que o protocolo MCP já garante permissão e ausência de ataques."
+    },
+    {
+     "id": "C",
+     "text": "Pedir revisão humana para operações de impacto quando exigido pelo risco."
+    },
+    {
+     "id": "D",
+     "text": "Tratar o retorno de qualquer ferramenta como instrução de sistema confiável."
+    },
+    {
+     "id": "E",
+     "text": "Compartilhar credenciais administrativas com todas as ferramentas para simplificar."
+    }
+   ],
+   "number_to_select": 2,
+   "correct": [
+    "A",
+    "C"
+   ],
+   "explanation": "MCP padroniza integração, mas não substitui IAM e controles de aplicação. Ações críticas podem exigir aprovação humana e logging."
+  },
+  {
+   "id": "AIF-MR05",
+   "type": "multiple_response",
+   "domain": 3,
+   "task": "3.1",
+   "prompt": "Uma equipe precisa responder sobre políticas internas que mudam toda semana. Quais DUAS escolhas ajudam a construir uma solução fundamentada?",
+   "choices": [
+    {
+     "id": "A",
+     "text": "Treinar um novo foundation model do zero toda vez que um documento mudar."
+    },
+    {
+     "id": "B",
+     "text": "Indexar documentos autorizados e recuperar trechos relevantes na consulta via RAG."
+    },
+    {
+     "id": "C",
+     "text": "Ignorar permissões documentais pois o modelo apenas resume."
+    },
+    {
+     "id": "D",
+     "text": "Disponibilizar referências e verificar se a resposta está apoiada no conteúdo recuperado."
+    },
+    {
+     "id": "E",
+     "text": "Supor que usar RAG elimina totalmente alucinações."
+    }
+   ],
+   "number_to_select": 2,
+   "correct": [
+    "B",
+    "D"
+   ],
+   "explanation": "RAG injeta evidências atualizadas no contexto. Permissões e grounding continuam necessários; nenhuma técnica garante veracidade absoluta."
+  },
+  {
+   "id": "AIF-MR06",
+   "type": "multiple_response",
+   "domain": 3,
+   "task": "3.4",
+   "prompt": "Você avalia um assistente RAG que cita documentos. Quais DUAS dimensões ajudam a diagnosticar sua qualidade além de fluência?",
+   "choices": [
+    {
+     "id": "A",
+     "text": "Relevância dos trechos recuperados para a pergunta."
+    },
+    {
+     "id": "B",
+     "text": "Somente número de parâmetros do modelo."
+    },
+    {
+     "id": "C",
+     "text": "Se a resposta é sustentada pelos trechos e suas citações."
+    },
+    {
+     "id": "D",
+     "text": "Apenas a nota ROUGE das respostas, sem conferir as fontes."
+    },
+    {
+     "id": "E",
+     "text": "Quantidade máxima de requisições sem observar resultado."
+    }
+   ],
+   "number_to_select": 2,
+   "correct": [
+    "A",
+    "C"
+   ],
+   "explanation": "Uma resposta pode soar boa mesmo quando a recuperação é ruim ou o texto inventa afirmações. Meça retrieval e grounding separadamente."
+  },
+  {
+   "id": "AIF-MR07",
+   "type": "multiple_response",
+   "domain": 4,
+   "task": "4.2",
+   "prompt": "Uma empresa avalia IA para sugerir decisões sensíveis. Selecione TRÊS mecanismos coerentes com IA responsável.",
+   "choices": [
+    {
+     "id": "A",
+     "text": "Documentar dados, uso pretendido, limitações e métricas com artefatos como Model Cards."
+    },
+    {
+     "id": "B",
+     "text": "Examinar desempenho e efeitos para diferentes subgrupos relevantes."
+    },
+    {
+     "id": "C",
+     "text": "Dispensar explicação e contestação porque o modelo tem boa média global."
+    },
+    {
+     "id": "D",
+     "text": "Oferecer revisão ou contestação humana de decisões de alto impacto."
+    },
+    {
+     "id": "E",
+     "text": "Usar apenas resultados de demonstrações comerciais como auditoria suficiente."
+    }
+   ],
+   "number_to_select": 3,
+   "correct": [
+    "A",
+    "B",
+    "D"
+   ],
+   "explanation": "Documentação, testes por subgrupos e supervisão humana tratam responsabilidades distintas. Média global e demo não bastam."
+  },
+  {
+   "id": "AIF-MR08",
+   "type": "multiple_response",
+   "domain": 5,
+   "task": "5.1",
+   "prompt": "Ao integrar um agente com um sistema financeiro, quais TRÊS proteções são compatíveis com defesa em profundidade?",
+   "choices": [
+    {
+     "id": "A",
+     "text": "Permissões de mínimo privilégio e autenticação na ferramenta/serviço."
+    },
+    {
+     "id": "B",
+     "text": "Validação de parâmetros e do resultado antes de efetuar ações."
+    },
+    {
+     "id": "C",
+     "text": "Permitir toda ação se a resposta do modelo vier em JSON válido."
+    },
+    {
+     "id": "D",
+     "text": "Auditoria de chamadas de ferramenta e aprovação humana para operações críticas."
+    },
+    {
+     "id": "E",
+     "text": "Inserir segredos diretamente em prompts para economizar configuração."
+    }
+   ],
+   "number_to_select": 3,
+   "correct": [
+    "A",
+    "B",
+    "D"
+   ],
+   "explanation": "IAM, validação, logs e aprovações são controles independentes. Formato JSON não equivale a autorização nem correção."
+  },
+  {
+   "id": "AIF-ORD01",
+   "type": "ordering",
+   "domain": 1,
+   "task": "1.3",
+   "prompt": "Coloque em ordem um ciclo simplificado e auditável de entrega de ML, do planejamento ao uso.",
+   "steps": [
+    {
+     "id": "S5",
+     "text": "Implantar com monitoramento, feedback e plano de atualização."
+    },
+    {
+     "id": "S3",
+     "text": "Treinar um baseline com dados apropriados."
+    },
+    {
+     "id": "S1",
+     "text": "Definir problema, público, restrições e métrica de sucesso."
+    },
+    {
+     "id": "S2",
+     "text": "Coletar e preparar dados representativos com tratamento de qualidade e vazamentos."
+    },
+    {
+     "id": "S4",
+     "text": "Avaliar resultados no conjunto de teste e revisar riscos."
+    }
+   ],
+   "correct_order": [
+    "S1",
+    "S2",
+    "S3",
+    "S4",
+    "S5"
+   ],
+   "explanation": "Definir a tarefa antes de tocar nos dados evita selecionar métrica ou técnica equivocada. Avaliar precede decisão de implantação; monitorar vem após o uso."
+  },
+  {
+   "id": "AIF-ORD02",
+   "type": "ordering",
+   "domain": 1,
+   "task": "1.2",
+   "prompt": "Uma empresa começa a estudar classificação de solicitações. Ordene as decisões desde o problema até o piloto.",
+   "steps": [
+    {
+     "id": "S5",
+     "text": "Executar piloto controlado e coletar feedback dos usuários."
+    },
+    {
+     "id": "S3",
+     "text": "Comparar uma solução determinística ou baseline de ML conforme necessidade."
+    },
+    {
+     "id": "S1",
+     "text": "Delimitar categorias e resultado de negócio desejado."
+    },
+    {
+     "id": "S2",
+     "text": "Examinar volume, rótulos disponíveis e representatividade dos exemplos."
+    },
+    {
+     "id": "S4",
+     "text": "Definir métricas e testar erros em dados não usados no treinamento."
+    }
+   ],
+   "correct_order": [
+    "S1",
+    "S2",
+    "S3",
+    "S4",
+    "S5"
+   ],
+   "explanation": "O método depende de objetivo e dados. Piloto não deve preceder avaliação em dados representativos."
+  },
+  {
+   "id": "AIF-ORD03",
+   "type": "ordering",
+   "domain": 2,
+   "task": "2.1",
+   "prompt": "Ordene a preparação de uma solicitação GenAI controlada, antes de exibir a resposta ao usuário.",
+   "steps": [
+    {
+     "id": "S5",
+     "text": "Exibir a resposta e registrar telemetria apropriada."
+    },
+    {
+     "id": "S3",
+     "text": "Solicitar inferência ao modelo."
+    },
+    {
+     "id": "S1",
+     "text": "Receber a solicitação e verificar autenticação/limites pertinentes."
+    },
+    {
+     "id": "S2",
+     "text": "Selecionar instruções, contexto autorizado e restrições da tarefa."
+    },
+    {
+     "id": "S4",
+     "text": "Validar a resposta quanto a formato, segurança e pertinência."
+    }
+   ],
+   "correct_order": [
+    "S1",
+    "S2",
+    "S3",
+    "S4",
+    "S5"
+   ],
+   "explanation": "Em fluxo simplificado, controle de entrada antecede inferência e validação de saída antecede a apresentação. Sistemas reais podem intercalar outros controles."
+  },
+  {
+   "id": "AIF-ORD04",
+   "type": "ordering",
+   "domain": 3,
+   "task": "3.1",
+   "prompt": "Ordene o percurso de CONSULTA em uma aplicação RAG que usa índice vetorial já criado.",
+   "steps": [
+    {
+     "id": "S5",
+     "text": "Gerar e validar a resposta, exibindo fontes quando disponíveis."
+    },
+    {
+     "id": "S3",
+     "text": "Recuperar trechos relevantes do repositório autorizado."
+    },
+    {
+     "id": "S1",
+     "text": "Receber e normalizar a pergunta do usuário."
+    },
+    {
+     "id": "S2",
+     "text": "Gerar uma representação de busca (por exemplo embedding da pergunta)."
+    },
+    {
+     "id": "S4",
+     "text": "Combinar pergunta, instruções e evidências no contexto."
+    }
+   ],
+   "correct_order": [
+    "S1",
+    "S2",
+    "S3",
+    "S4",
+    "S5"
+   ],
+   "explanation": "O RAG recupera evidências antes da geração. Indexação dos documentos ocorre separadamente, na preparação do acervo."
+  },
+  {
+   "id": "AIF-ORD05",
+   "type": "ordering",
+   "domain": 3,
+   "task": "3.2",
+   "prompt": "Ordene um processo de melhoria de prompt com histórico reproduzível.",
+   "steps": [
+    {
+     "id": "S5",
+     "text": "Versionar a configuração escolhida e acompanhar resultados em uso."
+    },
+    {
+     "id": "S3",
+     "text": "Executar um conjunto consistente de casos de teste."
+    },
+    {
+     "id": "S1",
+     "text": "Definir tarefa, formato esperado e condições de sucesso."
+    },
+    {
+     "id": "S2",
+     "text": "Criar a versão inicial do prompt com restrições e exemplos necessários."
+    },
+    {
+     "id": "S4",
+     "text": "Analisar erros, custo, riscos e desempenho frente à versão anterior."
+    }
+   ],
+   "correct_order": [
+    "S1",
+    "S2",
+    "S3",
+    "S4",
+    "S5"
+   ],
+   "explanation": "Iterar sem objetivo, teste fixo e registro de versão dificulta saber se o prompt realmente melhorou."
+  },
+  {
+   "id": "AIF-ORD06",
+   "type": "ordering",
+   "domain": 3,
+   "task": "3.4",
+   "prompt": "Ordene uma avaliação de agente antes de ampliar seu acesso a ferramentas.",
+   "steps": [
+    {
+     "id": "S5",
+     "text": "Corrigir falhas e aplicar critérios de aprovação antes de expandir o uso."
+    },
+    {
+     "id": "S3",
+     "text": "Executar o agente com ferramentas em ambiente controlado."
+    },
+    {
+     "id": "S1",
+     "text": "Definir quais tarefas e ações são permitidas e o que caracteriza sucesso."
+    },
+    {
+     "id": "S2",
+     "text": "Construir cenários de teste normais, adversariais e de falha de ferramenta."
+    },
+    {
+     "id": "S4",
+     "text": "Avaliar conclusão da tarefa, segurança, intervenção humana e custos."
+    }
+   ],
+   "correct_order": [
+    "S1",
+    "S2",
+    "S3",
+    "S4",
+    "S5"
+   ],
+   "explanation": "Avalie comportamento de ponta a ponta, não apenas a qualidade do texto. Testes de limites e permissões são essenciais em agentes com ferramentas."
+  },
+  {
+   "id": "AIF-ORD07",
+   "type": "ordering",
+   "domain": 4,
+   "task": "4.1",
+   "prompt": "Ordene um ciclo de análise de justiça para um caso de decisão com IA.",
+   "steps": [
+    {
+     "id": "S5",
+     "text": "Monitorar em produção e abrir canais de revisão/contestação."
+    },
+    {
+     "id": "S3",
+     "text": "Definir métricas adequadas e avaliar resultados por subgrupo."
+    },
+    {
+     "id": "S1",
+     "text": "Identificar público afetado e riscos de decisão desigual."
+    },
+    {
+     "id": "S2",
+     "text": "Examinar origem, distribuição e qualidade dos dados por subgrupo relevante."
+    },
+    {
+     "id": "S4",
+     "text": "Mitigar distorções, documentar trade-offs e reavaliar."
+    }
+   ],
+   "correct_order": [
+    "S1",
+    "S2",
+    "S3",
+    "S4",
+    "S5"
+   ],
+   "explanation": "Um score agregado não revela resultados desiguais. As métricas e a mitigação dependem do contexto e das pessoas afetadas."
+  },
+  {
+   "id": "AIF-ORD08",
+   "type": "ordering",
+   "domain": 5,
+   "task": "5.2",
+   "prompt": "Ordene a criação de um processo de governança para um novo caso de uso de IA.",
+   "steps": [
+    {
+     "id": "S5",
+     "text": "Revisitar periodicamente a adequação dos controles e as mudanças do sistema."
+    },
+    {
+     "id": "S3",
+     "text": "Definir controles, aprovações, retenção e políticas de acesso."
+    },
+    {
+     "id": "S1",
+     "text": "Inventariar finalidade, responsáveis, sistemas e dados utilizados."
+    },
+    {
+     "id": "S2",
+     "text": "Classificar riscos, sensibilidade, requisitos legais e impacto da aplicação."
+    },
+    {
+     "id": "S4",
+     "text": "Instrumentar logs, auditoria, acompanhamento e evidências."
+    }
+   ],
+   "correct_order": [
+    "S1",
+    "S2",
+    "S3",
+    "S4",
+    "S5"
+   ],
+   "explanation": "Governança começa conhecendo ativos e riscos, estabelece controles e exige evidência e revisão contínua."
+  },
+  {
+   "id": "AIF-MAT01",
+   "type": "matching",
+   "domain": 1,
+   "task": "1.1",
+   "prompt": "Associe cada tipo de aprendizado ao exemplo mais característico.",
+   "left": [
+    {
+     "id": "L1",
+     "text": "Classificação supervisionada"
+    },
+    {
+     "id": "L2",
+     "text": "Regressão supervisionada"
+    },
+    {
+     "id": "L3",
+     "text": "Clustering não supervisionado"
+    },
+    {
+     "id": "L4",
+     "text": "Aprendizado por reforço"
+    }
+   ],
+   "right": [
+    {
+     "id": "R4",
+     "text": "Aprender uma política de ações a partir de recompensas."
+    },
+    {
+     "id": "R3",
+     "text": "Formar grupos semelhantes sem rótulos de grupos prontos."
+    },
+    {
+     "id": "R2",
+     "text": "Estimar um valor numérico a partir de histórico rotulado."
+    },
+    {
+     "id": "R1",
+     "text": "Prever se um e-mail é spam usando exemplos rotulados."
+    }
+   ],
+   "correct_matches": {
+    "L1": "R1",
+    "L2": "R2",
+    "L3": "R3",
+    "L4": "R4"
+   },
+   "explanation": "O tipo de saída e a presença de rótulos/recompensas ajudam a identificar o paradigma."
+  },
+  {
+   "id": "AIF-MAT02",
+   "type": "matching",
+   "domain": 1,
+   "task": "1.2",
+   "prompt": "Associe os serviços AWS de IA especializada a suas funções principais.",
+   "left": [
+    {
+     "id": "L1",
+     "text": "Amazon Comprehend"
+    },
+    {
+     "id": "L2",
+     "text": "Amazon Textract"
+    },
+    {
+     "id": "L3",
+     "text": "Amazon Transcribe"
+    },
+    {
+     "id": "L4",
+     "text": "Amazon Translate"
+    }
+   ],
+   "right": [
+    {
+     "id": "R4",
+     "text": "Traduzir texto entre idiomas."
+    },
+    {
+     "id": "R3",
+     "text": "Converter fala em texto."
+    },
+    {
+     "id": "R2",
+     "text": "Extrair texto e estrutura de documentos escaneados."
+    },
+    {
+     "id": "R1",
+     "text": "Extrair informações e entidades de texto com NLP."
+    }
+   ],
+   "correct_matches": {
+    "L1": "R1",
+    "L2": "R2",
+    "L3": "R3",
+    "L4": "R4"
+   },
+   "explanation": "Os nomes têm funções próximas, mas a modalidade de entrada/saída muda a escolha."
+  },
+  {
+   "id": "AIF-MAT03",
+   "type": "matching",
+   "domain": 2,
+   "task": "2.1",
+   "prompt": "Associe os conceitos básicos de foundation models às descrições.",
+   "left": [
+    {
+     "id": "L1",
+     "text": "Token"
+    },
+    {
+     "id": "L2",
+     "text": "Embedding"
+    },
+    {
+     "id": "L3",
+     "text": "Janela de contexto"
+    },
+    {
+     "id": "L4",
+     "text": "Temperatura"
+    }
+   ],
+   "right": [
+    {
+     "id": "R4",
+     "text": "Parâmetro que influencia a aleatoriedade da amostragem, conforme modelo."
+    },
+    {
+     "id": "R3",
+     "text": "Limite de informação que pode ser considerada na chamada, conforme modelo."
+    },
+    {
+     "id": "R2",
+     "text": "Representação vetorial de informação para comparação/recuperação."
+    },
+    {
+     "id": "R1",
+     "text": "Unidade usada pelo modelo para representar porções de texto ou outras modalidades."
+    }
+   ],
+   "correct_matches": {
+    "L1": "R1",
+    "L2": "R2",
+    "L3": "R3",
+    "L4": "R4"
+   },
+   "explanation": "Tokenização, recuperação e geração são conceitos diferentes; embeddings não são resposta pronta."
+  },
+  {
+   "id": "AIF-MAT04",
+   "type": "matching",
+   "domain": 2,
+   "task": "2.3",
+   "prompt": "Associe a necessidade ao produto/serviço AWS mais diretamente ligado a ela.",
+   "left": [
+    {
+     "id": "L1",
+     "text": "Amazon Bedrock"
+    },
+    {
+     "id": "L2",
+     "text": "Amazon SageMaker AI"
+    },
+    {
+     "id": "L3",
+     "text": "Amazon Polly"
+    },
+    {
+     "id": "L4",
+     "text": "Amazon Rekognition"
+    }
+   ],
+   "right": [
+    {
+     "id": "R4",
+     "text": "Analisar conteúdo de imagens e vídeos."
+    },
+    {
+     "id": "R3",
+     "text": "Converter texto em fala sintetizada."
+    },
+    {
+     "id": "R2",
+     "text": "Criar e operar fluxos de machine learning com maior controle do ciclo de vida."
+    },
+    {
+     "id": "R1",
+     "text": "Consumir foundation models e recursos gerenciados de GenAI."
+    }
+   ],
+   "correct_matches": {
+    "L1": "R1",
+    "L2": "R2",
+    "L3": "R3",
+    "L4": "R4"
+   },
+   "explanation": "Uma mesma solução pode usar vários serviços; associe o propósito principal de cada um."
+  },
+  {
+   "id": "AIF-MAT05",
+   "type": "matching",
+   "domain": 3,
+   "task": "3.1",
+   "prompt": "Associe a técnica de adaptação de aplicação de FM à mudança que ela efetivamente faz.",
+   "left": [
+    {
+     "id": "L1",
+     "text": "RAG"
+    },
+    {
+     "id": "L2",
+     "text": "Fine-tuning"
+    },
+    {
+     "id": "L3",
+     "text": "Destilação"
+    },
+    {
+     "id": "L4",
+     "text": "In-context learning"
+    }
+   ],
+   "right": [
+    {
+     "id": "R4",
+     "text": "Orienta comportamento com exemplos no contexto, sem alterar os pesos."
+    },
+    {
+     "id": "R3",
+     "text": "Treina um modelo aluno para reproduzir capacidades/comportamento do professor em um escopo."
+    },
+    {
+     "id": "R2",
+     "text": "Atualiza parâmetros do modelo para adaptá-lo por treinamento adicional."
+    },
+    {
+     "id": "R1",
+     "text": "Fornece contexto recuperado na consulta sem exigir mudar os pesos do modelo."
+    }
+   ],
+   "correct_matches": {
+    "L1": "R1",
+    "L2": "R2",
+    "L3": "R3",
+    "L4": "R4"
+   },
+   "explanation": "RAG e in-context learning alteram entradas; fine-tuning e destilação envolvem treinamento."
+  },
+  {
+   "id": "AIF-MAT06",
+   "type": "matching",
+   "domain": 3,
+   "task": "3.4",
+   "prompt": "Associe a métrica à finalidade mais adequada em avaliação.",
+   "left": [
+    {
+     "id": "L1",
+     "text": "BLEU"
+    },
+    {
+     "id": "L2",
+     "text": "ROUGE"
+    },
+    {
+     "id": "L3",
+     "text": "BERTScore"
+    },
+    {
+     "id": "L4",
+     "text": "Taxa de conclusão da tarefa"
+    }
+   ],
+   "right": [
+    {
+     "id": "R4",
+     "text": "Medir se o fluxo resolveu a ação de negócio definida."
+    },
+    {
+     "id": "R3",
+     "text": "Comparar similaridade semântica baseada em representações contextuais."
+    },
+    {
+     "id": "R2",
+     "text": "Analisar sobreposição de texto, frequentemente em sumarização."
+    },
+    {
+     "id": "R1",
+     "text": "Comparar correspondência de n-gramas, tradicionalmente em tradução."
+    }
+   ],
+   "correct_matches": {
+    "L1": "R1",
+    "L2": "R2",
+    "L3": "R3",
+    "L4": "R4"
+   },
+   "explanation": "Métricas textuais não substituem avaliação do resultado de negócio nem revisão de segurança."
+  },
+  {
+   "id": "AIF-MAT07",
+   "type": "matching",
+   "domain": 4,
+   "task": "4.2",
+   "prompt": "Associe cada expressão à preocupação de IA responsável.",
+   "left": [
+    {
+     "id": "L1",
+     "text": "Viés algorítmico"
+    },
+    {
+     "id": "L2",
+     "text": "Alucinação"
+    },
+    {
+     "id": "L3",
+     "text": "Explicabilidade"
+    },
+    {
+     "id": "L4",
+     "text": "Humano no loop"
+    }
+   ],
+   "right": [
+    {
+     "id": "R4",
+     "text": "Intervenção humana em pontos definidos de avaliação ou decisão."
+    },
+    {
+     "id": "R3",
+     "text": "Capacidade de dar justificativas compreensíveis para comportamento/resultado."
+    },
+    {
+     "id": "R2",
+     "text": "Saída plausível que apresenta afirmação não sustentada como se fosse fato."
+    },
+    {
+     "id": "R1",
+     "text": "Padrão de resultado desigual potencialmente prejudicial entre grupos."
+    }
+   ],
+   "correct_matches": {
+    "L1": "R1",
+    "L2": "R2",
+    "L3": "R3",
+    "L4": "R4"
+   },
+   "explanation": "São riscos/controles relacionados, mas independentes: um modelo explicável ainda pode ter viés."
+  },
+  {
+   "id": "AIF-MAT08",
+   "type": "matching",
+   "domain": 5,
+   "task": "5.1",
+   "prompt": "Associe o serviço AWS ao controle ou evidência principal.",
+   "left": [
+    {
+     "id": "L1",
+     "text": "AWS IAM"
+    },
+    {
+     "id": "L2",
+     "text": "AWS KMS"
+    },
+    {
+     "id": "L3",
+     "text": "AWS CloudTrail"
+    },
+    {
+     "id": "L4",
+     "text": "AWS Artifact"
+    }
+   ],
+   "right": [
+    {
+     "id": "R4",
+     "text": "Acesso a relatórios de conformidade da AWS e a acordos com a AWS."
+    },
+    {
+     "id": "R3",
+     "text": "Registro/auditoria de atividade de API e eventos suportados."
+    },
+    {
+     "id": "R2",
+     "text": "Gerenciamento de chaves de criptografia."
+    },
+    {
+     "id": "R1",
+     "text": "Autorização de ações e recursos por papéis e políticas."
+    }
+   ],
+   "correct_matches": {
+    "L1": "R1",
+    "L2": "R2",
+    "L3": "R3",
+    "L4": "R4"
+   },
+   "explanation": "Controle de identidade, chaves, registro de eventos e documentação de conformidade não são substitutos."
+  },
+  {
+   "id": "AIF-MR09",
+   "type": "multiple_response",
+   "domain": 2,
+   "task": "2.3",
+   "prompt": "Uma empresa quer (1) que funcionários perguntem sobre documentos internos num assistente pronto, respeitando as permissões de cada um, e (2) que analistas montem painéis e façam perguntas sobre métricas de vendas. Selecione as DUAS escolhas mais diretas.",
+   "choices": [
+    {
+     "id": "A",
+     "text": "Amazon Q Business para o assistente dos funcionários."
+    },
+    {
+     "id": "B",
+     "text": "Amazon Quick para painéis e perguntas sobre os dados de vendas."
+    },
+    {
+     "id": "C",
+     "text": "Treinar um foundation model do zero para cada necessidade."
+    },
+    {
+     "id": "D",
+     "text": "Amazon Q Developer para os painéis de vendas."
+    },
+    {
+     "id": "E",
+     "text": "Amazon Polly para responder às perguntas dos funcionários."
+    }
+   ],
+   "number_to_select": 2,
+   "correct": [
+    "A",
+    "B"
+   ],
+   "explanation": "Q Business é o assistente generativo pronto sobre dados corporativos; Quick é a plataforma de análise e BI com IA. Q Developer ajuda a programar, e Polly sintetiza fala."
+  },
+  {
+   "id": "AIF-MAT09",
+   "type": "matching",
+   "domain": 1,
+   "task": "1.3",
+   "prompt": "Associe cada nome do guia 1.1 ao uso mais característico.",
+   "left": [
+    {
+     "id": "L1",
+     "text": "Amazon Q Developer"
+    },
+    {
+     "id": "L2",
+     "text": "Amazon Quick"
+    },
+    {
+     "id": "L3",
+     "text": "Kiro"
+    },
+    {
+     "id": "L4",
+     "text": "Amazon Bedrock"
+    }
+   ],
+   "right": [
+    {
+     "id": "R3",
+     "text": "Ambiente de desenvolvimento orientado por agentes e especificações."
+    },
+    {
+     "id": "R1",
+     "text": "Assistente generativo para programar e operar recursos na AWS."
+    },
+    {
+     "id": "R4",
+     "text": "Plataforma para construir aplicações próprias com foundation models."
+    },
+    {
+     "id": "R2",
+     "text": "Análise de dados e painéis com IA para usuários de negócio."
+    }
+   ],
+   "correct_matches": {
+    "L1": "R1",
+    "L2": "R2",
+    "L3": "R3",
+    "L4": "R4"
+   },
+   "explanation": "Q e Kiro ajudam pessoas a trabalhar e programar; Quick serve análise de dados; Bedrock é onde você constrói sua própria aplicação com FMs."
+  }
+ ]
+}

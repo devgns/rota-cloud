@@ -1,0 +1,2263 @@
+{
+  "metadata": {
+    "generated_from": "Apostila_AWS_AI_Practitioner_AIF-C01_Completa.md",
+    "sha256": "87af24cdac11984d03275c17376d02e1e5543b8f42a22a4606204e9239341c49",
+    "chapter_count": 30,
+    "question_count": 80,
+    "flashcard_count": 120,
+    "domain_weights": {
+      "1": 20,
+      "2": 24,
+      "3": 28,
+      "4": 14,
+      "5": 14
+    },
+    "exam_guide": "AIF-C01 v1.1 (2026-04-30)",
+    "note": "Curriculum navigation metadata; the Markdown is canonical and the domain mapping is editorial."
+  },
+  "modules": [
+    {
+      "id": "inicio",
+      "title": "Comece aqui",
+      "chapter_ids": [
+        "chapter-01"
+      ]
+    },
+    {
+      "id": "fundamentos-ml",
+      "title": "Fundamentos e aprendizado de máquina",
+      "chapter_ids": [
+        "chapter-02",
+        "chapter-03",
+        "chapter-04",
+        "chapter-05",
+        "chapter-06",
+        "chapter-07"
+      ]
+    },
+    {
+      "id": "fundamentos-generativos",
+      "title": "Como funciona a IA generativa",
+      "chapter_ids": [
+        "chapter-08",
+        "chapter-09",
+        "chapter-10",
+        "chapter-11"
+      ]
+    },
+    {
+      "id": "aplicacoes-fm",
+      "title": "Construindo aplicações com FMs",
+      "chapter_ids": [
+        "chapter-12",
+        "chapter-13",
+        "chapter-14",
+        "chapter-15",
+        "chapter-16",
+        "chapter-17",
+        "chapter-18"
+      ]
+    },
+    {
+      "id": "ia-responsavel",
+      "title": "IA responsável e explicável",
+      "chapter_ids": [
+        "chapter-19",
+        "chapter-20"
+      ]
+    },
+    {
+      "id": "seguranca",
+      "title": "Proteção, conformidade e governança",
+      "chapter_ids": [
+        "chapter-21",
+        "chapter-22",
+        "chapter-23"
+      ]
+    },
+    {
+      "id": "pratica",
+      "title": "Síntese e revisão",
+      "chapter_ids": [
+        "chapter-24",
+        "chapter-25",
+        "chapter-26",
+        "chapter-27",
+        "chapter-28",
+        "chapter-29",
+        "chapter-30"
+      ]
+    }
+  ],
+  "chapters": [
+    {
+      "id": "chapter-01",
+      "original_number": 1,
+      "title": "Como funciona a AIF-C01 e o método de estudo",
+      "module_id": "inicio",
+      "domains": [
+        1,
+        2,
+        3,
+        4,
+        5
+      ],
+      "source_heading": "# 1. Como funciona a AIF-C01 e o método de estudo",
+      "subheadings": [
+        {
+          "id": "c01-1-1-que-competencia-esta-certificacao-mede",
+          "title": "1.1. Que competência esta certificação mede?",
+          "heading_level": 2
+        },
+        {
+          "id": "c01-1-2-a-estrategia-aprender-por-decisoes",
+          "title": "1.2. A estratégia: aprender por decisões",
+          "heading_level": 2
+        },
+        {
+          "id": "c01-1-3-vocabulario-de-sobrevivencia",
+          "title": "1.3. Vocabulário de sobrevivência",
+          "heading_level": 2
+        },
+        {
+          "id": "c01-1-4-verifique-se-entendeu",
+          "title": "1.4. Verifique se entendeu",
+          "heading_level": 2
+        }
+      ]
+    },
+    {
+      "id": "chapter-02",
+      "original_number": 2,
+      "title": "IA, ML, deep learning, GenAI e IA agêntica",
+      "module_id": "fundamentos-ml",
+      "domains": [
+        1
+      ],
+      "source_heading": "# 2. IA, ML, deep learning, GenAI e IA agêntica",
+      "subheadings": [
+        {
+          "id": "c02-2-1-comece-pelo-problema-maquinas-que-executam-tarefas-inteligentes",
+          "title": "2.1. Comece pelo problema: máquinas que executam tarefas inteligentes",
+          "heading_level": 2
+        },
+        {
+          "id": "c02-2-2-o-que-e-rede-neural-nlp-e-visao-computacional",
+          "title": "2.2. O que é rede neural, NLP e visão computacional?",
+          "heading_level": 2
+        },
+        {
+          "id": "c02-2-3-agente-nao-significa-apenas-chatbot",
+          "title": "2.3. Agente não significa apenas chatbot",
+          "heading_level": 2
+        },
+        {
+          "id": "c02-2-4-pegadinhas-e-recuperacao",
+          "title": "2.4. Pegadinhas e recuperação",
+          "heading_level": 2
+        }
+      ]
+    },
+    {
+      "id": "chapter-03",
+      "original_number": 3,
+      "title": "Dados e formas de aprender: supervisionado, não supervisionado e reforço",
+      "module_id": "fundamentos-ml",
+      "domains": [
+        1
+      ],
+      "source_heading": "# 3. Dados e formas de aprender: supervisionado, não supervisionado e reforço",
+      "subheadings": [
+        {
+          "id": "c03-3-1-o-dado-vem-antes-da-escolha-do-modelo",
+          "title": "3.1. O dado vem antes da escolha do modelo",
+          "heading_level": 2
+        },
+        {
+          "id": "c03-3-2-tres-paradigmas-de-aprendizado",
+          "title": "3.2. Três paradigmas de aprendizado",
+          "heading_level": 2
+        },
+        {
+          "id": "c03-3-3-conjuntos-de-treinamento-validacao-e-teste",
+          "title": "3.3. Conjuntos de treinamento, validação e teste",
+          "heading_level": 2
+        },
+        {
+          "id": "c03-3-4-verifique-se-entendeu",
+          "title": "3.4. Verifique se entendeu",
+          "heading_level": 2
+        }
+      ]
+    },
+    {
+      "id": "chapter-04",
+      "original_number": 4,
+      "title": "Escolhendo a técnica correta para cada problema",
+      "module_id": "fundamentos-ml",
+      "domains": [
+        1,
+        3
+      ],
+      "source_heading": "# 4. Escolhendo a técnica correta para cada problema",
+      "subheadings": [
+        {
+          "id": "c04-4-1-nem-todo-problema-de-negocio-precisa-de-ia",
+          "title": "4.1. Nem todo problema de negócio precisa de IA",
+          "heading_level": 2
+        },
+        {
+          "id": "c04-4-2-matriz-de-tecnicas",
+          "title": "4.2. Matriz de técnicas",
+          "heading_level": 2
+        },
+        {
+          "id": "c04-4-3-ml-tradicional-versus-foundation-models",
+          "title": "4.3. ML tradicional versus foundation models",
+          "heading_level": 2
+        },
+        {
+          "id": "c04-4-4-exemplo-comparado",
+          "title": "4.4. Exemplo comparado",
+          "heading_level": 2
+        },
+        {
+          "id": "c04-4-5-verifique-se-entendeu",
+          "title": "4.5. Verifique se entendeu",
+          "heading_level": 2
+        }
+      ]
+    },
+    {
+      "id": "chapter-05",
+      "original_number": 5,
+      "title": "Ciclo de vida de IA/ML e MLOps",
+      "module_id": "fundamentos-ml",
+      "domains": [
+        1
+      ],
+      "source_heading": "# 5. Ciclo de vida de IA/ML e MLOps",
+      "subheadings": [
+        {
+          "id": "c05-5-1-da-hipotese-ao-sistema-que-continua-funcionando",
+          "title": "5.1. Da hipótese ao sistema que continua funcionando",
+          "heading_level": 2
+        },
+        {
+          "id": "c05-5-2-treino-inferencia-e-modalidades-de-atendimento",
+          "title": "5.2. Treino, inferência e modalidades de atendimento",
+          "heading_level": 2
+        },
+        {
+          "id": "c05-5-3-mlops-drift-e-divida-tecnica",
+          "title": "5.3. MLOps, drift e dívida técnica",
+          "heading_level": 2
+        },
+        {
+          "id": "c05-5-4-servicos-no-ciclo",
+          "title": "5.4. Serviços no ciclo",
+          "heading_level": 2
+        },
+        {
+          "id": "c05-5-5-verifique-se-entendeu",
+          "title": "5.5. Verifique se entendeu",
+          "heading_level": 2
+        }
+      ]
+    },
+    {
+      "id": "chapter-06",
+      "original_number": 6,
+      "title": "Métricas, generalização e valor de negócio",
+      "module_id": "fundamentos-ml",
+      "domains": [
+        1,
+        3
+      ],
+      "source_heading": "# 6. Métricas, generalização e valor de negócio",
+      "subheadings": [
+        {
+          "id": "c06-6-1-por-que-99-de-acuracia-pode-ser-pessimo",
+          "title": "6.1. Por que “99% de acurácia” pode ser péssimo?",
+          "heading_level": 2
+        },
+        {
+          "id": "c06-6-2-regressao-generalizacao-e-distribuicao",
+          "title": "6.2. Regressão, generalização e distribuição",
+          "heading_level": 2
+        },
+        {
+          "id": "c06-6-3-medida-tecnica-nao-e-valor-de-negocio",
+          "title": "6.3. Medida técnica não é valor de negócio",
+          "heading_level": 2
+        },
+        {
+          "id": "c06-6-4-exemplo-resolvido-a-matriz-de-confusao-da-triagem-de-risco",
+          "title": "6.4. Exemplo resolvido: a matriz de confusão da triagem de risco",
+          "heading_level": 2
+        },
+        {
+          "id": "c06-6-5-recupere-o-conceito",
+          "title": "6.5. Recupere o conceito",
+          "heading_level": 2
+        }
+      ]
+    },
+    {
+      "id": "chapter-07",
+      "original_number": 7,
+      "title": "Serviços de IA clássica e analytics na AWS",
+      "module_id": "fundamentos-ml",
+      "domains": [
+        1,
+        2
+      ],
+      "source_heading": "# 7. Serviços de IA clássica e analytics na AWS",
+      "subheadings": [
+        {
+          "id": "c07-7-1-a-pergunta-da-prova-costuma-vir-como-uma-necessidade",
+          "title": "7.1. A pergunta da prova costuma vir como uma necessidade",
+          "heading_level": 2
+        },
+        {
+          "id": "c07-7-2-o-que-analytics-acrescenta-ao-ml",
+          "title": "7.2. O que analytics acrescenta ao ML?",
+          "heading_level": 2
+        },
+        {
+          "id": "c07-7-3-escolha-pelos-sinais-do-enunciado",
+          "title": "7.3. Escolha pelos sinais do enunciado",
+          "heading_level": 2
+        }
+      ]
+    },
+    {
+      "id": "chapter-08",
+      "original_number": 8,
+      "title": "Foundation models, LLMs e Transformers",
+      "module_id": "fundamentos-generativos",
+      "domains": [
+        2
+      ],
+      "source_heading": "# 8. Foundation models, LLMs e Transformers",
+      "subheadings": [
+        {
+          "id": "c08-8-1-a-mudanca-de-paradigma-aprender-uma-vez-adaptar-varias-vezes",
+          "title": "8.1. A mudança de paradigma: aprender uma vez, adaptar várias vezes",
+          "heading_level": 2
+        },
+        {
+          "id": "c08-8-2-como-o-transformer-aprende-a-produzir-texto",
+          "title": "8.2. Como o Transformer aprende a produzir texto?",
+          "heading_level": 2
+        },
+        {
+          "id": "c08-8-3-ciclo-de-vida-de-um-fm",
+          "title": "8.3. Ciclo de vida de um FM",
+          "heading_level": 2
+        },
+        {
+          "id": "c08-8-4-capacidades-e-limites",
+          "title": "8.4. Capacidades e limites",
+          "heading_level": 2
+        }
+      ]
+    },
+    {
+      "id": "chapter-09",
+      "original_number": 9,
+      "title": "Tokens, janelas de contexto, embeddings e vetores",
+      "module_id": "fundamentos-generativos",
+      "domains": [
+        2,
+        3
+      ],
+      "source_heading": "# 9. Tokens, janelas de contexto, embeddings e vetores",
+      "subheadings": [
+        {
+          "id": "c09-9-1-token-nao-e-necessariamente-palavra",
+          "title": "9.1. Token não é necessariamente palavra",
+          "heading_level": 2
+        },
+        {
+          "id": "c09-9-2-o-que-e-embedding",
+          "title": "9.2. O que é embedding?",
+          "heading_level": 2
+        },
+        {
+          "id": "c09-9-3-context-engineering-a-competencia-nova-da-versao-1-1",
+          "title": "9.3. Context engineering: a competência nova da versão 1.1",
+          "heading_level": 2
+        },
+        {
+          "id": "c09-9-4-tokens-e-custos-de-inferencia",
+          "title": "9.4. Tokens e custos de inferência",
+          "heading_level": 2
+        },
+        {
+          "id": "c09-9-5-verifique-se-entendeu",
+          "title": "9.5. Verifique se entendeu",
+          "heading_level": 2
+        }
+      ]
+    },
+    {
+      "id": "chapter-10",
+      "original_number": 10,
+      "title": "Multimodalidade, difusão e casos de uso de GenAI",
+      "module_id": "fundamentos-generativos",
+      "domains": [
+        2
+      ],
+      "source_heading": "# 10. Multimodalidade, difusão e casos de uso de GenAI",
+      "subheadings": [
+        {
+          "id": "c10-10-1-nem-toda-ia-generativa-produz-texto",
+          "title": "10.1. Nem toda IA generativa produz texto",
+          "heading_level": 2
+        },
+        {
+          "id": "c10-10-2-beneficios-que-realmente-importam",
+          "title": "10.2. Benefícios que realmente importam",
+          "heading_level": 2
+        },
+        {
+          "id": "c10-10-3-limites-e-analise-economica",
+          "title": "10.3. Limites e análise econômica",
+          "heading_level": 2
+        },
+        {
+          "id": "c10-10-4-o-contraste-com-ferramentas-especializadas",
+          "title": "10.4. O contraste com ferramentas especializadas",
+          "heading_level": 2
+        }
+      ]
+    },
+    {
+      "id": "chapter-11",
+      "original_number": 11,
+      "title": "Inferência, parâmetros e escolha de modelos",
+      "module_id": "fundamentos-generativos",
+      "domains": [
+        2,
+        3
+      ],
+      "source_heading": "# 11. Inferência, parâmetros e escolha de modelos",
+      "subheadings": [
+        {
+          "id": "c11-11-1-o-maior-modelo-nem-sempre-vence",
+          "title": "11.1. O maior modelo nem sempre vence",
+          "heading_level": 2
+        },
+        {
+          "id": "c11-11-2-parametros-de-geracao",
+          "title": "11.2. Parâmetros de geração",
+          "heading_level": 2
+        },
+        {
+          "id": "c11-11-3-inferencia-e-throughput",
+          "title": "11.3. Inferência e throughput",
+          "heading_level": 2
+        },
+        {
+          "id": "c11-11-4-checklist-de-selecao-de-fm",
+          "title": "11.4. Checklist de seleção de FM",
+          "heading_level": 2
+        },
+        {
+          "id": "c11-11-5-decisao-por-cenario-latencia-qualidade-e-tokens",
+          "title": "11.5. Decisão por cenário: latência, qualidade e tokens",
+          "heading_level": 2
+        },
+        {
+          "id": "c11-11-6-verifique-se-entendeu",
+          "title": "11.6. Verifique se entendeu",
+          "heading_level": 2
+        }
+      ]
+    },
+    {
+      "id": "chapter-12",
+      "original_number": 12,
+      "title": "Ecossistema AWS: Bedrock, SageMaker e ferramentas de IA",
+      "module_id": "aplicacoes-fm",
+      "domains": [
+        1,
+        2,
+        3
+      ],
+      "source_heading": "# 12. Ecossistema AWS: Bedrock, SageMaker e ferramentas de IA",
+      "subheadings": [
+        {
+          "id": "c12-12-1-comece-pela-responsabilidade-desejada",
+          "title": "12.1. Comece pela responsabilidade desejada",
+          "heading_level": 2
+        },
+        {
+          "id": "c12-12-2-componentes-fundamentais-do-bedrock",
+          "title": "12.2. Componentes fundamentais do Bedrock",
+          "heading_level": 2
+        },
+        {
+          "id": "c12-12-3-novos-nomes-que-aparecem-na-revisao-1-1",
+          "title": "12.3. Novos nomes que aparecem na revisão 1.1",
+          "heading_level": 2
+        },
+        {
+          "id": "c12-12-4-arquitetura-orientadora",
+          "title": "12.4. Arquitetura orientadora",
+          "heading_level": 2
+        },
+        {
+          "id": "c12-12-5-uma-escolha-aws-com-tres-perguntas",
+          "title": "12.5. Uma escolha AWS com três perguntas",
+          "heading_level": 2
+        },
+        {
+          "id": "c12-12-6-verifique-se-entendeu",
+          "title": "12.6. Verifique se entendeu",
+          "heading_level": 2
+        }
+      ]
+    },
+    {
+      "id": "chapter-13",
+      "original_number": 13,
+      "title": "Prompt engineering e engenharia de contexto",
+      "module_id": "aplicacoes-fm",
+      "domains": [
+        3
+      ],
+      "source_heading": "# 13. Prompt engineering e engenharia de contexto",
+      "subheadings": [
+        {
+          "id": "c13-13-1-um-bom-prompt-reduz-ambiguidade-nao-torna-erro-impossivel",
+          "title": "13.1. Um bom prompt reduz ambiguidade; não torna erro impossível",
+          "heading_level": 2
+        },
+        {
+          "id": "c13-13-2-tecnicas-centrais",
+          "title": "13.2. Técnicas centrais",
+          "heading_level": 2
+        },
+        {
+          "id": "c13-13-3-engenharia-de-contexto-em-aplicacoes-reais",
+          "title": "13.3. Engenharia de contexto em aplicações reais",
+          "heading_level": 2
+        },
+        {
+          "id": "c13-13-4-gerenciar-e-versionar-e-parte-da-engenharia",
+          "title": "13.4. Gerenciar e versionar é parte da engenharia",
+          "heading_level": 2
+        },
+        {
+          "id": "c13-13-5-limitacoes-e-ataques",
+          "title": "13.5. Limitações e ataques",
+          "heading_level": 2
+        },
+        {
+          "id": "c13-13-6-exemplo-de-prompt-contexto-e-saida-verificavel",
+          "title": "13.6. Exemplo de prompt, contexto e saída verificável",
+          "heading_level": 2
+        },
+        {
+          "id": "c13-13-7-verifique-se-entendeu",
+          "title": "13.7. Verifique se entendeu",
+          "heading_level": 2
+        }
+      ]
+    },
+    {
+      "id": "chapter-14",
+      "original_number": 14,
+      "title": "RAG, bases de conhecimento e bancos vetoriais",
+      "module_id": "aplicacoes-fm",
+      "domains": [
+        2,
+        3
+      ],
+      "source_heading": "# 14. RAG, bases de conhecimento e bancos vetoriais",
+      "subheadings": [
+        {
+          "id": "c14-14-1-a-pergunta-que-leva-ao-rag",
+          "title": "14.1. A pergunta que leva ao RAG",
+          "heading_level": 2
+        },
+        {
+          "id": "c14-14-2-duas-etapas-dois-tipos-de-risco",
+          "title": "14.2. Duas etapas, dois tipos de risco",
+          "heading_level": 2
+        },
+        {
+          "id": "c14-14-3-onde-armazenar-embeddings-na-aws",
+          "title": "14.3. Onde armazenar embeddings na AWS?",
+          "heading_level": 2
+        },
+        {
+          "id": "c14-14-4-rag-ou-fine-tuning",
+          "title": "14.4. RAG ou fine-tuning?",
+          "heading_level": 2
+        },
+        {
+          "id": "c14-14-5-como-avaliar-um-rag",
+          "title": "14.5. Como avaliar um RAG",
+          "heading_level": 2
+        },
+        {
+          "id": "c14-14-6-rag-em-detalhes-o-que-acontece-antes-e-depois-da-consulta",
+          "title": "14.6. RAG em detalhes: o que acontece antes e depois da consulta",
+          "heading_level": 2
+        },
+        {
+          "id": "c14-14-7-verifique-se-entendeu",
+          "title": "14.7. Verifique se entendeu",
+          "heading_level": 2
+        }
+      ]
+    },
+    {
+      "id": "chapter-15",
+      "original_number": 15,
+      "title": "Agentes, ferramentas, MCP, memória e orquestração",
+      "module_id": "aplicacoes-fm",
+      "domains": [
+        2,
+        3
+      ],
+      "source_heading": "# 15. Agentes, ferramentas, MCP, memória e orquestração",
+      "subheadings": [
+        {
+          "id": "c15-15-1-de-responder-para-executar-um-trabalho",
+          "title": "15.1. De “responder” para “executar um trabalho”",
+          "heading_level": 2
+        },
+        {
+          "id": "c15-15-2-o-papel-do-mcp",
+          "title": "15.2. O papel do MCP",
+          "heading_level": 2
+        },
+        {
+          "id": "c15-15-3-memoria-e-contexto-nao-sao-a-mesma-coisa",
+          "title": "15.3. Memória e contexto não são a mesma coisa",
+          "heading_level": 2
+        },
+        {
+          "id": "c15-15-4-um-ou-varios-agentes",
+          "title": "15.4. Um ou vários agentes?",
+          "heading_level": 2
+        },
+        {
+          "id": "c15-15-5-recursos-da-aws-para-agentes",
+          "title": "15.5. Recursos da AWS para agentes",
+          "heading_level": 2
+        },
+        {
+          "id": "c15-15-6-quatro-riscos-que-a-prova-quer-que-voce-enxergue",
+          "title": "15.6. Quatro riscos que a prova quer que você enxergue",
+          "heading_level": 2
+        },
+        {
+          "id": "c15-15-7-exemplo-guiado-de-execucao-segura-do-pedido-a-confirmacao",
+          "title": "15.7. Exemplo guiado de execução segura, do pedido à confirmação",
+          "heading_level": 2
+        },
+        {
+          "id": "c15-15-8-verifique-se-entendeu",
+          "title": "15.8. Verifique se entendeu",
+          "heading_level": 2
+        }
+      ]
+    },
+    {
+      "id": "chapter-16",
+      "original_number": 16,
+      "title": "Customização: pré-treino, fine-tuning, RLHF e destilação",
+      "module_id": "aplicacoes-fm",
+      "domains": [
+        3
+      ],
+      "source_heading": "# 16. Customização: pré-treino, fine-tuning, RLHF e destilação",
+      "subheadings": [
+        {
+          "id": "c16-16-1-primeiro-identifique-o-que-deve-mudar-conhecimento-ou-comportamento",
+          "title": "16.1. Primeiro identifique o que deve mudar: conhecimento ou comportamento",
+          "heading_level": 2
+        },
+        {
+          "id": "c16-16-2-cinco-abordagens-em-ordem-de-custo-complexidade-aproximada",
+          "title": "16.2. Cinco abordagens em ordem de custo/complexidade aproximada",
+          "heading_level": 2
+        },
+        {
+          "id": "c16-16-3-o-que-fine-tuning-realmente-envolve",
+          "title": "16.3. O que fine-tuning realmente envolve?",
+          "heading_level": 2
+        },
+        {
+          "id": "c16-16-4-destilacao-e-eficiencia",
+          "title": "16.4. Destilação e eficiência",
+          "heading_level": 2
+        },
+        {
+          "id": "c16-16-5-diagnostico-quando-a-customizacao-e-desperdicio",
+          "title": "16.5. Diagnóstico: quando a customização é desperdício",
+          "heading_level": 2
+        },
+        {
+          "id": "c16-16-6-verifique-se-entendeu",
+          "title": "16.6. Verifique se entendeu",
+          "heading_level": 2
+        }
+      ]
+    },
+    {
+      "id": "chapter-17",
+      "original_number": 17,
+      "title": "Avaliação de modelos, RAG, agentes e aplicações",
+      "module_id": "aplicacoes-fm",
+      "domains": [
+        1,
+        3
+      ],
+      "source_heading": "# 17. Avaliação de modelos, RAG, agentes e aplicações",
+      "subheadings": [
+        {
+          "id": "c17-17-1-parece-boa-nao-e-metodologia-de-avaliacao",
+          "title": "17.1. “Parece boa” não é metodologia de avaliação",
+          "heading_level": 2
+        },
+        {
+          "id": "c17-17-2-avaliar-o-fm-e-avaliar-a-aplicacao-sao-tarefas-diferentes",
+          "title": "17.2. Avaliar o FM e avaliar a aplicação são tarefas diferentes",
+          "heading_level": 2
+        },
+        {
+          "id": "c17-17-3-metricas-textuais-que-podem-aparecer-no-exame",
+          "title": "17.3. Métricas textuais que podem aparecer no exame",
+          "heading_level": 2
+        },
+        {
+          "id": "c17-17-4-ferramentas-e-indicadores-de-negocio",
+          "title": "17.4. Ferramentas e indicadores de negócio",
+          "heading_level": 2
+        },
+        {
+          "id": "c17-17-5-estruture-uma-bateria-de-avaliacao-que-encontre-falhas-escondidas",
+          "title": "17.5. Estruture uma bateria de avaliação que encontre falhas escondidas",
+          "heading_level": 2
+        },
+        {
+          "id": "c17-17-6-verifique-se-entendeu",
+          "title": "17.6. Verifique se entendeu",
+          "heading_level": 2
+        }
+      ]
+    },
+    {
+      "id": "chapter-18",
+      "original_number": 18,
+      "title": "Custos, escalabilidade e retorno sobre investimento",
+      "module_id": "aplicacoes-fm",
+      "domains": [
+        2,
+        3
+      ],
+      "source_heading": "# 18. Custos, escalabilidade e retorno sobre investimento",
+      "subheadings": [
+        {
+          "id": "c18-18-1-contar-apenas-o-preco-do-modelo-esconde-o-custo-real",
+          "title": "18.1. Contar apenas o preço do modelo esconde o custo real",
+          "heading_level": 2
+        },
+        {
+          "id": "c18-18-2-custos-variaveis-e-previsibilidade",
+          "title": "18.2. Custos variáveis e previsibilidade",
+          "heading_level": 2
+        },
+        {
+          "id": "c18-18-3-trade-offs-que-importam-na-prova",
+          "title": "18.3. Trade-offs que importam na prova",
+          "heading_level": 2
+        },
+        {
+          "id": "c18-18-4-roi-risco-e-produtividade",
+          "title": "18.4. ROI, risco e produtividade",
+          "heading_level": 2
+        },
+        {
+          "id": "c18-18-5-conta-ilustrativa-de-custo-por-tarefa-concluida",
+          "title": "18.5. Conta ilustrativa de custo por tarefa concluída",
+          "heading_level": 2
+        },
+        {
+          "id": "c18-18-6-verifique-se-entendeu",
+          "title": "18.6. Verifique se entendeu",
+          "heading_level": 2
+        }
+      ]
+    },
+    {
+      "id": "chapter-19",
+      "original_number": 19,
+      "title": "IA responsável: viés, justiça, robustez e sustentabilidade",
+      "module_id": "ia-responsavel",
+      "domains": [
+        4
+      ],
+      "source_heading": "# 19. IA responsável: viés, justiça, robustez e sustentabilidade",
+      "subheadings": [
+        {
+          "id": "c19-19-1-a-pergunta-nao-e-apenas-o-modelo-acerta",
+          "title": "19.1. A pergunta não é apenas “o modelo acerta?”",
+          "heading_level": 2
+        },
+        {
+          "id": "c19-19-2-fontes-de-vies",
+          "title": "19.2. Fontes de viés",
+          "heading_level": 2
+        },
+        {
+          "id": "c19-19-3-vies-variancia-overfit-e-underfit",
+          "title": "19.3. Viés, variância, overfit e underfit",
+          "heading_level": 2
+        },
+        {
+          "id": "c19-19-4-ferramentas-e-mitigacao",
+          "title": "19.4. Ferramentas e mitigação",
+          "heading_level": 2
+        },
+        {
+          "id": "c19-19-5-questoes-legais-e-ambientais",
+          "title": "19.5. Questões legais e ambientais",
+          "heading_level": 2
+        },
+        {
+          "id": "c19-19-6-verifique-se-entendeu",
+          "title": "19.6. Verifique se entendeu",
+          "heading_level": 2
+        }
+      ]
+    },
+    {
+      "id": "chapter-20",
+      "original_number": 20,
+      "title": "Transparência, explicabilidade e supervisão humana",
+      "module_id": "ia-responsavel",
+      "domains": [
+        4
+      ],
+      "source_heading": "# 20. Transparência, explicabilidade e supervisão humana",
+      "subheadings": [
+        {
+          "id": "c20-20-1-transparencia-e-explicabilidade-sao-perguntas-diferentes",
+          "title": "20.1. Transparência e explicabilidade são perguntas diferentes",
+          "heading_level": 2
+        },
+        {
+          "id": "c20-20-2-documentacao-e-ferramentas",
+          "title": "20.2. Documentação e ferramentas",
+          "heading_level": 2
+        },
+        {
+          "id": "c20-20-3-seguranca-e-interpretabilidade-trade-offs-reais",
+          "title": "20.3. Segurança e interpretabilidade: trade-offs reais",
+          "heading_level": 2
+        },
+        {
+          "id": "c20-20-4-design-centrado-no-humano",
+          "title": "20.4. Design centrado no humano",
+          "heading_level": 2
+        },
+        {
+          "id": "c20-20-5-verifique-se-entendeu",
+          "title": "20.5. Verifique se entendeu",
+          "heading_level": 2
+        }
+      ]
+    },
+    {
+      "id": "chapter-21",
+      "original_number": 21,
+      "title": "Ameaças a aplicações de IA e controles de saída",
+      "module_id": "seguranca",
+      "domains": [
+        4,
+        5
+      ],
+      "source_heading": "# 21. Ameaças a aplicações de IA e controles de saída",
+      "subheadings": [
+        {
+          "id": "c21-21-1-quem-e-a-fonte-de-confianca",
+          "title": "21.1. Quem é a fonte de confiança?",
+          "heading_level": 2
+        },
+        {
+          "id": "c21-21-2-ameacas-tipicas",
+          "title": "21.2. Ameaças típicas",
+          "heading_level": 2
+        },
+        {
+          "id": "c21-21-3-uma-defesa-em-camadas",
+          "title": "21.3. Uma defesa em camadas",
+          "heading_level": 2
+        },
+        {
+          "id": "c21-21-4-bedrock-guardrails-e-grounding",
+          "title": "21.4. Bedrock Guardrails e grounding",
+          "heading_level": 2
+        },
+        {
+          "id": "c21-21-5-um-ataque-indireto-em-quatro-etapas-e-as-defesas-correspondentes",
+          "title": "21.5. Um ataque indireto em quatro etapas — e as defesas correspondentes",
+          "heading_level": 2
+        },
+        {
+          "id": "c21-21-6-verifique-se-entendeu",
+          "title": "21.6. Verifique se entendeu",
+          "heading_level": 2
+        }
+      ]
+    },
+    {
+      "id": "chapter-22",
+      "original_number": 22,
+      "title": "Identidade, privacidade e proteção de dados na AWS",
+      "module_id": "seguranca",
+      "domains": [
+        5
+      ],
+      "source_heading": "# 22. Identidade, privacidade e proteção de dados na AWS",
+      "subheadings": [
+        {
+          "id": "c22-22-1-um-fm-nao-determina-quem-pode-acessar-seus-dados",
+          "title": "22.1. Um FM não determina quem pode acessar seus dados",
+          "heading_level": 2
+        },
+        {
+          "id": "c22-22-2-protegendo-dados-em-repouso-e-transito",
+          "title": "22.2. Protegendo dados em repouso e trânsito",
+          "heading_level": 2
+        },
+        {
+          "id": "c22-22-3-responsabilidade-compartilhada-e-genai",
+          "title": "22.3. Responsabilidade compartilhada e GenAI",
+          "heading_level": 2
+        },
+        {
+          "id": "c22-22-4-agentes-tornam-identidade-mais-importante",
+          "title": "22.4. Agentes tornam identidade mais importante",
+          "heading_level": 2
+        },
+        {
+          "id": "c22-22-5-checklist-de-uma-aplicacao-corporativa",
+          "title": "22.5. Checklist de uma aplicação corporativa",
+          "heading_level": 2
+        },
+        {
+          "id": "c22-22-6-matriz-de-controles-quem-protege-o-que",
+          "title": "22.6. Matriz de controles: quem protege o quê?",
+          "heading_level": 2
+        },
+        {
+          "id": "c22-22-7-verifique-se-entendeu",
+          "title": "22.7. Verifique se entendeu",
+          "heading_level": 2
+        }
+      ]
+    },
+    {
+      "id": "chapter-23",
+      "original_number": 23,
+      "title": "Conformidade, auditoria e governança de IA",
+      "module_id": "seguranca",
+      "domains": [
+        5
+      ],
+      "source_heading": "# 23. Conformidade, auditoria e governança de IA",
+      "subheadings": [
+        {
+          "id": "c23-23-1-seguranca-tecnica-nao-equivale-a-comprovacao-de-conformidade",
+          "title": "23.1. Segurança técnica não equivale a comprovação de conformidade",
+          "heading_level": 2
+        },
+        {
+          "id": "c23-23-2-diferenciando-servicos-que-a-prova-aproxima",
+          "title": "23.2. Diferenciando serviços que a prova aproxima",
+          "heading_level": 2
+        },
+        {
+          "id": "c23-23-3-linhagem-e-citacao-de-fontes",
+          "title": "23.3. Linhagem e citação de fontes",
+          "heading_level": 2
+        },
+        {
+          "id": "c23-23-4-ciclo-de-vida-de-dados-e-politicas",
+          "title": "23.4. Ciclo de vida de dados e políticas",
+          "heading_level": 2
+        },
+        {
+          "id": "c23-23-5-exemplo-de-governanca-em-seis-perguntas",
+          "title": "23.5. Exemplo de governança em seis perguntas",
+          "heading_level": 2
+        },
+        {
+          "id": "c23-23-6-verifique-se-entendeu",
+          "title": "23.6. Verifique se entendeu",
+          "heading_level": 2
+        }
+      ]
+    },
+    {
+      "id": "chapter-24",
+      "original_number": 24,
+      "title": "Catálogo dos serviços AWS no escopo AIF-C01",
+      "module_id": "pratica",
+      "domains": [
+        1,
+        2,
+        3,
+        4,
+        5
+      ],
+      "source_heading": "# 24. Catálogo dos serviços AWS no escopo AIF-C01",
+      "subheadings": [
+        {
+          "id": "c24-24-1-como-usar-este-capitulo",
+          "title": "24.1. Como usar este capítulo",
+          "heading_level": 2
+        },
+        {
+          "id": "c24-24-2-analytics-e-gestao-de-dados",
+          "title": "24.2. Analytics e gestão de dados",
+          "heading_level": 2
+        },
+        {
+          "id": "c24-24-3-compute-conteineres-e-armazenamento",
+          "title": "24.3. Compute, contêineres e armazenamento",
+          "heading_level": 2
+        },
+        {
+          "id": "c24-24-4-bancos-de-dados",
+          "title": "24.4. Bancos de dados",
+          "heading_level": 2
+        },
+        {
+          "id": "c24-24-5-desenvolvimento-assistido-e-ml-ia",
+          "title": "24.5. Desenvolvimento assistido e ML/IA",
+          "heading_level": 2
+        },
+        {
+          "id": "c24-24-6-gestao-redes-seguranca-e-financas",
+          "title": "24.6. Gestão, redes, segurança e finanças",
+          "heading_level": 2
+        },
+        {
+          "id": "c24-24-7-o-que-nao-priorizar-nesta-certificacao",
+          "title": "24.7. O que não priorizar nesta certificação",
+          "heading_level": 2
+        },
+        {
+          "id": "c24-24-8-exercicio-de-classificacao",
+          "title": "24.8. Exercício de classificação",
+          "heading_level": 2
+        }
+      ]
+    },
+    {
+      "id": "chapter-25",
+      "original_number": 25,
+      "title": "Estudo de caso: assistente empresarial de ponta a ponta",
+      "module_id": "pratica",
+      "domains": [
+        1,
+        2,
+        3,
+        4,
+        5
+      ],
+      "source_heading": "# 25. Estudo de caso: assistente empresarial de ponta a ponta",
+      "subheadings": [
+        {
+          "id": "c25-25-1-o-cenario",
+          "title": "25.1. O cenário",
+          "heading_level": 2
+        },
+        {
+          "id": "c25-25-2-arquitetura-conceitual",
+          "title": "25.2. Arquitetura conceitual",
+          "heading_level": 2
+        },
+        {
+          "id": "c25-25-3-escolhas-justificadas-fase-por-fase",
+          "title": "25.3. Escolhas justificadas, fase por fase",
+          "heading_level": 2
+        },
+        {
+          "id": "c25-25-4-cinco-falhas-simuladas",
+          "title": "25.4. Cinco falhas simuladas",
+          "heading_level": 2
+        },
+        {
+          "id": "c25-25-5-o-que-a-prova-pode-pedir",
+          "title": "25.5. O que a prova pode pedir",
+          "heading_level": 2
+        }
+      ]
+    },
+    {
+      "id": "chapter-26",
+      "original_number": 26,
+      "title": "Comparativos decisivos e armadilhas de prova",
+      "module_id": "pratica",
+      "domains": [
+        1,
+        2,
+        3,
+        4,
+        5
+      ],
+      "source_heading": "# 26. Comparativos decisivos e armadilhas de prova",
+      "subheadings": [
+        {
+          "id": "c26-26-1-aprenda-pela-diferenca-nao-apenas-pela-definicao",
+          "title": "26.1. Aprenda pela diferença, não apenas pela definição",
+          "heading_level": 2
+        },
+        {
+          "id": "c26-26-2-se-o-enunciado-contiver-estas-pistas",
+          "title": "26.2. Se o enunciado contiver estas pistas...",
+          "heading_level": 2
+        },
+        {
+          "id": "c26-26-3-tres-erros-de-raciocinio-a-evitar",
+          "title": "26.3. Três erros de raciocínio a evitar",
+          "heading_level": 2
+        },
+        {
+          "id": "c26-26-4-autoteste-rapido",
+          "title": "26.4. Autoteste rápido",
+          "heading_level": 2
+        }
+      ]
+    },
+    {
+      "id": "chapter-27",
+      "original_number": 27,
+      "title": "Simulado original comentado — 80 questões",
+      "module_id": "pratica",
+      "domains": [
+        1,
+        2,
+        3,
+        4,
+        5
+      ],
+      "source_heading": "# 27. Simulado original comentado — 80 questões",
+      "subheadings": [
+        {
+          "id": "c27-parte-a-questoes",
+          "title": "Parte A — questões",
+          "heading_level": 2
+        },
+        {
+          "id": "c27-aif-q01-dominio-1",
+          "title": "AIF-Q01 · Domínio 1",
+          "heading_level": 3
+        },
+        {
+          "id": "c27-aif-q02-dominio-1",
+          "title": "AIF-Q02 · Domínio 1",
+          "heading_level": 3
+        },
+        {
+          "id": "c27-aif-q03-dominio-1",
+          "title": "AIF-Q03 · Domínio 1",
+          "heading_level": 3
+        },
+        {
+          "id": "c27-aif-q04-dominio-1",
+          "title": "AIF-Q04 · Domínio 1",
+          "heading_level": 3
+        },
+        {
+          "id": "c27-aif-q05-dominio-1",
+          "title": "AIF-Q05 · Domínio 1",
+          "heading_level": 3
+        },
+        {
+          "id": "c27-aif-q06-dominio-1",
+          "title": "AIF-Q06 · Domínio 1",
+          "heading_level": 3
+        },
+        {
+          "id": "c27-aif-q07-dominio-1",
+          "title": "AIF-Q07 · Domínio 1",
+          "heading_level": 3
+        },
+        {
+          "id": "c27-aif-q08-dominio-1",
+          "title": "AIF-Q08 · Domínio 1",
+          "heading_level": 3
+        },
+        {
+          "id": "c27-aif-q09-dominio-1",
+          "title": "AIF-Q09 · Domínio 1",
+          "heading_level": 3
+        },
+        {
+          "id": "c27-aif-q10-dominio-1",
+          "title": "AIF-Q10 · Domínio 1",
+          "heading_level": 3
+        },
+        {
+          "id": "c27-aif-q11-dominio-1",
+          "title": "AIF-Q11 · Domínio 1",
+          "heading_level": 3
+        },
+        {
+          "id": "c27-aif-q12-dominio-1",
+          "title": "AIF-Q12 · Domínio 1",
+          "heading_level": 3
+        },
+        {
+          "id": "c27-aif-q13-dominio-1",
+          "title": "AIF-Q13 · Domínio 1",
+          "heading_level": 3
+        },
+        {
+          "id": "c27-aif-q14-dominio-1",
+          "title": "AIF-Q14 · Domínio 1",
+          "heading_level": 3
+        },
+        {
+          "id": "c27-aif-q15-dominio-1",
+          "title": "AIF-Q15 · Domínio 1",
+          "heading_level": 3
+        },
+        {
+          "id": "c27-aif-q16-dominio-1",
+          "title": "AIF-Q16 · Domínio 1",
+          "heading_level": 3
+        },
+        {
+          "id": "c27-aif-q17-dominio-2",
+          "title": "AIF-Q17 · Domínio 2",
+          "heading_level": 3
+        },
+        {
+          "id": "c27-aif-q18-dominio-2",
+          "title": "AIF-Q18 · Domínio 2",
+          "heading_level": 3
+        },
+        {
+          "id": "c27-aif-q19-dominio-2",
+          "title": "AIF-Q19 · Domínio 2",
+          "heading_level": 3
+        },
+        {
+          "id": "c27-aif-q20-dominio-2",
+          "title": "AIF-Q20 · Domínio 2",
+          "heading_level": 3
+        },
+        {
+          "id": "c27-aif-q21-dominio-2",
+          "title": "AIF-Q21 · Domínio 2",
+          "heading_level": 3
+        },
+        {
+          "id": "c27-aif-q22-dominio-2",
+          "title": "AIF-Q22 · Domínio 2",
+          "heading_level": 3
+        },
+        {
+          "id": "c27-aif-q23-dominio-2",
+          "title": "AIF-Q23 · Domínio 2",
+          "heading_level": 3
+        },
+        {
+          "id": "c27-aif-q24-dominio-2",
+          "title": "AIF-Q24 · Domínio 2",
+          "heading_level": 3
+        },
+        {
+          "id": "c27-aif-q25-dominio-2",
+          "title": "AIF-Q25 · Domínio 2",
+          "heading_level": 3
+        },
+        {
+          "id": "c27-aif-q26-dominio-2",
+          "title": "AIF-Q26 · Domínio 2",
+          "heading_level": 3
+        },
+        {
+          "id": "c27-aif-q27-dominio-2",
+          "title": "AIF-Q27 · Domínio 2",
+          "heading_level": 3
+        },
+        {
+          "id": "c27-aif-q28-dominio-2",
+          "title": "AIF-Q28 · Domínio 2",
+          "heading_level": 3
+        },
+        {
+          "id": "c27-aif-q29-dominio-2",
+          "title": "AIF-Q29 · Domínio 2",
+          "heading_level": 3
+        },
+        {
+          "id": "c27-aif-q30-dominio-2",
+          "title": "AIF-Q30 · Domínio 2",
+          "heading_level": 3
+        },
+        {
+          "id": "c27-aif-q31-dominio-2",
+          "title": "AIF-Q31 · Domínio 2",
+          "heading_level": 3
+        },
+        {
+          "id": "c27-aif-q32-dominio-2",
+          "title": "AIF-Q32 · Domínio 2",
+          "heading_level": 3
+        },
+        {
+          "id": "c27-aif-q33-dominio-2",
+          "title": "AIF-Q33 · Domínio 2",
+          "heading_level": 3
+        },
+        {
+          "id": "c27-aif-q34-dominio-2",
+          "title": "AIF-Q34 · Domínio 2",
+          "heading_level": 3
+        },
+        {
+          "id": "c27-aif-q35-dominio-2",
+          "title": "AIF-Q35 · Domínio 2",
+          "heading_level": 3
+        },
+        {
+          "id": "c27-aif-q36-dominio-3",
+          "title": "AIF-Q36 · Domínio 3",
+          "heading_level": 3
+        },
+        {
+          "id": "c27-aif-q37-dominio-3",
+          "title": "AIF-Q37 · Domínio 3",
+          "heading_level": 3
+        },
+        {
+          "id": "c27-aif-q38-dominio-3",
+          "title": "AIF-Q38 · Domínio 3",
+          "heading_level": 3
+        },
+        {
+          "id": "c27-aif-q39-dominio-3",
+          "title": "AIF-Q39 · Domínio 3",
+          "heading_level": 3
+        },
+        {
+          "id": "c27-aif-q40-dominio-3",
+          "title": "AIF-Q40 · Domínio 3",
+          "heading_level": 3
+        },
+        {
+          "id": "c27-aif-q41-dominio-3",
+          "title": "AIF-Q41 · Domínio 3",
+          "heading_level": 3
+        },
+        {
+          "id": "c27-aif-q42-dominio-3",
+          "title": "AIF-Q42 · Domínio 3",
+          "heading_level": 3
+        },
+        {
+          "id": "c27-aif-q43-dominio-3",
+          "title": "AIF-Q43 · Domínio 3",
+          "heading_level": 3
+        },
+        {
+          "id": "c27-aif-q44-dominio-3",
+          "title": "AIF-Q44 · Domínio 3",
+          "heading_level": 3
+        },
+        {
+          "id": "c27-aif-q45-dominio-3",
+          "title": "AIF-Q45 · Domínio 3",
+          "heading_level": 3
+        },
+        {
+          "id": "c27-aif-q46-dominio-3",
+          "title": "AIF-Q46 · Domínio 3",
+          "heading_level": 3
+        },
+        {
+          "id": "c27-aif-q47-dominio-3",
+          "title": "AIF-Q47 · Domínio 3",
+          "heading_level": 3
+        },
+        {
+          "id": "c27-aif-q48-dominio-3",
+          "title": "AIF-Q48 · Domínio 3",
+          "heading_level": 3
+        },
+        {
+          "id": "c27-aif-q49-dominio-3",
+          "title": "AIF-Q49 · Domínio 3",
+          "heading_level": 3
+        },
+        {
+          "id": "c27-aif-q50-dominio-3",
+          "title": "AIF-Q50 · Domínio 3",
+          "heading_level": 3
+        },
+        {
+          "id": "c27-aif-q51-dominio-3",
+          "title": "AIF-Q51 · Domínio 3",
+          "heading_level": 3
+        },
+        {
+          "id": "c27-aif-q52-dominio-3",
+          "title": "AIF-Q52 · Domínio 3",
+          "heading_level": 3
+        },
+        {
+          "id": "c27-aif-q53-dominio-3",
+          "title": "AIF-Q53 · Domínio 3",
+          "heading_level": 3
+        },
+        {
+          "id": "c27-aif-q54-dominio-3",
+          "title": "AIF-Q54 · Domínio 3",
+          "heading_level": 3
+        },
+        {
+          "id": "c27-aif-q55-dominio-3",
+          "title": "AIF-Q55 · Domínio 3",
+          "heading_level": 3
+        },
+        {
+          "id": "c27-aif-q56-dominio-3",
+          "title": "AIF-Q56 · Domínio 3",
+          "heading_level": 3
+        },
+        {
+          "id": "c27-aif-q57-dominio-3",
+          "title": "AIF-Q57 · Domínio 3",
+          "heading_level": 3
+        },
+        {
+          "id": "c27-aif-q58-dominio-3",
+          "title": "AIF-Q58 · Domínio 3",
+          "heading_level": 3
+        },
+        {
+          "id": "c27-aif-q59-dominio-4",
+          "title": "AIF-Q59 · Domínio 4",
+          "heading_level": 3
+        },
+        {
+          "id": "c27-aif-q60-dominio-4",
+          "title": "AIF-Q60 · Domínio 4",
+          "heading_level": 3
+        },
+        {
+          "id": "c27-aif-q61-dominio-4",
+          "title": "AIF-Q61 · Domínio 4",
+          "heading_level": 3
+        },
+        {
+          "id": "c27-aif-q62-dominio-4",
+          "title": "AIF-Q62 · Domínio 4",
+          "heading_level": 3
+        },
+        {
+          "id": "c27-aif-q63-dominio-4",
+          "title": "AIF-Q63 · Domínio 4",
+          "heading_level": 3
+        },
+        {
+          "id": "c27-aif-q64-dominio-4",
+          "title": "AIF-Q64 · Domínio 4",
+          "heading_level": 3
+        },
+        {
+          "id": "c27-aif-q65-dominio-4",
+          "title": "AIF-Q65 · Domínio 4",
+          "heading_level": 3
+        },
+        {
+          "id": "c27-aif-q66-dominio-4",
+          "title": "AIF-Q66 · Domínio 4",
+          "heading_level": 3
+        },
+        {
+          "id": "c27-aif-q67-dominio-4",
+          "title": "AIF-Q67 · Domínio 4",
+          "heading_level": 3
+        },
+        {
+          "id": "c27-aif-q68-dominio-4",
+          "title": "AIF-Q68 · Domínio 4",
+          "heading_level": 3
+        },
+        {
+          "id": "c27-aif-q69-dominio-4",
+          "title": "AIF-Q69 · Domínio 4",
+          "heading_level": 3
+        },
+        {
+          "id": "c27-aif-q70-dominio-5",
+          "title": "AIF-Q70 · Domínio 5",
+          "heading_level": 3
+        },
+        {
+          "id": "c27-aif-q71-dominio-5",
+          "title": "AIF-Q71 · Domínio 5",
+          "heading_level": 3
+        },
+        {
+          "id": "c27-aif-q72-dominio-5",
+          "title": "AIF-Q72 · Domínio 5",
+          "heading_level": 3
+        },
+        {
+          "id": "c27-aif-q73-dominio-5",
+          "title": "AIF-Q73 · Domínio 5",
+          "heading_level": 3
+        },
+        {
+          "id": "c27-aif-q74-dominio-5",
+          "title": "AIF-Q74 · Domínio 5",
+          "heading_level": 3
+        },
+        {
+          "id": "c27-aif-q75-dominio-5",
+          "title": "AIF-Q75 · Domínio 5",
+          "heading_level": 3
+        },
+        {
+          "id": "c27-aif-q76-dominio-5",
+          "title": "AIF-Q76 · Domínio 5",
+          "heading_level": 3
+        },
+        {
+          "id": "c27-aif-q77-dominio-5",
+          "title": "AIF-Q77 · Domínio 5",
+          "heading_level": 3
+        },
+        {
+          "id": "c27-aif-q78-dominio-5",
+          "title": "AIF-Q78 · Domínio 5",
+          "heading_level": 3
+        },
+        {
+          "id": "c27-aif-q79-dominio-5",
+          "title": "AIF-Q79 · Domínio 5",
+          "heading_level": 3
+        },
+        {
+          "id": "c27-aif-q80-dominio-5",
+          "title": "AIF-Q80 · Domínio 5",
+          "heading_level": 3
+        },
+        {
+          "id": "c27-parte-b-gabarito-comentado",
+          "title": "Parte B — gabarito comentado",
+          "heading_level": 2
+        }
+      ]
+    },
+    {
+      "id": "chapter-28",
+      "original_number": 28,
+      "title": "Flashcards para revisão ativa — 120 cartões",
+      "module_id": "pratica",
+      "domains": [
+        1,
+        2,
+        3,
+        4,
+        5
+      ],
+      "source_heading": "# 28. Flashcards para revisão ativa — 120 cartões",
+      "subheadings": [
+        {
+          "id": "c28-aif-f001-ia-versus-ml",
+          "title": "AIF-F001 — IA versus ML",
+          "heading_level": 3
+        },
+        {
+          "id": "c28-aif-f002-deep-learning",
+          "title": "AIF-F002 — Deep learning",
+          "heading_level": 3
+        },
+        {
+          "id": "c28-aif-f003-ia-generativa",
+          "title": "AIF-F003 — IA generativa",
+          "heading_level": 3
+        },
+        {
+          "id": "c28-aif-f004-ia-agentica",
+          "title": "AIF-F004 — IA agêntica",
+          "heading_level": 3
+        },
+        {
+          "id": "c28-aif-f005-treino",
+          "title": "AIF-F005 — Treino",
+          "heading_level": 3
+        },
+        {
+          "id": "c28-aif-f006-inferencia",
+          "title": "AIF-F006 — Inferência",
+          "heading_level": 3
+        },
+        {
+          "id": "c28-aif-f007-llm",
+          "title": "AIF-F007 — LLM",
+          "heading_level": 3
+        },
+        {
+          "id": "c28-aif-f008-fm",
+          "title": "AIF-F008 — FM",
+          "heading_level": 3
+        },
+        {
+          "id": "c28-aif-f009-nlp",
+          "title": "AIF-F009 — NLP",
+          "heading_level": 3
+        },
+        {
+          "id": "c28-aif-f010-computer-vision",
+          "title": "AIF-F010 — Computer vision",
+          "heading_level": 3
+        },
+        {
+          "id": "c28-aif-f011-dados-estruturados",
+          "title": "AIF-F011 — Dados estruturados",
+          "heading_level": 3
+        },
+        {
+          "id": "c28-aif-f012-dados-nao-estruturados",
+          "title": "AIF-F012 — Dados não estruturados",
+          "heading_level": 3
+        },
+        {
+          "id": "c28-aif-f013-dados-rotulados",
+          "title": "AIF-F013 — Dados rotulados",
+          "heading_level": 3
+        },
+        {
+          "id": "c28-aif-f014-supervisionado",
+          "title": "AIF-F014 — Supervisionado",
+          "heading_level": 3
+        },
+        {
+          "id": "c28-aif-f015-nao-supervisionado",
+          "title": "AIF-F015 — Não supervisionado",
+          "heading_level": 3
+        },
+        {
+          "id": "c28-aif-f016-reforco",
+          "title": "AIF-F016 — Reforço",
+          "heading_level": 3
+        },
+        {
+          "id": "c28-aif-f017-classificacao",
+          "title": "AIF-F017 — Classificação",
+          "heading_level": 3
+        },
+        {
+          "id": "c28-aif-f018-regressao",
+          "title": "AIF-F018 — Regressão",
+          "heading_level": 3
+        },
+        {
+          "id": "c28-aif-f019-clustering",
+          "title": "AIF-F019 — Clustering",
+          "heading_level": 3
+        },
+        {
+          "id": "c28-aif-f020-data-leakage",
+          "title": "AIF-F020 — Data leakage",
+          "heading_level": 3
+        },
+        {
+          "id": "c28-aif-f021-treino-validacao-teste",
+          "title": "AIF-F021 — Treino/validação/teste",
+          "heading_level": 3
+        },
+        {
+          "id": "c28-aif-f022-quando-evitar-ia",
+          "title": "AIF-F022 — Quando evitar IA",
+          "heading_level": 3
+        },
+        {
+          "id": "c28-aif-f023-modelo-tradicional-vs-fm",
+          "title": "AIF-F023 — Modelo tradicional vs FM",
+          "heading_level": 3
+        },
+        {
+          "id": "c28-aif-f024-pipeline-de-ml",
+          "title": "AIF-F024 — Pipeline de ML",
+          "heading_level": 3
+        },
+        {
+          "id": "c28-aif-f025-batch-inference",
+          "title": "AIF-F025 — Batch inference",
+          "heading_level": 3
+        },
+        {
+          "id": "c28-aif-f026-real-time-inference",
+          "title": "AIF-F026 — Real-time inference",
+          "heading_level": 3
+        },
+        {
+          "id": "c28-aif-f027-inferencia-assincrona",
+          "title": "AIF-F027 — Inferência assíncrona",
+          "heading_level": 3
+        },
+        {
+          "id": "c28-aif-f028-serverless",
+          "title": "AIF-F028 — Serverless",
+          "heading_level": 3
+        },
+        {
+          "id": "c28-aif-f029-api-managed-vs-self-hosted",
+          "title": "AIF-F029 — API managed vs self hosted",
+          "heading_level": 3
+        },
+        {
+          "id": "c28-aif-f030-mlops",
+          "title": "AIF-F030 — MLOps",
+          "heading_level": 3
+        },
+        {
+          "id": "c28-aif-f031-data-drift",
+          "title": "AIF-F031 — Data drift",
+          "heading_level": 3
+        },
+        {
+          "id": "c28-aif-f032-concept-drift",
+          "title": "AIF-F032 — Concept drift",
+          "heading_level": 3
+        },
+        {
+          "id": "c28-aif-f033-overfitting",
+          "title": "AIF-F033 — Overfitting",
+          "heading_level": 3
+        },
+        {
+          "id": "c28-aif-f034-underfitting",
+          "title": "AIF-F034 — Underfitting",
+          "heading_level": 3
+        },
+        {
+          "id": "c28-aif-f035-precision",
+          "title": "AIF-F035 — Precision",
+          "heading_level": 3
+        },
+        {
+          "id": "c28-aif-f036-recall",
+          "title": "AIF-F036 — Recall",
+          "heading_level": 3
+        },
+        {
+          "id": "c28-aif-f037-accuracy",
+          "title": "AIF-F037 — Accuracy",
+          "heading_level": 3
+        },
+        {
+          "id": "c28-aif-f038-f1",
+          "title": "AIF-F038 — F1",
+          "heading_level": 3
+        },
+        {
+          "id": "c28-aif-f039-classe-desbalanceada",
+          "title": "AIF-F039 — Classe desbalanceada",
+          "heading_level": 3
+        },
+        {
+          "id": "c28-aif-f040-roi",
+          "title": "AIF-F040 — ROI",
+          "heading_level": 3
+        },
+        {
+          "id": "c28-aif-f041-amazon-transcribe",
+          "title": "AIF-F041 — Amazon Transcribe",
+          "heading_level": 3
+        },
+        {
+          "id": "c28-aif-f042-amazon-polly",
+          "title": "AIF-F042 — Amazon Polly",
+          "heading_level": 3
+        },
+        {
+          "id": "c28-aif-f043-amazon-translate",
+          "title": "AIF-F043 — Amazon Translate",
+          "heading_level": 3
+        },
+        {
+          "id": "c28-aif-f044-amazon-comprehend",
+          "title": "AIF-F044 — Amazon Comprehend",
+          "heading_level": 3
+        },
+        {
+          "id": "c28-aif-f045-amazon-lex",
+          "title": "AIF-F045 — Amazon Lex",
+          "heading_level": 3
+        },
+        {
+          "id": "c28-aif-f046-amazon-rekognition",
+          "title": "AIF-F046 — Amazon Rekognition",
+          "heading_level": 3
+        },
+        {
+          "id": "c28-aif-f047-amazon-textract",
+          "title": "AIF-F047 — Amazon Textract",
+          "heading_level": 3
+        },
+        {
+          "id": "c28-aif-f048-amazon-personalize",
+          "title": "AIF-F048 — Amazon Personalize",
+          "heading_level": 3
+        },
+        {
+          "id": "c28-aif-f049-sagemaker-ai",
+          "title": "AIF-F049 — SageMaker AI",
+          "heading_level": 3
+        },
+        {
+          "id": "c28-aif-f050-sagemaker-jumpstart",
+          "title": "AIF-F050 — SageMaker JumpStart",
+          "heading_level": 3
+        },
+        {
+          "id": "c28-aif-f051-amazon-bedrock",
+          "title": "AIF-F051 — Amazon Bedrock",
+          "heading_level": 3
+        },
+        {
+          "id": "c28-aif-f052-amazon-nova",
+          "title": "AIF-F052 — Amazon Nova",
+          "heading_level": 3
+        },
+        {
+          "id": "c28-aif-f053-transformer",
+          "title": "AIF-F053 — Transformer",
+          "heading_level": 3
+        },
+        {
+          "id": "c28-aif-f054-self-attention",
+          "title": "AIF-F054 — Self-attention",
+          "heading_level": 3
+        },
+        {
+          "id": "c28-aif-f055-token",
+          "title": "AIF-F055 — Token",
+          "heading_level": 3
+        },
+        {
+          "id": "c28-aif-f056-context-window",
+          "title": "AIF-F056 — Context window",
+          "heading_level": 3
+        },
+        {
+          "id": "c28-aif-f057-embeddings",
+          "title": "AIF-F057 — Embeddings",
+          "heading_level": 3
+        },
+        {
+          "id": "c28-aif-f058-chunking",
+          "title": "AIF-F058 — Chunking",
+          "heading_level": 3
+        },
+        {
+          "id": "c28-aif-f059-vector-store",
+          "title": "AIF-F059 — Vector store",
+          "heading_level": 3
+        },
+        {
+          "id": "c28-aif-f060-busca-semantica",
+          "title": "AIF-F060 — Busca semântica",
+          "heading_level": 3
+        },
+        {
+          "id": "c28-aif-f061-modelo-multimodal",
+          "title": "AIF-F061 — Modelo multimodal",
+          "heading_level": 3
+        },
+        {
+          "id": "c28-aif-f062-alucinacao",
+          "title": "AIF-F062 — Alucinação",
+          "heading_level": 3
+        },
+        {
+          "id": "c28-aif-f063-nao-determinismo",
+          "title": "AIF-F063 — Não determinismo",
+          "heading_level": 3
+        },
+        {
+          "id": "c28-aif-f064-temperatura",
+          "title": "AIF-F064 — Temperatura",
+          "heading_level": 3
+        },
+        {
+          "id": "c28-aif-f065-output-token-limit",
+          "title": "AIF-F065 — Output token limit",
+          "heading_level": 3
+        },
+        {
+          "id": "c28-aif-f066-prompt-caching",
+          "title": "AIF-F066 — Prompt caching",
+          "heading_level": 3
+        },
+        {
+          "id": "c28-aif-f067-custos-por-tokens",
+          "title": "AIF-F067 — Custos por tokens",
+          "heading_level": 3
+        },
+        {
+          "id": "c28-aif-f068-provisioned-throughput",
+          "title": "AIF-F068 — Provisioned throughput",
+          "heading_level": 3
+        },
+        {
+          "id": "c28-aif-f069-prompt-engineering",
+          "title": "AIF-F069 — Prompt engineering",
+          "heading_level": 3
+        },
+        {
+          "id": "c28-aif-f070-zero-shot",
+          "title": "AIF-F070 — Zero-shot",
+          "heading_level": 3
+        },
+        {
+          "id": "c28-aif-f071-few-shot",
+          "title": "AIF-F071 — Few-shot",
+          "heading_level": 3
+        },
+        {
+          "id": "c28-aif-f072-negative-prompt",
+          "title": "AIF-F072 — Negative prompt",
+          "heading_level": 3
+        },
+        {
+          "id": "c28-aif-f073-prompt-template",
+          "title": "AIF-F073 — Prompt template",
+          "heading_level": 3
+        },
+        {
+          "id": "c28-aif-f074-prompt-management",
+          "title": "AIF-F074 — Prompt Management",
+          "heading_level": 3
+        },
+        {
+          "id": "c28-aif-f075-context-engineering",
+          "title": "AIF-F075 — Context engineering",
+          "heading_level": 3
+        },
+        {
+          "id": "c28-aif-f076-rag",
+          "title": "AIF-F076 — RAG",
+          "heading_level": 3
+        },
+        {
+          "id": "c28-aif-f077-bedrock-knowledge-bases",
+          "title": "AIF-F077 — Bedrock Knowledge Bases",
+          "heading_level": 3
+        },
+        {
+          "id": "c28-aif-f078-grounding",
+          "title": "AIF-F078 — Grounding",
+          "heading_level": 3
+        },
+        {
+          "id": "c28-aif-f079-faithfulness",
+          "title": "AIF-F079 — Faithfulness",
+          "heading_level": 3
+        },
+        {
+          "id": "c28-aif-f080-citacao-em-rag",
+          "title": "AIF-F080 — Citação em RAG",
+          "heading_level": 3
+        },
+        {
+          "id": "c28-aif-f081-opensearch-e-vetores",
+          "title": "AIF-F081 — OpenSearch e vetores",
+          "heading_level": 3
+        },
+        {
+          "id": "c28-aif-f082-aurora-rds-postgresql-em-rag",
+          "title": "AIF-F082 — Aurora/RDS PostgreSQL em RAG",
+          "heading_level": 3
+        },
+        {
+          "id": "c28-aif-f083-amazon-neptune",
+          "title": "AIF-F083 — Amazon Neptune",
+          "heading_level": 3
+        },
+        {
+          "id": "c28-aif-f084-agente",
+          "title": "AIF-F084 — Agente",
+          "heading_level": 3
+        },
+        {
+          "id": "c28-aif-f085-mcp",
+          "title": "AIF-F085 — MCP",
+          "heading_level": 3
+        },
+        {
+          "id": "c28-aif-f086-agentcore",
+          "title": "AIF-F086 — AgentCore",
+          "heading_level": 3
+        },
+        {
+          "id": "c28-aif-f087-strands-agents",
+          "title": "AIF-F087 — Strands Agents",
+          "heading_level": 3
+        },
+        {
+          "id": "c28-aif-f088-agentcore-identity",
+          "title": "AIF-F088 — AgentCore Identity",
+          "heading_level": 3
+        },
+        {
+          "id": "c28-aif-f089-memoria-curta-do-agente",
+          "title": "AIF-F089 — Memória curta do agente",
+          "heading_level": 3
+        },
+        {
+          "id": "c28-aif-f090-memoria-longa-do-agente",
+          "title": "AIF-F090 — Memória longa do agente",
+          "heading_level": 3
+        },
+        {
+          "id": "c28-aif-f091-multiagent",
+          "title": "AIF-F091 — Multiagent",
+          "heading_level": 3
+        },
+        {
+          "id": "c28-aif-f092-tool-calling-seguro",
+          "title": "AIF-F092 — Tool calling seguro",
+          "heading_level": 3
+        },
+        {
+          "id": "c28-aif-f093-fine-tuning",
+          "title": "AIF-F093 — Fine-tuning",
+          "heading_level": 3
+        },
+        {
+          "id": "c28-aif-f094-instruction-tuning",
+          "title": "AIF-F094 — Instruction tuning",
+          "heading_level": 3
+        },
+        {
+          "id": "c28-aif-f095-continual-pretraining",
+          "title": "AIF-F095 — Continual pretraining",
+          "heading_level": 3
+        },
+        {
+          "id": "c28-aif-f096-rlhf",
+          "title": "AIF-F096 — RLHF",
+          "heading_level": 3
+        },
+        {
+          "id": "c28-aif-f097-destilacao",
+          "title": "AIF-F097 — Destilação",
+          "heading_level": 3
+        },
+        {
+          "id": "c28-aif-f098-rouge",
+          "title": "AIF-F098 — ROUGE",
+          "heading_level": 3
+        },
+        {
+          "id": "c28-aif-f099-bleu",
+          "title": "AIF-F099 — BLEU",
+          "heading_level": 3
+        },
+        {
+          "id": "c28-aif-f100-bertscore",
+          "title": "AIF-F100 — BERTScore",
+          "heading_level": 3
+        },
+        {
+          "id": "c28-aif-f101-llm-as-a-judge",
+          "title": "AIF-F101 — LLM-as-a-judge",
+          "heading_level": 3
+        },
+        {
+          "id": "c28-aif-f102-human-in-the-loop",
+          "title": "AIF-F102 — Human-in-the-loop",
+          "heading_level": 3
+        },
+        {
+          "id": "c28-aif-f103-fairness",
+          "title": "AIF-F103 — Fairness",
+          "heading_level": 3
+        },
+        {
+          "id": "c28-aif-f104-vies-de-dataset",
+          "title": "AIF-F104 — Viés de dataset",
+          "heading_level": 3
+        },
+        {
+          "id": "c28-aif-f105-transparencia",
+          "title": "AIF-F105 — Transparência",
+          "heading_level": 3
+        },
+        {
+          "id": "c28-aif-f106-explicabilidade",
+          "title": "AIF-F106 — Explicabilidade",
+          "heading_level": 3
+        },
+        {
+          "id": "c28-aif-f107-sagemaker-model-cards",
+          "title": "AIF-F107 — SageMaker Model Cards",
+          "heading_level": 3
+        },
+        {
+          "id": "c28-aif-f108-bedrock-guardrails",
+          "title": "AIF-F108 — Bedrock Guardrails",
+          "heading_level": 3
+        },
+        {
+          "id": "c28-aif-f109-prompt-injection",
+          "title": "AIF-F109 — Prompt injection",
+          "heading_level": 3
+        },
+        {
+          "id": "c28-aif-f110-poisoning",
+          "title": "AIF-F110 — Poisoning",
+          "heading_level": 3
+        },
+        {
+          "id": "c28-aif-f111-iam",
+          "title": "AIF-F111 — IAM",
+          "heading_level": 3
+        },
+        {
+          "id": "c28-aif-f112-kms",
+          "title": "AIF-F112 — KMS",
+          "heading_level": 3
+        },
+        {
+          "id": "c28-aif-f113-secrets-manager",
+          "title": "AIF-F113 — Secrets Manager",
+          "heading_level": 3
+        },
+        {
+          "id": "c28-aif-f114-macie",
+          "title": "AIF-F114 — Macie",
+          "heading_level": 3
+        },
+        {
+          "id": "c28-aif-f115-aws-privatelink",
+          "title": "AIF-F115 — AWS PrivateLink",
+          "heading_level": 3
+        },
+        {
+          "id": "c28-aif-f116-cloudtrail",
+          "title": "AIF-F116 — CloudTrail",
+          "heading_level": 3
+        },
+        {
+          "id": "c28-aif-f117-aws-config",
+          "title": "AIF-F117 — AWS Config",
+          "heading_level": 3
+        },
+        {
+          "id": "c28-aif-f118-aws-artifact",
+          "title": "AIF-F118 — AWS Artifact",
+          "heading_level": 3
+        },
+        {
+          "id": "c28-aif-f119-amazon-inspector",
+          "title": "AIF-F119 — Amazon Inspector",
+          "heading_level": 3
+        },
+        {
+          "id": "c28-aif-f120-governanca-de-dados",
+          "title": "AIF-F120 — Governança de dados",
+          "heading_level": 3
+        }
+      ]
+    },
+    {
+      "id": "chapter-29",
+      "original_number": 29,
+      "title": "Laboratórios guiados, cronograma e critérios de prontidão",
+      "module_id": "pratica",
+      "domains": [
+        1,
+        2,
+        3,
+        4,
+        5
+      ],
+      "source_heading": "# 29. Laboratórios guiados, cronograma e critérios de prontidão",
+      "subheadings": [
+        {
+          "id": "c29-29-1-laboratorio-sem-conta-encontre-o-problema-antes-do-modelo",
+          "title": "29.1. Laboratório sem conta: encontre o problema antes do modelo",
+          "heading_level": 2
+        },
+        {
+          "id": "c29-29-2-laboratorio-de-avaliacao-o-modelo-eloquente-que-errou",
+          "title": "29.2. Laboratório de avaliação: o modelo eloquente que errou",
+          "heading_level": 2
+        },
+        {
+          "id": "c29-29-3-laboratorio-opcional-na-aws-prototipo-responsavel",
+          "title": "29.3. Laboratório opcional na AWS: protótipo responsável",
+          "heading_level": 2
+        },
+        {
+          "id": "c29-29-4-cronograma-de-quatro-semanas",
+          "title": "29.4. Cronograma de quatro semanas",
+          "heading_level": 2
+        },
+        {
+          "id": "c29-29-5-criterios-de-prontidao-que-nao-prometem-aprovacao",
+          "title": "29.5. Critérios de prontidão que não prometem aprovação",
+          "heading_level": 2
+        }
+      ]
+    },
+    {
+      "id": "chapter-30",
+      "original_number": 30,
+      "title": "Matriz de cobertura AIF-C01 e referências oficiais",
+      "module_id": "pratica",
+      "domains": [
+        1,
+        2,
+        3,
+        4,
+        5
+      ],
+      "source_heading": "# 30. Matriz de cobertura AIF-C01 e referências oficiais",
+      "subheadings": [
+        {
+          "id": "c30-30-1-como-interpretar-este-mapa",
+          "title": "30.1. Como interpretar este mapa",
+          "heading_level": 2
+        },
+        {
+          "id": "c30-30-2-trilha-por-dependencia-conceitual",
+          "title": "30.2. Trilha por dependência conceitual",
+          "heading_level": 2
+        },
+        {
+          "id": "c30-30-3-fontes-oficiais-prioritarias",
+          "title": "30.3. Fontes oficiais prioritárias",
+          "heading_level": 2
+        },
+        {
+          "id": "c30-30-4-limites-atualizacoes-e-uso-do-material",
+          "title": "30.4. Limites, atualizações e uso do material",
+          "heading_level": 2
+        }
+      ]
+    }
+  ]
+}

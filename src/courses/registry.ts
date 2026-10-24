@@ -32,8 +32,13 @@ export const COURSES: readonly Course[] = [
     code: 'AIF-C01',
     title: 'AI Practitioner',
     level: 'Foundational',
-    status: 'soon',
-    blurb: 'Fundamentos de IA, machine learning e IA generativa na AWS.',
+    status: 'available',
+    blurb: 'Dos fundamentos de IA aos modelos de base, agentes e governança.',
+    stats: [
+      { value: 30, label: 'capítulos' },
+      { value: 80, label: 'questões' },
+      { value: 120, label: 'flashcards' },
+    ],
   },
   {
     id: 'saa-c03',

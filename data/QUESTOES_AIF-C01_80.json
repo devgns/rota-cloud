@@ -1,0 +1,1126 @@
+{
+  "exam": "AIF-C01",
+  "questions": [
+    {
+      "id": "AIF-Q01",
+      "domain": 1,
+      "task": "1.1",
+      "prompt": "Uma aplicação segue regras explícitas para aplicar taxa fixa. Qual afirmação é correta?",
+      "choices": [
+        "Isso exige deep learning",
+        "Regras determinísticas podem resolver sem ML",
+        "Todo software é um foundation model",
+        "Deve usar fine-tuning"
+      ],
+      "correct": "B",
+      "explanation": "Uma regra fixa auditável não exige modelo probabilístico."
+    },
+    {
+      "id": "AIF-Q02",
+      "domain": 1,
+      "task": "1.1",
+      "prompt": "Qual relação entre IA, ML e deep learning está mais correta?",
+      "choices": [
+        "IA é parte de deep learning",
+        "ML não pertence à IA",
+        "Deep learning é família de ML, que pertence à IA ampla",
+        "Todo ML gera textos"
+      ],
+      "correct": "C",
+      "explanation": "Deep learning é uma abordagem de aprendizado de máquina dentro da área maior de IA."
+    },
+    {
+      "id": "AIF-Q03",
+      "domain": 1,
+      "task": "1.2",
+      "prompt": "Prever o faturamento do próximo mês é exemplo típico de:",
+      "choices": [
+        "Regressão",
+        "Clustering",
+        "Geração de imagem",
+        "Reconhecimento de entidade"
+      ],
+      "correct": "A",
+      "explanation": "A variável-alvo é numérica; trata-se de previsão/regressão."
+    },
+    {
+      "id": "AIF-Q04",
+      "domain": 1,
+      "task": "1.2",
+      "prompt": "Separar clientes em perfis semelhantes sem rótulos prévios sugere:",
+      "choices": [
+        "Classificação supervisionada",
+        "Fine-tuning",
+        "Clustering não supervisionado",
+        "Tradução"
+      ],
+      "correct": "C",
+      "explanation": "Clustering encontra estrutura/grupos sem gabarito fornecido."
+    },
+    {
+      "id": "AIF-Q05",
+      "domain": 1,
+      "task": "1.1",
+      "prompt": "O que caracteriza aprendizado supervisionado?",
+      "choices": [
+        "Ausência de dados",
+        "Entradas e saídas corretas rotuladas",
+        "Somente sequência de recompensas",
+        "Obrigatoriamente redes neurais profundas"
+      ],
+      "correct": "B",
+      "explanation": "O modelo aprende de exemplos com alvo conhecido."
+    },
+    {
+      "id": "AIF-Q06",
+      "domain": 1,
+      "task": "1.1",
+      "prompt": "Um sistema aprende ações por recompensa recebida ao interagir com ambiente. Qual paradigma?",
+      "choices": [
+        "Unsupervised",
+        "Regression",
+        "Supervised",
+        "Reinforcement learning"
+      ],
+      "correct": "D",
+      "explanation": "Reforço aprende política de ação por sinais de recompensa."
+    },
+    {
+      "id": "AIF-Q07",
+      "domain": 1,
+      "task": "1.1",
+      "prompt": "Milhões de registros serão pontuados durante a madrugada. Que modo de inferência é natural?",
+      "choices": [
+        "Tempo real por usuário",
+        "Batch",
+        "Interativa via chat",
+        "Obrigatoriamente GPU dedicada"
+      ],
+      "correct": "B",
+      "explanation": "Batch processa lotes sem exigência de resposta instantânea."
+    },
+    {
+      "id": "AIF-Q08",
+      "domain": 1,
+      "task": "1.3",
+      "prompt": "Usar no treino uma coluna que só existe após o fechamento da venda caracteriza:",
+      "choices": [
+        "Data leakage",
+        "RAG",
+        "Few-shot",
+        "In-context learning"
+      ],
+      "correct": "A",
+      "explanation": "O modelo recebeu informação futura indisponível no instante da previsão."
+    },
+    {
+      "id": "AIF-Q09",
+      "domain": 1,
+      "task": "1.1",
+      "prompt": "Qual exemplo representa dado não estruturado?",
+      "choices": [
+        "Tabela SQL com colunas fixas",
+        "Planilha de vendas",
+        "Texto livre de avaliações",
+        "Chave primária numérica"
+      ],
+      "correct": "C",
+      "explanation": "Texto livre costuma não se conformar a schema fixo como tabela."
+    },
+    {
+      "id": "AIF-Q10",
+      "domain": 1,
+      "task": "1.2",
+      "prompt": "Em qual cenário a IA provavelmente não deve ser a primeira solução?",
+      "choices": [
+        "Análise de voz",
+        "Regra regulatória determinística e simples",
+        "Detecção de imagens",
+        "Sumarização de relatórios"
+      ],
+      "correct": "B",
+      "explanation": "Regra conhecida pode ter menor custo, risco e complexidade."
+    },
+    {
+      "id": "AIF-Q11",
+      "domain": 1,
+      "task": "1.2",
+      "prompt": "Empresa deseja identificar entidades e sentimento em comentários. Qual serviço?",
+      "choices": [
+        "Polly",
+        "Translate",
+        "Comprehend",
+        "ECS"
+      ],
+      "correct": "C",
+      "explanation": "Amazon Comprehend é um serviço de NLP para análise de texto."
+    },
+    {
+      "id": "AIF-Q12",
+      "domain": 1,
+      "task": "1.2",
+      "prompt": "Áudio de atendimento deve virar texto. Qual serviço?",
+      "choices": [
+        "Amazon Transcribe",
+        "Amazon Polly",
+        "Amazon Translate",
+        "Amazon Textract"
+      ],
+      "correct": "A",
+      "explanation": "Transcribe faz fala para texto; Polly realiza texto para fala."
+    },
+    {
+      "id": "AIF-Q13",
+      "domain": 1,
+      "task": "1.2",
+      "prompt": "Extrair tabelas e campos de formulário em PDF digitalizado é caso de:",
+      "choices": [
+        "Rekognition somente",
+        "Amazon Textract",
+        "Amazon Lex",
+        "Amazon Personalize"
+      ],
+      "correct": "B",
+      "explanation": "Textract extrai informação de documentos, inclusive campos e tabelas."
+    },
+    {
+      "id": "AIF-Q14",
+      "domain": 1,
+      "task": "1.3",
+      "prompt": "Uma equipe quer treinar e implantar modelo tabular próprio. Qual plataforma é mais alinhada?",
+      "choices": [
+        "Artifact",
+        "Guardrails",
+        "CloudTrail",
+        "SageMaker AI"
+      ],
+      "correct": "D",
+      "explanation": "SageMaker AI cobre construção, treinamento, implantação e operação de ML."
+    },
+    {
+      "id": "AIF-Q15",
+      "domain": 1,
+      "task": "1.3",
+      "prompt": "Qual diferença entre treino e inferência?",
+      "choices": [
+        "Treino atualiza parâmetros, inferência aplica modelo",
+        "Inferência sempre atualiza pesos",
+        "São sinônimos",
+        "Treino só ocorre quando o usuário conversa"
+      ],
+      "correct": "A",
+      "explanation": "A separação é otimizar modelo versus usá-lo em dados novos."
+    },
+    {
+      "id": "AIF-Q16",
+      "domain": 1,
+      "task": "1.3",
+      "prompt": "Em cenário de doença rara, deixar positivos reais sem detecção é crítico. Priorize:",
+      "choices": [
+        "Menor número de tokens",
+        "Maior geração de texto",
+        "Recall dos positivos, sem ignorar outros riscos",
+        "Somente accuracy global"
+      ],
+      "correct": "C",
+      "explanation": "Recall mede quantos casos positivos reais foram encontrados."
+    },
+    {
+      "id": "AIF-Q17",
+      "domain": 2,
+      "task": "2.1",
+      "prompt": "O que caracteriza um foundation model?",
+      "choices": [
+        "Treinado apenas para uma classificação pequena",
+        "Modelo pré-treinado amplo e adaptável a várias tarefas",
+        "Sempre um motor de busca",
+        "Apenas um programa de regras"
+      ],
+      "correct": "B",
+      "explanation": "FMs são pré-treinados de uso amplo e adaptáveis por várias técnicas."
+    },
+    {
+      "id": "AIF-Q18",
+      "domain": 2,
+      "task": "2.1",
+      "prompt": "A função de self-attention em Transformers está relacionada a:",
+      "choices": [
+        "Relacionar partes de uma sequência",
+        "Criptografar prompts",
+        "Garantir fatos atuais",
+        "Armazenar senha"
+      ],
+      "correct": "A",
+      "explanation": "Atenção modela relações entre posições/tokens de uma sequência."
+    },
+    {
+      "id": "AIF-Q19",
+      "domain": 2,
+      "task": "2.1",
+      "prompt": "Qual frase sobre tokens é correta?",
+      "choices": [
+        "Um token é sempre uma palavra",
+        "Tokens são bancos de dados",
+        "Tokens não interferem no custo",
+        "Tokens podem representar pedaços de palavras ou pontuação"
+      ],
+      "correct": "D",
+      "explanation": "Tokenização varia por modelo e afeta limites e cobrança."
+    },
+    {
+      "id": "AIF-Q20",
+      "domain": 2,
+      "task": "2.1",
+      "prompt": "Por que usar embeddings em busca semântica?",
+      "choices": [
+        "Para autorizar acesso ao banco",
+        "Para transformar texto em vetores que ajudam a medir similaridade",
+        "Para remover viés automaticamente",
+        "Para gerar chaves KMS"
+      ],
+      "correct": "B",
+      "explanation": "Embeddings representam conteúdos numericamente para comparação semântica."
+    },
+    {
+      "id": "AIF-Q21",
+      "domain": 2,
+      "task": "2.1",
+      "prompt": "Chunking em RAG significa:",
+      "choices": [
+        "Aumentar aleatoriedade",
+        "Treinar novo FM",
+        "Fragmentar documentos para recuperação e contexto",
+        "Cifrar mensagens"
+      ],
+      "correct": "C",
+      "explanation": "Chunks dividem fontes longas em partes recuperáveis."
+    },
+    {
+      "id": "AIF-Q22",
+      "domain": 2,
+      "task": "2.1",
+      "prompt": "Um modelo que recebe imagem e texto e responde em texto é:",
+      "choices": [
+        "Necessariamente regressão",
+        "Sempre modelo tabular",
+        "Sempre não supervisionado",
+        "Multimodal"
+      ],
+      "correct": "D",
+      "explanation": "Múltiplas modalidades de entrada/saída caracterizam multimodalidade."
+    },
+    {
+      "id": "AIF-Q23",
+      "domain": 2,
+      "task": "2.1",
+      "prompt": "Modelos de difusão são associados frequentemente à:",
+      "choices": [
+        "Geração de imagens por processos iterativos",
+        "Auditoria CloudTrail",
+        "Controle de IAM",
+        "Estrutura de tabelas"
+      ],
+      "correct": "A",
+      "explanation": "Difusão é família conhecida por geração de imagens e outros meios."
+    },
+    {
+      "id": "AIF-Q24",
+      "domain": 2,
+      "task": "2.1",
+      "prompt": "Qual ordem conceitual é plausível no ciclo de FM?",
+      "choices": [
+        "Deployment antes de avaliar dados",
+        "Dados e pré-treino, avaliação, deployment e feedback",
+        "Somente prompt e resposta",
+        "Somente criptografia"
+      ],
+      "correct": "B",
+      "explanation": "O ciclo inclui seleção/treino, adaptação, avaliação e operação."
+    },
+    {
+      "id": "AIF-Q25",
+      "domain": 2,
+      "task": "2.2",
+      "prompt": "Uma resposta fluente inventa uma citação inexistente. Isso ilustra:",
+      "choices": [
+        "Alta precision",
+        "Overprovisioning",
+        "Hallucination",
+        "Clustering"
+      ],
+      "correct": "C",
+      "explanation": "Alucinação é conteúdo sem fundamentação correta, mesmo convincente."
+    },
+    {
+      "id": "AIF-Q26",
+      "domain": 2,
+      "task": "2.2",
+      "prompt": "Qual benefício típico da GenAI em atendimento?",
+      "choices": [
+        "Garantir respostas legais",
+        "Eliminar custo humano sempre",
+        "Impossibilidade de usar voz",
+        "Respostas conversacionais e geração de rascunhos"
+      ],
+      "correct": "D",
+      "explanation": "GenAI ajuda interface conversacional, conteúdo e produtividade com validação."
+    },
+    {
+      "id": "AIF-Q27",
+      "domain": 2,
+      "task": "2.1",
+      "prompt": "Context engineering prioriza:",
+      "choices": [
+        "Quais evidências, memória e instruções entram em cada chamada",
+        "Apenas trocar fonte do site",
+        "Criar hardware físico",
+        "Treinar do zero todos os dias"
+      ],
+      "correct": "A",
+      "explanation": "É gestão do contexto informacional, fontes e limites da requisição."
+    },
+    {
+      "id": "AIF-Q28",
+      "domain": 2,
+      "task": "2.1",
+      "prompt": "Qual cenário caracteriza sistema agêntico?",
+      "choices": [
+        "Tradutor isolado",
+        "Sistema que decide sequência e chama ferramentas com controle",
+        "Planilha com fórmula",
+        "Cache estático"
+      ],
+      "correct": "B",
+      "explanation": "Agentes encadeiam decisões e ferramentas; precisam de limites."
+    },
+    {
+      "id": "AIF-Q29",
+      "domain": 2,
+      "task": "2.1",
+      "prompt": "MCP é mais corretamente descrito como:",
+      "choices": [
+        "Modelo fundacional",
+        "Método de treinamento supervisionado",
+        "Protocolo que ajuda a integrar agentes e ferramentas externas",
+        "Serviço de armazenamento de PII"
+      ],
+      "correct": "C",
+      "explanation": "MCP padroniza integração; não é modelo nem autorização."
+    },
+    {
+      "id": "AIF-Q30",
+      "domain": 2,
+      "task": "2.1",
+      "prompt": "Qual relação memória/contexto está correta?",
+      "choices": [
+        "Todo conteúdo salvo em memória aparece na inferência",
+        "Memória sempre muda os pesos do FM",
+        "Memória é uma chave KMS",
+        "Memória armazena informação; contexto é o que se entrega na chamada"
+      ],
+      "correct": "D",
+      "explanation": "É preciso selecionar o que entra no contexto da inferência."
+    },
+    {
+      "id": "AIF-Q31",
+      "domain": 2,
+      "task": "2.1",
+      "prompt": "Qual ação exige proteção adicional em agentes?",
+      "choices": [
+        "Consultar documentação pública",
+        "Executar reembolso externo",
+        "Gerar uma frase",
+        "Resumir arquivo autorizado"
+      ],
+      "correct": "B",
+      "explanation": "Ações com efeito externo exigem autorização, validação e confirmação adequada."
+    },
+    {
+      "id": "AIF-Q32",
+      "domain": 2,
+      "task": "2.2",
+      "prompt": "Para selecionar FM para português e imagem, o mais importante é:",
+      "choices": [
+        "Avaliar modalidade, idioma e testes reais",
+        "Escolher sempre maior modelo",
+        "Ignorar dados confidenciais",
+        "Considerar só nome comercial"
+      ],
+      "correct": "A",
+      "explanation": "Capacidade real por modalidade/idioma e requisitos define a escolha."
+    },
+    {
+      "id": "AIF-Q33",
+      "domain": 2,
+      "task": "2.1",
+      "prompt": "Ao reduzir tokens de entrada redundantes pode-se:",
+      "choices": [
+        "Garantir que não existam ataques",
+        "Aumentar sempre a accuracy",
+        "Diminuir custo e às vezes latência, preservando contexto necessário",
+        "Eliminar avaliações"
+      ],
+      "correct": "C",
+      "explanation": "Tokens têm impacto de custo e processamento, mas cortar evidências demais prejudica qualidade."
+    },
+    {
+      "id": "AIF-Q34",
+      "domain": 2,
+      "task": "2.3",
+      "prompt": "Qual escolha pode aumentar custo fixo de inferência em baixo volume?",
+      "choices": [
+        "Prompt claro",
+        "Chunk adequado",
+        "Menos chamadas",
+        "Throughput provisionado ocioso"
+      ],
+      "correct": "D",
+      "explanation": "Capacidade contratada não aproveitada pode gerar custo desnecessário."
+    },
+    {
+      "id": "AIF-Q35",
+      "domain": 2,
+      "task": "2.3",
+      "prompt": "O principal benefício de serviços GenAI gerenciados é:",
+      "choices": [
+        "Reduzir operação de infraestrutura de modelos para certos casos",
+        "Transferir toda responsabilidade de privacidade para AWS",
+        "Dispensar proteção da aplicação",
+        "Garantir resultado correto"
+      ],
+      "correct": "A",
+      "explanation": "Abstração operacional é vantagem; dados, risco e aplicações continuam responsabilidade do cliente."
+    },
+    {
+      "id": "AIF-Q36",
+      "domain": 3,
+      "task": "3.1",
+      "prompt": "Qual critério NÃO deve ser ignorado na seleção de FM?",
+      "choices": [
+        "Somente benchmark público",
+        "Custo, modalidade, latência, idiomas e compliance",
+        "Apenas cor da interface",
+        "Quantidade de slogans publicitários"
+      ],
+      "correct": "B",
+      "explanation": "Seleção é multidimensional e deve considerar exigências do negócio."
+    },
+    {
+      "id": "AIF-Q37",
+      "domain": 3,
+      "task": "3.1",
+      "prompt": "Reduzir temperature em um modelo normalmente:",
+      "choices": [
+        "Garante ausência de alucinação",
+        "Dá acesso a dados atuais",
+        "Tende a reduzir variação em modelos que suportam o parâmetro",
+        "Reduz custos de IAM"
+      ],
+      "correct": "C",
+      "explanation": "Temperature afeta amostragem, não é garantia de factualidade."
+    },
+    {
+      "id": "AIF-Q38",
+      "domain": 3,
+      "task": "3.1",
+      "prompt": "Se máximo de tokens de saída é baixo demais, qual risco?",
+      "choices": [
+        "Truncar resposta válida",
+        "Ampliar janela ilimitadamente",
+        "Treinar novos pesos",
+        "Vazar mais dados por definição"
+      ],
+      "correct": "A",
+      "explanation": "O limite de saída pode impedir completar o conteúdo solicitado."
+    },
+    {
+      "id": "AIF-Q39",
+      "domain": 3,
+      "task": "3.1",
+      "prompt": "Para responder com base em manuais atualizados diariamente com citações, qual abordagem?",
+      "choices": [
+        "Pré-treino diário",
+        "Fine-tuning para memorizar todos os documentos",
+        "Apenas um prompt sem fontes",
+        "RAG sobre fontes autorizadas"
+      ],
+      "correct": "D",
+      "explanation": "RAG agrega fatos atuais e referências sem retreinar pesos."
+    },
+    {
+      "id": "AIF-Q40",
+      "domain": 3,
+      "task": "3.1",
+      "prompt": "Qual serviço é exemplo explícito para aplicações de embeddings?",
+      "choices": [
+        "AWS Artifact",
+        "Amazon OpenSearch Service",
+        "Amazon Polly",
+        "AWS Budgets"
+      ],
+      "correct": "B",
+      "explanation": "OpenSearch pode ser usado para indexação e busca vetorial."
+    },
+    {
+      "id": "AIF-Q41",
+      "domain": 3,
+      "task": "3.1",
+      "prompt": "Embedding é melhor descrito como:",
+      "choices": [
+        "Credencial de API",
+        "Arquivo de log bruto",
+        "Representação vetorial de conteúdo",
+        "Resposta final em linguagem natural"
+      ],
+      "correct": "C",
+      "explanation": "Vetores permitem comparação semântica; não substituem o texto original."
+    },
+    {
+      "id": "AIF-Q42",
+      "domain": 3,
+      "task": "3.3",
+      "prompt": "Qual mudança distingue fine-tuning de RAG?",
+      "choices": [
+        "Fine-tuning altera pesos, RAG não",
+        "Ambos mudam pesos a cada consulta",
+        "RAG exige pré-treinar do zero",
+        "Fine-tuning sempre tem citações"
+      ],
+      "correct": "A",
+      "explanation": "RAG consulta conhecimento externo; fine-tuning adapta parâmetros."
+    },
+    {
+      "id": "AIF-Q43",
+      "domain": 3,
+      "task": "3.2",
+      "prompt": "Few-shot em contexto difere de fine-tuning porque:",
+      "choices": [
+        "Sempre funciona melhor",
+        "Exige deploy de banco",
+        "Não usa exemplos",
+        "Inclui exemplos no prompt sem atualizar pesos"
+      ],
+      "correct": "D",
+      "explanation": "In-context learning orienta comportamento no momento da chamada."
+    },
+    {
+      "id": "AIF-Q44",
+      "domain": 3,
+      "task": "3.3",
+      "prompt": "Pré-treinar um FM do zero normalmente implica:",
+      "choices": [
+        "Baixo custo sem dados",
+        "Grande necessidade de dados, compute e governança",
+        "Apenas um parâmetro de API",
+        "Nenhuma avaliação"
+      ],
+      "correct": "B",
+      "explanation": "Pré-treino de modelos grandes tende a ser oneroso e complexo."
+    },
+    {
+      "id": "AIF-Q45",
+      "domain": 3,
+      "task": "3.3",
+      "prompt": "Continual pretraining é:",
+      "choices": [
+        "Continuar treinamento de base com dados adicionais",
+        "Editar template de prompt",
+        "Consultar índice vetorial",
+        "Trocar senha IAM"
+      ],
+      "correct": "A",
+      "explanation": "Envolve continuar a aprendizagem de parâmetros, normalmente com mais dados."
+    },
+    {
+      "id": "AIF-Q46",
+      "domain": 3,
+      "task": "3.3",
+      "prompt": "Instruction tuning frequentemente usa:",
+      "choices": [
+        "Somente preços regionais",
+        "Armazenamento em cache",
+        "Exemplos de instruções e respostas desejadas",
+        "Unicamente autenticação"
+      ],
+      "correct": "C",
+      "explanation": "É ajuste de modelo com dados de instrução/resposta."
+    },
+    {
+      "id": "AIF-Q47",
+      "domain": 3,
+      "task": "3.3",
+      "prompt": "RLHF busca:",
+      "choices": [
+        "Substituir qualquer segurança",
+        "Eliminar alucinação com certeza",
+        "Indexar embeddings",
+        "Usar feedback humano como sinal para alinhamento"
+      ],
+      "correct": "D",
+      "explanation": "RLHF incorpora preferências humanas ao processo de alinhamento."
+    },
+    {
+      "id": "AIF-Q48",
+      "domain": 3,
+      "task": "3.3",
+      "prompt": "A finalidade da destilação de modelo costuma ser:",
+      "choices": [
+        "Treinar um estudante menor com sinais do professor para eficiência",
+        "Substituir IAM",
+        "Apenas adicionar documentos",
+        "Criar automaticamente um banco de grafo"
+      ],
+      "correct": "A",
+      "explanation": "A distilação pode reduzir custo/latência com trade-off de qualidade."
+    },
+    {
+      "id": "AIF-Q49",
+      "domain": 3,
+      "task": "3.2",
+      "prompt": "Zero-shot significa:",
+      "choices": [
+        "Dez exemplos",
+        "Um exemplo",
+        "Instrução sem exemplos demonstrativos",
+        "Treinar um novo FM"
+      ],
+      "correct": "C",
+      "explanation": "Zero-shot apresenta tarefa sem exemplos de resposta no prompt."
+    },
+    {
+      "id": "AIF-Q50",
+      "domain": 3,
+      "task": "3.2",
+      "prompt": "Few-shot prompting significa:",
+      "choices": [
+        "Não enviar nenhuma instrução",
+        "Fornecer poucos exemplos no contexto",
+        "Trocar todos os pesos",
+        "Usar somente um vetor de busca"
+      ],
+      "correct": "B",
+      "explanation": "Exemplos ajudam a estabelecer formato e padrão da resposta."
+    },
+    {
+      "id": "AIF-Q51",
+      "domain": 3,
+      "task": "3.2",
+      "prompt": "Um negative prompt procura:",
+      "choices": [
+        "Eliminar custo de execução",
+        "Substituir políticas IAM",
+        "Criar uma base de dados",
+        "Indicar características ou conteúdo a evitar"
+      ],
+      "correct": "D",
+      "explanation": "Instruções negativas orientam estilo/conteúdo; não são barreira infalível."
+    },
+    {
+      "id": "AIF-Q52",
+      "domain": 3,
+      "task": "3.2",
+      "prompt": "Qual frase sobre chain-of-thought é adequada?",
+      "choices": [
+        "Pode ser reconhecido como técnica de decomposição; não exige revelar raciocínio interno privado",
+        "É um serviço AWS de logs",
+        "É um banco vetorial",
+        "Garante toda conclusão correta"
+      ],
+      "correct": "A",
+      "explanation": "A técnica está no guia como estratégia de prompt, não como garantia de verdade."
+    },
+    {
+      "id": "AIF-Q53",
+      "domain": 3,
+      "task": "3.2",
+      "prompt": "Para testar e versionar variantes reutilizáveis de prompt no Bedrock, use:",
+      "choices": [
+        "Macie",
+        "S3 Glacier",
+        "Bedrock Prompt Management",
+        "Rekognition"
+      ],
+      "correct": "C",
+      "explanation": "Prompt Management armazena e organiza versões/variantes de prompts."
+    },
+    {
+      "id": "AIF-Q54",
+      "domain": 3,
+      "task": "3.2",
+      "prompt": "Um documento recuperado instrui o modelo a ignorar regras e divulgar secrets. Isso é:",
+      "choices": [
+        "Cache poisoning de CDN necessariamente",
+        "Prompt injection indireta",
+        "Fine-tuning legítimo",
+        "Reforço supervisionado"
+      ],
+      "correct": "B",
+      "explanation": "Conteúdo externo não deve ser tratado como instrução com autoridade."
+    },
+    {
+      "id": "AIF-Q55",
+      "domain": 3,
+      "task": "3.1",
+      "prompt": "Qual plataforma facilita usar FMs gerenciados por API?",
+      "choices": [
+        "Bedrock",
+        "AWS Artifact",
+        "CloudTrail",
+        "Glue DataBrew"
+      ],
+      "correct": "A",
+      "explanation": "Bedrock oferece acesso gerenciado e componentes para soluções com FMs."
+    },
+    {
+      "id": "AIF-Q56",
+      "domain": 3,
+      "task": "3.1",
+      "prompt": "Qual distinção entre AgentCore e Strands Agents é correta?",
+      "choices": [
+        "São modelos de imagem idênticos",
+        "Ambos substituem IAM",
+        "Strands é banco de documentos",
+        "AgentCore fornece infraestrutura modular; Strands é framework/SDK"
+      ],
+      "correct": "D",
+      "explanation": "Papéis distintos: componentes operacionais e biblioteca de construção de agente."
+    },
+    {
+      "id": "AIF-Q57",
+      "domain": 3,
+      "task": "3.4",
+      "prompt": "Qual associação de métrica está correta?",
+      "choices": [
+        "ROUGE é um serviço de criptografia",
+        "BLEU é uma política IAM",
+        "ROUGE para sobreposição em resumo; BLEU frequente em tradução",
+        "BERTScore faz antivírus"
+      ],
+      "correct": "C",
+      "explanation": "ROUGE, BLEU e BERTScore comparam textos sob perspectivas diferentes."
+    },
+    {
+      "id": "AIF-Q58",
+      "domain": 3,
+      "task": "3.4",
+      "prompt": "Qual indicador avalia uma aplicação RAG além do modelo?",
+      "choices": [
+        "Qualidade de recuperação, groundedness e citações",
+        "Só quantidade de GPUs",
+        "Somente tamanho dos arquivos",
+        "Apenas idade do usuário"
+      ],
+      "correct": "A",
+      "explanation": "O pipeline de busca e a conexão entre resposta e fonte fazem parte da qualidade."
+    },
+    {
+      "id": "AIF-Q59",
+      "domain": 4,
+      "task": "4.1",
+      "prompt": "Qual exemplo ilustra viés histórico no treinamento?",
+      "choices": [
+        "Bases variadas auditadas",
+        "Modelo reproduz aprovação desigual presente em dados antigos",
+        "Fonte com links públicos",
+        "Uso de data encryption"
+      ],
+      "correct": "B",
+      "explanation": "Dados passados podem codificar decisões injustas que o modelo reproduz."
+    },
+    {
+      "id": "AIF-Q60",
+      "domain": 4,
+      "task": "4.1",
+      "prompt": "Como fortalecer representatividade do dataset?",
+      "choices": [
+        "Excluir sistematicamente grupos minoritários",
+        "Usar somente exemplos fáceis",
+        "Curadoria, diversidade e análise por subgrupos",
+        "Descartar revisão humana"
+      ],
+      "correct": "C",
+      "explanation": "Representatividade e qualidade são requisitos para reduzir falhas por subgrupos."
+    },
+    {
+      "id": "AIF-Q61",
+      "domain": 4,
+      "task": "4.1",
+      "prompt": "Uma boa média global pode esconder:",
+      "choices": [
+        "Desempenho desigual por grupos",
+        "Uma chave KMS",
+        "Uma tabela RDS",
+        "O custo de CDN apenas"
+      ],
+      "correct": "A",
+      "explanation": "Fairness exige examinar impactos e métricas em diferentes populações."
+    },
+    {
+      "id": "AIF-Q62",
+      "domain": 4,
+      "task": "4.1",
+      "prompt": "Qual serviço oferece filtros configuráveis de conteúdo para GenAI?",
+      "choices": [
+        "CloudTrail",
+        "Textract",
+        "AWS Artifact",
+        "Amazon Bedrock Guardrails"
+      ],
+      "correct": "D",
+      "explanation": "Guardrails ajuda na moderação e detecção de informações sensíveis."
+    },
+    {
+      "id": "AIF-Q63",
+      "domain": 4,
+      "task": "4.1",
+      "prompt": "Modelo que memoriza treino e falha em dados novos sofre de:",
+      "choices": [
+        "Grounding",
+        "Overfitting",
+        "RAG",
+        "Prompt versioning"
+      ],
+      "correct": "B",
+      "explanation": "Overfitting é adaptação excessiva aos dados de treino."
+    },
+    {
+      "id": "AIF-Q64",
+      "domain": 4,
+      "task": "4.1",
+      "prompt": "Qual atitude considera sustentabilidade de IA?",
+      "choices": [
+        "Escolher modelo proporcional à tarefa e reduzir processamento inútil",
+        "Sempre escolher maior modelo",
+        "Ignorar custo computacional",
+        "Treinar diariamente sem avaliação"
+      ],
+      "correct": "A",
+      "explanation": "Uso eficiente de capacidade e tamanho de modelos considera impacto ambiental."
+    },
+    {
+      "id": "AIF-Q65",
+      "domain": 4,
+      "task": "4.1",
+      "prompt": "Qual é um risco legal de GenAI?",
+      "choices": [
+        "Busca de vetor",
+        "Uso de Lambda",
+        "Violação de propriedade intelectual e dados pessoais",
+        "Apenas janela de contexto"
+      ],
+      "correct": "C",
+      "explanation": "Direitos autorais, privacidade e outputs danosos exigem análise."
+    },
+    {
+      "id": "AIF-Q66",
+      "domain": 4,
+      "task": "4.2",
+      "prompt": "Transparência de um sistema de IA significa:",
+      "choices": [
+        "Garantir que toda decisão seja compreensível matematicamente",
+        "Revelar uso, finalidade, limites e governança em nível adequado",
+        "Expor todas as credenciais",
+        "Publicar todo dado privado"
+      ],
+      "correct": "B",
+      "explanation": "Transparência é prestação de informação sobre sistema e responsáveis."
+    },
+    {
+      "id": "AIF-Q67",
+      "domain": 4,
+      "task": "4.2",
+      "prompt": "Qual é um uso de SageMaker Model Cards?",
+      "choices": [
+        "Gerar voz",
+        "Gerenciar secrets",
+        "Gerar CDN",
+        "Documentar finalidade, avaliações e limitações de modelo"
+      ],
+      "correct": "D",
+      "explanation": "Model Cards apoiam documentação e governança de modelos."
+    },
+    {
+      "id": "AIF-Q68",
+      "domain": 4,
+      "task": "4.2",
+      "prompt": "Design centrado no humano inclui:",
+      "choices": [
+        "Canal de feedback e revisão de decisões importantes",
+        "Excluir contestação",
+        "Aprovação automática sem leitura",
+        "Ocultar quando IA é usada"
+      ],
+      "correct": "A",
+      "explanation": "Supervisão significativa e feedback reduzem risco e melhoram adequação."
+    },
+    {
+      "id": "AIF-Q69",
+      "domain": 4,
+      "task": "4.2",
+      "prompt": "Um modelo aberto garante fairness e autorização livre irrestrita?",
+      "choices": [
+        "Sim, todos são domínio público",
+        "Sim, dispensa testes",
+        "Não, licenças, dataset, viés e segurança precisam de revisão",
+        "Não existe modelo aberto"
+      ],
+      "correct": "C",
+      "explanation": "Open source não garante ausência de viés ou compatibilidade com qualquer uso."
+    },
+    {
+      "id": "AIF-Q70",
+      "domain": 5,
+      "task": "5.1",
+      "prompt": "Para controlar quais recursos AWS um componente pode acessar use:",
+      "choices": [
+        "Amazon Translate",
+        "IAM roles e políticas com menor privilégio",
+        "BERTScore",
+        "Amazon Polly"
+      ],
+      "correct": "B",
+      "explanation": "IAM é a camada base de autorização a recursos AWS."
+    },
+    {
+      "id": "AIF-Q71",
+      "domain": 5,
+      "task": "5.1",
+      "prompt": "Qual serviço concentra gestão de chaves de criptografia AWS?",
+      "choices": [
+        "AWS KMS",
+        "Amazon Lex",
+        "Amazon Rekognition",
+        "AWS Budgets"
+      ],
+      "correct": "A",
+      "explanation": "KMS gerencia chaves e integrações de criptografia."
+    },
+    {
+      "id": "AIF-Q72",
+      "domain": 5,
+      "task": "5.1",
+      "prompt": "Onde gerenciar segredos de aplicações como credenciais de DB?",
+      "choices": [
+        "Amazon Polly",
+        "CloudFront",
+        "Amazon S3 Glacier",
+        "AWS Secrets Manager"
+      ],
+      "correct": "D",
+      "explanation": "Secrets Manager foi projetado para segredos e pode apoiar rotação."
+    },
+    {
+      "id": "AIF-Q73",
+      "domain": 5,
+      "task": "5.1",
+      "prompt": "Qual serviço ajuda a descobrir informações sensíveis em buckets S3?",
+      "choices": [
+        "Amazon Polly",
+        "Amazon Nova",
+        "Amazon Macie",
+        "Amazon EMR"
+      ],
+      "correct": "C",
+      "explanation": "Macie realiza descoberta de dados sensíveis no S3."
+    },
+    {
+      "id": "AIF-Q74",
+      "domain": 5,
+      "task": "5.1",
+      "prompt": "Qual benefício típico do AWS PrivateLink em arquiteturas suportadas?",
+      "choices": [
+        "Treinar transformers",
+        "Conectividade privada a serviços compatíveis",
+        "Calcular BLEU",
+        "Criar prompt de imagem"
+      ],
+      "correct": "B",
+      "explanation": "PrivateLink oferece caminhos privados de acesso conforme configuração."
+    },
+    {
+      "id": "AIF-Q75",
+      "domain": 5,
+      "task": "5.1",
+      "prompt": "Que prática é apropriada ao registrar interações com IA?",
+      "choices": [
+        "Minimizar segredos/PII e respeitar retenção e auditoria",
+        "Registrar todo segredo por padrão",
+        "Desabilitar monitoramento sempre",
+        "Copiar prompts para fontes públicas"
+      ],
+      "correct": "A",
+      "explanation": "Observabilidade precisa respeitar privacidade, acesso e retenção."
+    },
+    {
+      "id": "AIF-Q76",
+      "domain": 5,
+      "task": "5.2",
+      "prompt": "Qual associação de produto está correta?",
+      "choices": [
+        "Config registra toda frase do usuário",
+        "CloudTrail treina modelos",
+        "Artifact armazena embeddings",
+        "CloudTrail registra eventos API; Config rastreia configurações"
+      ],
+      "correct": "D",
+      "explanation": "CloudTrail e Config atendem perguntas de auditoria diferentes."
+    },
+    {
+      "id": "AIF-Q77",
+      "domain": 5,
+      "task": "5.2",
+      "prompt": "Preciso baixar relatórios oficiais de conformidade da AWS. Recurso:",
+      "choices": [
+        "Amazon Personalize",
+        "Amazon Textract",
+        "AWS Artifact",
+        "Bedrock Prompt Management"
+      ],
+      "correct": "C",
+      "explanation": "Artifact oferece documentação de conformidade e acordos AWS."
+    },
+    {
+      "id": "AIF-Q78",
+      "domain": 5,
+      "task": "5.2",
+      "prompt": "Qual produto ajuda a avaliar vulnerabilidades de recursos suportados?",
+      "choices": [
+        "Amazon Inspector",
+        "Amazon Comprehend",
+        "Amazon Quick",
+        "Amazon Polly"
+      ],
+      "correct": "A",
+      "explanation": "Inspector identifica vulnerabilidades/exposições em ativos AWS suportados."
+    },
+    {
+      "id": "AIF-Q79",
+      "domain": 5,
+      "task": "5.1",
+      "prompt": "Qual abordagem reduz chance de alucinação em pergunta sobre política atual?",
+      "choices": [
+        "Temperature alta apenas",
+        "RAG grounding com fontes e validação de saída",
+        "Desligar logs",
+        "Treinar um novo LLM a cada consulta"
+      ],
+      "correct": "B",
+      "explanation": "Recuperação confiável e validação/citações apoiam exatidão."
+    },
+    {
+      "id": "AIF-Q80",
+      "domain": 5,
+      "task": "5.2",
+      "prompt": "O que uma organização deve definir em governança de IA?",
+      "choices": [
+        "Somente um prompt mais longo",
+        "Só o nome do modelo",
+        "Apenas uma variável no frontend",
+        "Responsáveis, dados, retenção, revisão, incidentes e políticas"
+      ],
+      "correct": "D",
+      "explanation": "Governança é processo contínuo e responsabilidade distribuída."
+    }
+  ],
+  "note": "Questões inéditas de prática; não são questões oficiais."
+}
